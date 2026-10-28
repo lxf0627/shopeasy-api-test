@@ -65,19 +65,39 @@ class TestCartBehavior:
     @pytest.mark.p1
     @pytest.mark.cart
     @pytest.mark.negative
-    def test_tc_exp_001_zero_stock_product(self, buyer1_client):
+    def test_tc_exp_001_zero_stock_product(self, buyer1_client, admin_client):
         """
         TC-EXP-001: 零库存商品加入购物车应返回400
+        前置条件由用例自构造：管理员将无规格商品库存置0，结束后还原
         """
-        with allure.step("添加零库存商品(id=27)"):
-            response = buyer1_client.post('/api/cart', json_data={
-                'productId': 27,
-                'quantity': 1
-            })
+        product_id = 3  # AirPods Pro 2（seed 数据中的无规格商品）
+        original_stock = None
 
-        with allure.step("验证返回400 库存不足"):
-            assert response.status_code == 400, f"期望状态码400，实际{response.status_code}"
-            assert response.json()['message'] == '库存不足'
+        try:
+            with allure.step("准备: 确认商品为无规格并记录初始库存"):
+                product = buyer1_client.get(f'/api/products/{product_id}')
+                assert product.status_code == 200, "查询商品失败"
+                product_data = product.json()['data']
+                assert product_data['hasSpec'] == False, "应选择无规格商品"
+                original_stock = product_data['stock']
+
+            with allure.step("准备: 管理员将商品库存置为0"):
+                update = admin_client.put(f'/api/admin/products/{product_id}', json_data={'stock': 0})
+                assert update.status_code == 200, f"更新库存失败，状态码{update.status_code}"
+
+            with allure.step("添加零库存商品到购物车"):
+                response = buyer1_client.post('/api/cart', json_data={
+                    'productId': product_id,
+                    'quantity': 1
+                })
+
+            with allure.step("验证返回400 库存不足"):
+                assert response.status_code == 400, f"期望状态码400，实际{response.status_code}"
+                assert response.json()['message'] == '库存不足'
+        finally:
+            if original_stock is not None:
+                with allure.step("恢复: 还原商品库存"):
+                    admin_client.put(f'/api/admin/products/{product_id}', json_data={'stock': original_stock})
 
     @allure.story("数量累加")
     @allure.severity(allure.severity_level.NORMAL)
