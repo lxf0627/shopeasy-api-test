@@ -47,18 +47,15 @@ def main():
     # 步骤2: 执行测试
     print("\n[2/3] 执行测试用例...")
     test_cmd = f'python -m pytest tests/ -v --alluredir={allure_results}'
-    if not run_command(test_cmd, "执行pytest测试"):
-        print("\n[X] 测试执行失败！")
-        sys.exit(1)
+    tests_passed = run_command(test_cmd, "执行pytest测试")
 
-    # 步骤3: 生成报告
+    # 步骤3: 生成报告（无论测试通过与否都生成，便于失败排查）
     print("\n[3/3] 生成测试报告...")
     test_cases = parse_allure_results(allure_results)
 
     if test_cases:
         generate_html_report(test_cases, html_report)
-        print(f"\n[OK] 测试完成！报告已打开")
-        print(f"     报告位置: {html_report}")
+        print(f"\n[OK] 报告已生成: {html_report}")
 
         # 统计
         total = len(test_cases)
@@ -66,10 +63,15 @@ def main():
         failed = sum(1 for t in test_cases if t.get('status') == 'failed')
         print(f"\n     总计: {total} | 通过: {passed} | 失败: {failed}")
 
-        # 打开报告
-        os.startfile(html_report)
+        # 打开报告（仅 Windows 本地执行，CI/Linux 环境跳过）
+        if sys.platform == 'win32':
+            os.startfile(html_report)
     else:
         print("\n[X] 未找到测试结果")
+
+    if not tests_passed:
+        print("\n[X] 测试执行失败！")
+        sys.exit(1)
 
     print(f"""
     ================================================

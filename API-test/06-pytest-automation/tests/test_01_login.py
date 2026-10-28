@@ -18,15 +18,15 @@ class TestLogin:
     @pytest.mark.p0
     @pytest.mark.login
     @pytest.mark.negative
-    def test_tc_exc_001_disabled_user_login(self, api_client):
+    def test_tc_exc_001_disabled_user_login(self, api_client, test_accounts):
         """
         TC-EXC-001: 禁用用户登录应返回403
         来源: 用例-用户下单流程-2026-10-08.md 2.2 异常场景
         """
         with allure.step("执行禁用用户登录"):
             response = api_client.post('/api/auth/login', json_data={
-                'username': 'disabled_user',
-                'password': '123456'
+                'username': test_accounts['disabled_user']['username'],
+                'password': test_accounts['disabled_user']['password']
             })
 
         with allure.step("验证响应状态码为403"):
@@ -68,14 +68,14 @@ class TestLogin:
     @pytest.mark.p0
     @pytest.mark.login
     @pytest.mark.positive
-    def test_login_success(self, api_client):
+    def test_login_success(self, api_client, test_accounts):
         """
         正向测试: 正常用户登录成功
         """
         with allure.step("执行正常用户登录"):
             response = api_client.post('/api/auth/login', json_data={
-                'username': 'buyer1',
-                'password': '123456'
+                'username': test_accounts['buyer1']['username'],
+                'password': test_accounts['buyer1']['password']
             })
 
         with allure.step("验证响应状态码为200"):

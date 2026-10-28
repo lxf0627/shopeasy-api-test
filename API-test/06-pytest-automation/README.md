@@ -88,7 +88,7 @@ python generate_report.py
 
 ## 测试环境
 
-- **Base URL:** http://localhost:3000
+- **Base URL:** http://localhost:3000（可用环境变量 `BASE_URL` 覆盖）
 - **Web前台:** http://localhost:5173
 
 ## 测试账号
@@ -99,3 +99,27 @@ python generate_report.py
 | 普通用户 | buyer2 | 123456 |
 | 管理员 | admin | 123456 |
 | 禁用用户 | disabled_user | 123456 |
+
+> 账号密码支持环境变量注入：`TEST_BUYER1_USER` / `TEST_BUYER1_PASSWORD` 等，详见 `conftest.py`
+
+## CI/CD（GitHub Actions）
+
+代码推送后自动执行 API 测试，工作流定义见 `.github/workflows/api-test.yml`。
+
+**触发时机：** push / PR 到 main、master · 手动触发 · 每日定时回归（UTC 02:17）
+
+**执行流程：**
+1. 拉取测试代码 + 被测服务端仓库（单独仓库）
+2. 启动 ShopEasy API 服务（npm install + seed + 后台启动 + 健康检查）
+3. 执行 pytest 测试并生成 HTML 报告
+4. 上传测试报告产物（测试失败也会上传，便于排查）
+
+**首次使用需配置：**
+
+| 配置项 | 位置 | 说明 |
+|--------|------|------|
+| `SERVER_REPO` | `api-test.yml` 顶部 env | 已设为 `lxf0627/shopeasy-server` |
+| `SERVER_REPO_TOKEN` | 仓库 Settings → Secrets → Actions | 服务端仓库为 **Private** 时必配（PAT，勾选 repo 权限）；Public 仓库无需配置 |
+| 测试账号密码（可选） | 仓库 Secrets | 如需脱敏，配置 `TEST_BUYER1_PASSWORD` 等变量 |
+
+**查看测试报告：** Actions 运行记录 → Artifacts → 下载 `api-test-report`

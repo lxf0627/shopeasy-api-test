@@ -1,0 +1,109 @@
+# ============================================================
+# API 自动化测试 CI 工作流（Pytest + Requests + Allure，无需Java）
+#
+# 触发时机:
+#   - push / PR 到 main、master 分支
+#   - 手动触发 (workflow_dispatch)
+#   - 每日定时回归 (UTC 02:17)
+#
+# 执行流程:
+#   拉取测试代码 + 拉取被测服务端仓库
+#   -> 启动 ShopEasy API 服务 (localhost:3000)
+#   -> 执行 pytest 测试并生成 HTML 报告
+#   -> 上传测试报告产物（无论成败都会上传）
+# ============================================================
+name: API Test
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * *'
+
+env:
+  # 被测服务端仓库（owner/repo-name 格式）
+  SERVER_REPO: lxf0627/shopeasy-server
+  # JWT 签名密钥（仅 CI 测试用）
+  JWT_SECRET: ci-test-secret
+
+jobs:
+  api-test:
+    name: 用户下单流程 API 测试
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      # ---------- 1. 拉取代码 ----------
+      - name: Checkout 测试代码仓库
+        uses: actions/checkout@v4
+
+      - name: Checkout 被测服务端仓库
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.SERVER_REPO }}
+          path: server-src
+          # 服务端仓库为 Private 时: 在测试仓库 Settings -> Secrets 配置
+          #   SERVER_REPO_TOKEN = GitHub PAT (勾选 repo 权限)
+          # 服务端仓库为 Public 时: 自动回退到内置 token，无需任何配置
+          token: ${{ secrets.SERVER_REPO_TOKEN || github.token }}
+
+      # ---------- 2. 启动被测服务 ----------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 服务端为零配置启动：PORT 默认 3000，JWT_SECRET 由 env 注入
+      - name: 安装服务端依赖并初始化测试数据
+        working-directory: server-src
+        run: |
+          npm ci || npm install
+          npm run seed
+
+      - name: 启动服务并等待就绪
+        working-directory: server-src
+        run: |
+          npm start &
+          echo "等待 API 服务就绪..."
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:3000/api/products/1 > /dev/null 2>&1; then
+              echo "API 服务已就绪"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "API 服务启动超时"
+          exit 1
+
+      # ---------- 3. 执行 API 测试 ----------
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: API-test/06-pytest-automation/requirements.txt
+
+      - name: 安装测试依赖
+        working-directory: API-test/06-pytest-automation
+        run: pip install -r requirements.txt
+
+      - name: 执行测试并生成报告
+        working-directory: API-test/06-pytest-automation
+        env:
+          BASE_URL: http://localhost:3000
+        run: python run_tests.py
+
+      # ---------- 4. 上传测试报告 ----------
+      - name: 上传测试报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-report
+          path: |
+            API-test/06-pytest-automation/artifacts/report.html
+            API-test/06-pytest-automation/artifacts/allure-results
+          if-no-files-found: warn
+          retention-days: 30

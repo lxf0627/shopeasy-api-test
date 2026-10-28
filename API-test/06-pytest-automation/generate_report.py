@@ -6,6 +6,7 @@
 """
 import json
 import os
+import sys
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
@@ -204,9 +205,12 @@ def main():
     generate_html_report(test_cases, report_file)
     print(f"      报告已生成!")
 
-    # 打开报告
-    os.startfile(report_file)
-    print(f"\n[OK] 测试报告已打开")
+    # 打开报告（仅 Windows 本地执行，CI/Linux 环境跳过）
+    if sys.platform == 'win32':
+        os.startfile(report_file)
+        print(f"\n[OK] 测试报告已打开")
+    else:
+        print(f"\n[OK] 测试报告已生成: {report_file}")
 
 
 if __name__ == "__main__":
