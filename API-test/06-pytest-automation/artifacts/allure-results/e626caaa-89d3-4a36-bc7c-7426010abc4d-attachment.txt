@@ -1,9 +1,0 @@
-[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/products/0
-[32mINFO    [0m api_client:api_client.py:80 响应状态码: 404
-[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 404, "message": "资源不存在", "data": null}
-[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/products/-1
-[32mINFO    [0m api_client:api_client.py:80 响应状态码: 404
-[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 404, "message": "资源不存在", "data": null}
-[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/products/99999
-[32mINFO    [0m api_client:api_client.py:80 响应状态码: 404
-[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 404, "message": "资源不存在", "data": null}

@@ -1,4 +1,0 @@
-[32mINFO    [0m api_client:api_client.py:33 Token已设置: eyJhbGciOiJIUzI1NiIs...
-[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/addresses
-[32mINFO    [0m api_client:api_client.py:80 响应状态码: 401
-[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 401, "message": "登录已过期，请重新登录", "data": null}
