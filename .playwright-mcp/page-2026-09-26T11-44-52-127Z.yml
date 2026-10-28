@@ -1,0 +1,52 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e5]:
+    - link "🛍️ ShopEasy" [ref=f4e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f4e8]:
+      - textbox "搜索商品..." [ref=f4e10]
+      - button [ref=f4e13] [cursor=pointer]
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]:
+        - button [ref=f4e19] [cursor=pointer]
+        - superscript [ref=f4e24]: "1"
+      - button "李 李四" [ref=f4e26] [cursor=pointer]:
+        - generic [ref=f4e27]: 李
+        - generic [ref=f4e28]: 李四
+  - main [ref=f4e29]:
+    - generic [ref=f4e130]:
+      - heading "确认订单" [level=2] [ref=f4e131]
+      - generic [ref=f4e132]:
+        - generic [ref=f4e133]:
+          - heading "收货地址" [level=3] [ref=f4e134]
+          - generic [ref=f4e137] [cursor=pointer]:
+            - radio "李四 13800000002 上海市上海市浦东新区陆家嘴环路1000号恒生银行大厦 默认" [checked] [ref=f4e139]
+            - generic [ref=f4e141]:
+              - strong [ref=f4e142]: 李四
+              - text: 13800000002 上海市上海市浦东新区陆家嘴环路1000号恒生银行大厦
+              - generic [ref=f4e143]: 默认
+        - generic [ref=f4e145]:
+          - heading "商品清单" [level=3] [ref=f4e146]
+          - generic [ref=f4e148]:
+            - table [ref=f4e150]:
+              - rowgroup [ref=f4e156]:
+                - row [ref=f4e157]:
+                  - columnheader "商品" [ref=f4e158]
+                  - columnheader "单价" [ref=f4e160]
+                  - columnheader "数量" [ref=f4e162]
+                  - columnheader "小计" [ref=f4e164]
+            - table [ref=f4e170]:
+              - rowgroup [ref=f4e176]:
+                - row [ref=f4e177]:
+                  - cell "iPhone 15 Pro Max" [ref=f4e178]
+                  - cell "¥9999" [ref=f4e180]
+                  - cell "1" [ref=f4e182]
+                  - cell "¥9999.00" [ref=f4e184]
+        - generic [ref=f4e186]:
+          - heading "订单备注" [level=3] [ref=f4e187]
+          - generic [ref=f4e188]:
+            - textbox "选填" [ref=f4e189]
+            - status "0 / 500 个字符" [ref=f4e190]: 0 / 500
+        - generic [ref=f4e191]:
+          - generic [ref=f4e192]: "共 1 件商品，合计: ¥9999.00"
+          - button "提交订单" [ref=f4e193] [cursor=pointer]
+  - paragraph [ref=f4e127]: © 2024 ShopEasy — 测试用在线购物平台

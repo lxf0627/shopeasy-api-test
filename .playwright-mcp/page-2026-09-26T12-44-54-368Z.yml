@@ -1,0 +1,37 @@
+- generic [ref=f2e3]:
+  - generic [ref=f2e5]:
+    - link "🛍️ ShopEasy" [ref=f2e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f2e8]:
+      - textbox "搜索商品..." [ref=f2e10]
+      - button [ref=f2e13] [cursor=pointer]
+    - generic [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - button [ref=f2e19] [cursor=pointer]
+        - superscript [ref=f2e24]: "1"
+      - button "李 李四" [ref=f2e26] [cursor=pointer]:
+        - generic [ref=f2e27]: 李
+        - generic [ref=f2e28]: 李四
+  - main [ref=f2e29]:
+    - generic [ref=f2e387]:
+      - heading "个人中心" [level=2] [ref=f2e388]
+      - generic [ref=f2e389]:
+        - tablist [ref=f2e393]:
+          - tab "个人信息" [ref=f2e395]
+          - tab "修改密码" [ref=f2e396]
+          - tab "收货地址" [active] [selected] [ref=f2e397] [cursor=pointer]
+        - generic [ref=f2e398]:
+          - text: "* * *"
+          - tabpanel "收货地址" [ref=f2e434]:
+            - generic [ref=f2e435]:
+              - button "新增地址" [ref=f2e436] [cursor=pointer]
+              - generic [ref=f2e438]:
+                - generic [ref=f2e439]:
+                  - strong [ref=f2e440]: 李四
+                  - text: "13800000002"
+                  - generic [ref=f2e441]: 默认
+                  - paragraph [ref=f2e443]: 上海市上海市浦东新区陆家嘴环路1000号恒生银行大厦
+                - generic [ref=f2e444]:
+                  - button "编辑" [ref=f2e445] [cursor=pointer]
+                  - button "删除" [ref=f2e447] [cursor=pointer]
+  - paragraph [ref=f2e127]: © 2024 ShopEasy — 测试用在线购物平台

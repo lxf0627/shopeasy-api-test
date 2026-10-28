@@ -1,0 +1,86 @@
+- generic [ref=f8e3]:
+  - generic [ref=f8e5]:
+    - link "🛍️ ShopEasy" [ref=f8e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f8e8]:
+      - textbox "搜索商品..." [ref=f8e10]
+      - button [ref=f8e13] [cursor=pointer]
+    - generic [ref=f8e17]:
+      - generic [ref=f8e18]:
+        - button [ref=f8e19] [cursor=pointer]
+        - superscript [ref=f8e24]: "2"
+      - button "张 张三" [ref=f8e26] [cursor=pointer]:
+        - generic [ref=f8e27]: 张
+        - generic [ref=f8e28]: 张三
+  - main [ref=f8e29]:
+    - generic [ref=f8e30]:
+      - heading "🛒 购物车" [level=2] [ref=f8e31]
+      - generic [ref=f8e32]:
+        - generic [ref=f8e34]:
+          - table [ref=f8e36]:
+            - rowgroup [ref=f8e44]:
+              - row [ref=f8e45]:
+                - columnheader [ref=f8e46]:
+                  - generic "选择所有行" [ref=f8e48] [cursor=pointer]:
+                    - generic [ref=f8e49]:
+                      - checkbox "选择所有行"
+                - columnheader "商品" [ref=f8e51]
+                - columnheader "单价" [ref=f8e53]
+                - columnheader "数量" [ref=f8e55]
+                - columnheader "小计" [ref=f8e57]
+                - columnheader "操作" [ref=f8e59]
+          - table [ref=f8e65]:
+            - rowgroup [ref=f8e73]:
+              - row [ref=f8e74]:
+                - cell [ref=f8e75]:
+                  - generic "选择当前行" [ref=f8e77] [cursor=pointer]:
+                    - generic [ref=f8e78]:
+                      - checkbox "选择当前行"
+                - cell "Samsung Galaxy S24 Ultra 256GB / 钛灰色 手机数码" [ref=f8e80]:
+                  - generic [ref=f8e84] [cursor=pointer]:
+                    - paragraph [ref=f8e85]: Samsung Galaxy S24 Ultra
+                    - generic [ref=f8e163]: 256GB / 钛灰色
+                    - paragraph [ref=f8e86]: 手机数码
+                - cell "¥8999" [ref=f8e87]
+                - cell [ref=f8e89]:
+                  - generic [ref=f8e91]:
+                    - button "减少数值" [ref=f8e92]
+                    - button "增加数值" [ref=f8e96] [cursor=pointer]
+                    - spinbutton [ref=f8e102]: "1"
+                - cell "¥8999.00" [ref=f8e103]
+                - cell [ref=f8e105]:
+                  - button "删除" [ref=f8e107] [cursor=pointer]
+              - row [ref=f8e109]:
+                - cell [ref=f8e110]:
+                  - generic "选择当前行" [ref=f8e112] [cursor=pointer]:
+                    - generic [ref=f8e113]:
+                      - checkbox "选择当前行"
+                - cell "iPhone 15 Pro Max 256GB / 原色钛金属 手机数码" [ref=f8e115]:
+                  - generic [ref=f8e119] [cursor=pointer]:
+                    - paragraph [ref=f8e120]: iPhone 15 Pro Max
+                    - generic [ref=f8e165]: 256GB / 原色钛金属
+                    - paragraph [ref=f8e121]: 手机数码
+                - cell "¥9999" [ref=f8e122]
+                - cell [ref=f8e124]:
+                  - generic [ref=f8e126]:
+                    - button "减少数值" [ref=f8e127]
+                    - button "增加数值" [ref=f8e131] [cursor=pointer]
+                    - spinbutton [ref=f8e137]: "1"
+                - cell "¥9999.00" [ref=f8e138]
+                - cell [ref=f8e140]:
+                  - button "删除" [ref=f8e142] [cursor=pointer]
+        - generic [ref=f8e144]:
+          - generic [ref=f8e146] [cursor=pointer]:
+            - generic [ref=f8e147]:
+              - checkbox "全选" [checked] [active]
+            - generic [ref=f8e149]: 全选
+          - generic [ref=f8e150]:
+            - generic [ref=f8e151]:
+              - text: 已选
+              - strong [ref=f8e152]: "2"
+              - text: 件
+            - generic [ref=f8e153]:
+              - text: "合计:"
+              - strong [ref=f8e154]: ¥18998.00
+            - button "去结算" [ref=f8e155] [cursor=pointer]
+  - paragraph [ref=f8e162]: © 2024 ShopEasy — 测试用在线购物平台

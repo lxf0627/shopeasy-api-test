@@ -1,0 +1,188 @@
+- generic [ref=f8e3]:
+  - generic [ref=f8e5]:
+    - link "🛍️ ShopEasy" [ref=f8e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f8e8]:
+      - textbox "搜索商品..." [ref=f8e10]
+      - button [ref=f8e13] [cursor=pointer]
+    - generic [ref=f8e17]:
+      - generic [ref=f8e18]:
+        - button [ref=f8e19] [cursor=pointer]
+        - superscript [ref=f8e24]: "2"
+      - button "张 张三" [ref=f8e26] [cursor=pointer]:
+        - generic [ref=f8e27]: 张
+        - generic [ref=f8e28]: 张三
+  - main [ref=f8e29]:
+    - generic [ref=f8e255]:
+      - heading "我的订单" [level=2] [ref=f8e256]
+      - generic [ref=f8e257]:
+        - tablist [ref=f8e261]:
+          - tab "全部" [active] [selected] [ref=f8e263] [cursor=pointer]
+          - tab "待支付" [ref=f8e264]
+          - tab "已支付" [ref=f8e265]
+          - tab "已发货" [ref=f8e266]
+          - tab "已完成" [ref=f8e267]
+          - tab "已取消" [ref=f8e268]
+        - generic:
+          - tabpanel "全部"
+      - generic [ref=f8e269]:
+        - generic [ref=f8e492] [cursor=pointer]:
+          - generic [ref=f8e493]:
+            - generic [ref=f8e494]: "订单号: ORD1790425219922EQBD"
+            - generic [ref=f8e495]: 待支付
+          - generic [ref=f8e497]:
+            - generic [ref=f8e498]:
+              - generic [ref=f8e499]:
+                - text: Samsung Galaxy S24 Ultra
+                - generic [ref=f8e500]: 256GB / 钛灰色
+              - generic [ref=f8e502]: x1
+              - generic [ref=f8e503]: ¥8999
+            - generic [ref=f8e504]:
+              - generic [ref=f8e505]:
+                - text: iPhone 15 Pro Max
+                - generic [ref=f8e506]: 256GB / 原色钛金属
+              - generic [ref=f8e508]: x1
+              - generic [ref=f8e509]: ¥9999
+          - generic [ref=f8e510]:
+            - generic [ref=f8e511]: "下单时间: 2026-09-26 12:20"
+            - generic [ref=f8e512]:
+              - text: "合计:"
+              - strong [ref=f8e513]: ¥18998
+        - generic [ref=f8e514] [cursor=pointer]:
+          - generic [ref=f8e515]:
+            - generic [ref=f8e516]: "订单号: ORD1790421475277QPJD"
+            - generic [ref=f8e517]: 已退款
+          - generic [ref=f8e520]:
+            - generic [ref=f8e521]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e522]: 256GB / 原色钛金属
+            - generic [ref=f8e524]: x1
+            - generic [ref=f8e525]: ¥9999
+          - generic [ref=f8e526]:
+            - generic [ref=f8e527]: "下单时间: 2026-09-26 11:17"
+            - generic [ref=f8e528]:
+              - text: "合计:"
+              - strong [ref=f8e529]: ¥9999
+        - generic [ref=f8e460] [cursor=pointer]:
+          - generic [ref=f8e461]:
+            - generic [ref=f8e462]: "订单号: ORD17904214440661PR6"
+            - generic [ref=f8e463]: 已取消
+          - generic [ref=f8e466]:
+            - generic [ref=f8e467]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e468]: 256GB / 原色钛金属
+            - generic [ref=f8e470]: x1
+            - generic [ref=f8e471]: ¥9999
+          - generic [ref=f8e472]:
+            - generic [ref=f8e473]: "下单时间: 2026-09-26 11:17"
+            - generic [ref=f8e474]:
+              - text: "合计:"
+              - strong [ref=f8e475]: ¥9999
+        - generic [ref=f8e530] [cursor=pointer]:
+          - generic [ref=f8e531]:
+            - generic [ref=f8e532]: "订单号: ORD1790421267797ZS6Z"
+            - generic [ref=f8e533]: 已收货
+          - generic [ref=f8e536]:
+            - generic [ref=f8e537]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e538]: 256GB / 原色钛金属
+            - generic [ref=f8e540]: x2
+            - generic [ref=f8e541]: ¥9999
+          - generic [ref=f8e542]:
+            - generic [ref=f8e543]: "下单时间: 2026-09-26 11:14"
+            - generic [ref=f8e544]:
+              - text: "合计:"
+              - strong [ref=f8e545]: ¥19998
+        - generic [ref=f8e476] [cursor=pointer]:
+          - generic [ref=f8e477]:
+            - generic [ref=f8e478]: "订单号: ORD1790416735399RF7N"
+            - generic [ref=f8e479]: 已取消
+          - generic [ref=f8e482]:
+            - generic [ref=f8e483]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e484]: 256GB / 原色钛金属
+            - generic [ref=f8e486]: x2
+            - generic [ref=f8e487]: ¥9999
+          - generic [ref=f8e488]:
+            - generic [ref=f8e489]: "下单时间: 2026-09-26 09:58"
+            - generic [ref=f8e490]:
+              - text: "合计:"
+              - strong [ref=f8e491]: ¥19998
+        - generic [ref=f8e546] [cursor=pointer]:
+          - generic [ref=f8e547]:
+            - generic [ref=f8e548]: "订单号: ORD1790399818761D93T"
+            - generic [ref=f8e549]: 待支付
+          - generic [ref=f8e552]:
+            - generic [ref=f8e553]: AirPods Pro 2
+            - generic [ref=f8e554]: x1
+            - generic [ref=f8e555]: ¥1799
+          - generic [ref=f8e556]:
+            - generic [ref=f8e557]: "下单时间: 2026-09-26 05:16"
+            - generic [ref=f8e558]:
+              - text: "合计:"
+              - strong [ref=f8e559]: ¥1799
+        - generic [ref=f8e560] [cursor=pointer]:
+          - generic [ref=f8e561]:
+            - generic [ref=f8e562]: "订单号: ORD1789323840810WP2L"
+            - generic [ref=f8e563]: 待支付
+          - generic [ref=f8e566]:
+            - generic [ref=f8e567]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e568]: 512GB / 原色钛金属
+            - generic [ref=f8e570]: x1
+            - generic [ref=f8e571]: ¥11999
+          - generic [ref=f8e572]:
+            - generic [ref=f8e573]: "下单时间: 2026-09-13 18:24"
+            - generic [ref=f8e574]:
+              - text: "合计:"
+              - strong [ref=f8e575]: ¥11999
+        - generic [ref=f8e576] [cursor=pointer]:
+          - generic [ref=f8e577]:
+            - generic [ref=f8e578]: "订单号: ORD17892777829327DUJ"
+            - generic [ref=f8e579]: 待支付
+          - generic [ref=f8e582]:
+            - generic [ref=f8e583]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e584]: 256GB / 原色钛金属
+            - generic [ref=f8e586]: x1
+            - generic [ref=f8e587]: ¥9999
+          - generic [ref=f8e588]:
+            - generic [ref=f8e589]: "下单时间: 2026-09-13 05:36"
+            - generic [ref=f8e590]:
+              - text: "合计:"
+              - strong [ref=f8e591]: ¥9999
+        - generic [ref=f8e592] [cursor=pointer]:
+          - generic [ref=f8e593]:
+            - generic [ref=f8e594]: "订单号: ORD17889377882231WZ9"
+            - generic [ref=f8e595]: 待支付
+          - generic [ref=f8e598]:
+            - generic [ref=f8e599]:
+              - text: iPhone 15 Pro Max
+              - generic [ref=f8e600]: 256GB / 原色钛金属
+            - generic [ref=f8e602]: x1
+            - generic [ref=f8e603]: ¥9999
+          - generic [ref=f8e604]:
+            - generic [ref=f8e605]: "下单时间: 2026-09-09 07:09"
+            - generic [ref=f8e606]:
+              - text: "合计:"
+              - strong [ref=f8e607]: ¥9999
+        - generic [ref=f8e608] [cursor=pointer]:
+          - generic [ref=f8e609]:
+            - generic [ref=f8e610]: "订单号: ORD20240106001"
+            - generic [ref=f8e611]: 已退款
+          - generic [ref=f8e614]:
+            - generic [ref=f8e615]: Dyson V15 Detect
+            - generic [ref=f8e616]: x1
+            - generic [ref=f8e617]: ¥4990
+          - generic [ref=f8e618]:
+            - generic [ref=f8e619]: "下单时间: 2024-01-06 10:00"
+            - generic [ref=f8e620]:
+              - text: "合计:"
+              - strong [ref=f8e621]: ¥4990
+      - generic [ref=f8e623]:
+        - button "上一页" [disabled] [ref=f8e624]
+        - list [ref=f8e625]:
+          - listitem "第 1 页" [ref=f8e626]: "1"
+          - listitem "第 2 页" [ref=f8e627] [cursor=pointer]: "2"
+        - button "下一页" [ref=f8e628] [cursor=pointer]
+  - paragraph [ref=f8e162]: © 2024 ShopEasy — 测试用在线购物平台

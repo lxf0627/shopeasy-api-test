@@ -1,0 +1,14 @@
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/auth/login
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"username": "buyer2", "password": "123456"}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "登录成功", "data": {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6InVzZXIiLCJpYXQiOjE3OTE0NDExNzksImV4cCI6MTc5MjA0NTk3OX0.Sw7qxxO01fF2mLgqqGmRPertN5RmINOROZ3r-lqBnxo", "user": {"id": 3, "username": "buyer2", "role": "user", "nickname": "李四", "avatar": ""}}}
+[32mINFO    [0m api_client:api_client.py:33 Token已设置: eyJhbGciOiJIUzI1NiIs...
+[32mINFO    [0m api_client:api_client.py:125 用户 buyer2 登录成功
+[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/addresses
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "ok", "data": [{"id": 3, "userId": 3, "name": "李四", "phone": "13800000002", "province": "上海市", "city": "上海市", "district": "浦东新区", "detail": "陆家嘴环路1000号恒生银行大厦", "isDefault": true, "createdAt": "2026-09-09T06:46:06.601Z", "updatedAt": "2026-09-09T06:46:06.601Z"}]}
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/orders
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"addressId": 3}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 400
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 400, "message": "请选择商品", "data": null}
+[32mINFO    [0m api_client:api_client.py:134 API客户端会话已关闭

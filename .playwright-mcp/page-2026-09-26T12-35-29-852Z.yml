@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e32]:
+    - generic [ref=e34]:
+      - link "🛍️ ShopEasy" [ref=e35] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e37]:
+        - textbox "搜索商品..." [ref=e39]
+        - button [ref=e42] [cursor=pointer]
+      - generic [ref=e46]:
+        - button [ref=e48] [cursor=pointer]
+        - button "张 张三" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 张
+          - generic [ref=e56]: 张三
+    - main [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - heading "商品分类" [level=3] [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62] [cursor=pointer]:
+              - generic [ref=e63]: 🔥
+              - generic [ref=e64]: 全部
+            - generic [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]: 📱
+              - generic [ref=e67]: 手机数码
+            - generic [ref=e68] [cursor=pointer]:
+              - generic [ref=e69]: 💻
+              - generic [ref=e70]: 电脑办公
+            - generic [ref=e71] [cursor=pointer]:
+              - generic [ref=e72]: 🏠
+              - generic [ref=e73]: 家用电器
+            - generic [ref=e74] [cursor=pointer]:
+              - generic [ref=e75]: 👕
+              - generic [ref=e76]: 服装鞋包
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: 🍜
+              - generic [ref=e79]: 食品饮料
+            - generic [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]: 📚
+              - generic [ref=e82]: 图书文具
+        - radiogroup "radio-group" [ref=e84]:
+          - generic [ref=e85]:
+            - radio "默认" [checked] [ref=e86]
+            - generic [ref=e87] [cursor=pointer]: 默认
+          - generic [ref=e88]:
+            - radio "销量" [ref=e89]
+            - generic [ref=e90] [cursor=pointer]: 销量
+          - generic [ref=e91]:
+            - radio "价格↑" [ref=e92]
+            - generic [ref=e93] [cursor=pointer]: 价格↑
+          - generic [ref=e94]:
+            - radio "价格↓" [ref=e95]
+            - generic [ref=e96] [cursor=pointer]: 价格↓
+          - generic [ref=e97]:
+            - radio "评分" [ref=e98]
+            - generic [ref=e99] [cursor=pointer]: 评分
+        - generic [ref=e100]:
+          - generic [ref=e101] [cursor=pointer]:
+            - generic [ref=e102]:
+              - img "测试商品-零库存" [ref=e103]
+              - generic [ref=e104]: 已售罄
+            - generic [ref=e105]:
+              - heading "测试商品-零库存" [level=4] [ref=e106]
+              - paragraph [ref=e107]: 自动化测试创建的零库存商品
+              - generic [ref=e108]:
+                - generic [ref=e109]: ¥999
+                - generic [ref=e110]: ¥1099
+              - generic [ref=e111]:
+                - generic [ref=e112]: 已售 0
+                - generic [ref=e113]: ⭐ 5
+          - generic [ref=e114] [cursor=pointer]:
+            - img "iPhone 15 Pro Max" [ref=e116]
+            - generic [ref=e117]:
+              - heading "iPhone 15 Pro Max" [level=4] [ref=e118]
+              - paragraph [ref=e119]: 苹果最新旗舰手机，A17 Pro芯片，钛金属边框，48MP主摄像头，USB-C接口
+              - generic [ref=e120]:
+                - generic [ref=e121]: ¥9999
+                - generic [ref=e122]: ¥10999
+              - generic [ref=e123]:
+                - generic [ref=e124]: 已售 2616
+                - generic [ref=e125]: ⭐ 4.8
+          - generic [ref=e126] [cursor=pointer]:
+            - img "Samsung Galaxy S24 Ultra" [ref=e128]
+            - generic [ref=e129]:
+              - heading "Samsung Galaxy S24 Ultra" [level=4] [ref=e130]
+              - paragraph [ref=e131]: 三星Galaxy AI手机，S Pen内置，2亿像素摄像头，钛金属边框
+              - generic [ref=e132]:
+                - generic [ref=e133]: ¥8999
+                - generic [ref=e134]: ¥9999
+              - generic [ref=e135]:
+                - generic [ref=e136]: 已售 1321
+                - generic [ref=e137]: ⭐ 4.7
+          - generic [ref=e138] [cursor=pointer]:
+            - img "AirPods Pro 2" [ref=e140]
+            - generic [ref=e141]:
+              - heading "AirPods Pro 2" [level=4] [ref=e142]
+              - paragraph [ref=e143]: 主动降噪，自适应透明模式，USB-C充电，个性化空间音频
+              - generic [ref=e144]:
+                - generic [ref=e145]: ¥1799
+                - generic [ref=e146]: ¥1999
+              - generic [ref=e147]:
+                - generic [ref=e148]: 已售 3768
+                - generic [ref=e149]: ⭐ 4.8
+          - generic [ref=e150] [cursor=pointer]:
+            - img "HUAWEI Mate 60 Pro" [ref=e152]
+            - generic [ref=e153]:
+              - heading "HUAWEI Mate 60 Pro" [level=4] [ref=e154]
+              - paragraph [ref=e155]: 华为旗舰手机，麒麟芯片，卫星通信，XMAGE影像系统
+              - generic [ref=e156]:
+                - generic [ref=e157]: ¥6999
+                - generic [ref=e158]: ¥7999
+              - generic [ref=e159]:
+                - generic [ref=e160]: 已售 1890
+                - generic [ref=e161]: ⭐ 4.6
+          - generic [ref=e162] [cursor=pointer]:
+            - img "Xiaomi 14 Ultra" [ref=e164]
+            - generic [ref=e165]:
+              - heading "Xiaomi 14 Ultra" [level=4] [ref=e166]
+              - paragraph [ref=e167]: 小米影像旗舰，徕卡光学，骁龙8 Gen3，5000mAh电池
+              - generic [ref=e168]:
+                - generic [ref=e169]: ¥5999
+                - generic [ref=e170]: ¥6499
+              - generic [ref=e171]:
+                - generic [ref=e172]: 已售 980
+                - generic [ref=e173]: ⭐ 4.5
+          - generic [ref=e174] [cursor=pointer]:
+            - img "MacBook Pro 14英寸" [ref=e176]
+            - generic [ref=e177]:
+              - heading "MacBook Pro 14英寸" [level=4] [ref=e178]
+              - paragraph [ref=e179]: M3 Pro芯片，18GB内存，512GB固态硬盘，Liquid Retina XDR显示屏
+              - generic [ref=e180]:
+                - generic [ref=e181]: ¥14999
+                - generic [ref=e182]: ¥16999
+              - generic [ref=e183]:
+                - generic [ref=e184]: 已售 1210
+                - generic [ref=e185]: ⭐ 4.9
+          - generic [ref=e186] [cursor=pointer]:
+            - img "ThinkPad X1 Carbon" [ref=e188]
+            - generic [ref=e189]:
+              - heading "ThinkPad X1 Carbon" [level=4] [ref=e190]
+              - paragraph [ref=e191]: 联想商务轻薄本，i7-1365U处理器，16GB内存，2.8K OLED屏
+              - generic [ref=e192]:
+                - generic [ref=e193]: ¥8999
+                - generic [ref=e194]: ¥10999
+              - generic [ref=e195]:
+                - generic [ref=e196]: 已售 650
+                - generic [ref=e197]: ⭐ 4.6
+          - generic [ref=e198] [cursor=pointer]:
+            - img "iPad Air" [ref=e200]
+            - generic [ref=e201]:
+              - heading "iPad Air" [level=4] [ref=e202]
+              - paragraph [ref=e203]: M1芯片，10.9英寸，256GB，支持Apple Pencil和妙控键盘
+              - generic [ref=e204]:
+                - generic [ref=e205]: ¥5499
+                - generic [ref=e206]: ¥5999
+              - generic [ref=e207]:
+                - generic [ref=e208]: 已售 1430
+                - generic [ref=e209]: ⭐ 4.7
+          - generic [ref=e210] [cursor=pointer]:
+            - img "Dell XPS 15" [ref=e212]
+            - generic [ref=e213]:
+              - heading "Dell XPS 15" [level=4] [ref=e214]
+              - paragraph [ref=e215]: 戴尔旗舰笔记本，i7-13700H，RTX 4060，3.5K OLED触控屏
+              - generic [ref=e216]:
+                - generic [ref=e217]: ¥11999
+                - generic [ref=e218]: ¥13999
+              - generic [ref=e219]:
+                - generic [ref=e220]: 已售 320
+                - generic [ref=e221]: ⭐ 4.5
+          - generic [ref=e222] [cursor=pointer]:
+            - img "Logitech MX Master 3S" [ref=e224]
+            - generic [ref=e225]:
+              - heading "Logitech MX Master 3S" [level=4] [ref=e226]
+              - paragraph [ref=e227]: 罗技旗舰鼠标，电磁滚轮，8K DPI，安静点击，多设备切换
+              - generic [ref=e228]:
+                - generic [ref=e229]: ¥699
+                - generic [ref=e230]: ¥899
+              - generic [ref=e231]:
+                - generic [ref=e232]: 已售 2100
+                - generic [ref=e233]: ⭐ 4.8
+          - generic [ref=e234] [cursor=pointer]:
+            - img "Dyson V15 Detect" [ref=e236]
+            - generic [ref=e237]:
+              - heading "Dyson V15 Detect" [level=4] [ref=e238]
+              - paragraph [ref=e239]: 戴森旗舰吸尘器，激光检测灰尘，智能吸力调节，60分钟续航
+              - generic [ref=e240]:
+                - generic [ref=e241]: ¥4990
+                - generic [ref=e242]: ¥5990
+              - generic [ref=e243]:
+                - generic [ref=e244]: 已售 1420
+                - generic [ref=e245]: ⭐ 4.5
+        - generic [ref=e247]:
+          - button "上一页" [disabled] [ref=e248]
+          - list [ref=e249]:
+            - listitem "第 1 页" [ref=e250]: "1"
+            - listitem "第 2 页" [ref=e251] [cursor=pointer]: "2"
+            - listitem "第 3 页" [ref=e252] [cursor=pointer]: "3"
+          - button "下一页" [ref=e253] [cursor=pointer]
+    - paragraph [ref=e255]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=e256]:
+    - paragraph [ref=e260]: 登录成功

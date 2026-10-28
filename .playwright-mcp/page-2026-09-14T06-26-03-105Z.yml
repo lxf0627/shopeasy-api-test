@@ -1,0 +1,180 @@
+- generic [ref=e243]:
+  - complementary [ref=e244]:
+    - generic [ref=e245]: ⚙️ 管理后台
+    - menubar [ref=e246]:
+      - menuitem [ref=e247] [cursor=pointer]
+      - menuitem [ref=e251] [cursor=pointer]
+      - menuitem [ref=e255] [cursor=pointer]
+      - menuitem [ref=e259] [cursor=pointer]
+      - menuitem [ref=e263] [cursor=pointer]
+      - menuitem [ref=e267] [cursor=pointer]
+    - button "← 返回前台" [ref=e273] [cursor=pointer]
+  - generic [ref=e275]:
+    - generic [ref=e276]:
+      - generic [ref=e277]: 管理员（管理员）
+      - button "退出登录" [ref=e278] [cursor=pointer]
+    - main [ref=e280]:
+      - generic [ref=e2472]:
+        - generic [ref=e2473]:
+          - heading "商品管理" [level=2] [ref=e2474]
+          - button "新增商品" [ref=e2475] [cursor=pointer]
+        - generic [ref=e2477]:
+          - generic [ref=e2478]:
+            - textbox "搜索商品" [ref=e2481]
+            - generic [ref=e2484] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e2486]
+                - generic [ref=e2487]: 状态
+            - button "搜索" [ref=e2492] [cursor=pointer]
+          - generic [ref=e2495]:
+            - table [ref=e2497]:
+              - rowgroup [ref=e2508]:
+                - row [ref=e2509]:
+                  - columnheader "ID" [ref=e2510]
+                  - columnheader "商品名称" [ref=e2512]
+                  - columnheader "分类" [ref=e2514]
+                  - columnheader "规格" [ref=e2516]
+                  - columnheader "价格" [ref=e2518]
+                  - columnheader "库存" [ref=e2520]
+                  - columnheader "销量" [ref=e2522]
+                  - columnheader "状态" [ref=e2524]
+                  - columnheader "操作" [ref=e2526]
+            - table [ref=e2532]:
+              - rowgroup [ref=e2543]:
+                - row [ref=e2812]:
+                  - cell "11" [ref=e2813]
+                  - cell "Dyson V15 Detect" [ref=e2814]
+                  - cell "家用电器" [ref=e2815]
+                  - cell "无" [ref=e2816]
+                  - cell "¥4990" [ref=e2817]
+                  - cell "201" [ref=e2818]
+                  - cell "1420" [ref=e2819]
+                  - cell "上架" [ref=e2561]
+                  - cell [ref=e2565]:
+                    - generic [ref=e2566]:
+                      - button "编辑" [ref=e2567] [cursor=pointer]
+                      - button "下架" [ref=e2569] [cursor=pointer]
+                - row [ref=e2820]:
+                  - cell "12" [ref=e2821]
+                  - cell "小米电视 65英寸" [ref=e2822]
+                  - cell "家用电器" [ref=e2823]
+                  - cell "无" [ref=e2824]
+                  - cell "¥3999" [ref=e2825]
+                  - cell "150" [ref=e2826]
+                  - cell "2680" [ref=e2827]
+                  - cell "上架" [ref=e2588]
+                  - cell [ref=e2592]:
+                    - generic [ref=e2593]:
+                      - button "编辑" [ref=e2594] [cursor=pointer]
+                      - button "下架" [ref=e2596] [cursor=pointer]
+                - row [ref=e2828]:
+                  - cell "13" [ref=e2829]
+                  - cell "海底捞自热火锅" [ref=e2830]
+                  - cell "家用电器" [ref=e2831]
+                  - cell "无" [ref=e2605]
+                  - cell "¥39.9" [ref=e2832]
+                  - cell "500" [ref=e2833]
+                  - cell "8500" [ref=e2834]
+                  - cell "上架" [ref=e2613]
+                  - cell [ref=e2617]:
+                    - generic [ref=e2618]:
+                      - button "编辑" [ref=e2619] [cursor=pointer]
+                      - button "下架" [ref=e2621] [cursor=pointer]
+                - row [ref=e2835]:
+                  - cell "14" [ref=e2836]
+                  - cell "飞利浦空气炸锅" [ref=e2837]
+                  - cell "家用电器" [ref=e2838]
+                  - cell "无" [ref=e2839]
+                  - cell "¥499" [ref=e2840]
+                  - cell "180" [ref=e2841]
+                  - cell "3200" [ref=e2842]
+                  - cell "上架" [ref=e2640]
+                  - cell [ref=e2644]:
+                    - generic [ref=e2645]:
+                      - button "编辑" [ref=e2646] [cursor=pointer]
+                      - button "下架" [ref=e2648] [cursor=pointer]
+                - row [ref=e2843]:
+                  - cell "15" [ref=e2844]
+                  - cell "Nike Air Max 270" [ref=e2845]
+                  - cell "服装鞋包" [ref=e2846]
+                  - cell "15种" [ref=e2847]
+                  - cell "¥899" [ref=e2850]
+                  - cell "300" [ref=e2851]
+                  - cell "4200" [ref=e2852]
+                  - cell "上架" [ref=e2665]
+                  - cell [ref=e2669]:
+                    - generic [ref=e2670]:
+                      - button "编辑" [ref=e2671] [cursor=pointer]
+                      - button "下架" [ref=e2673] [cursor=pointer]
+                - row [ref=e2853]:
+                  - cell "16" [ref=e2854]
+                  - cell "优衣库轻薄羽绒服" [ref=e2855]
+                  - cell "服装鞋包" [ref=e2856]
+                  - cell "15种" [ref=e2857]
+                  - cell "¥599" [ref=e2858]
+                  - cell "500" [ref=e2859]
+                  - cell "3950" [ref=e2860]
+                  - cell "上架" [ref=e2692]
+                  - cell [ref=e2696]:
+                    - generic [ref=e2697]:
+                      - button "编辑" [ref=e2698] [cursor=pointer]
+                      - button "下架" [ref=e2700] [cursor=pointer]
+                - row [ref=e2861]:
+                  - cell "17" [ref=e2862]
+                  - cell "Adidas Ultraboost" [ref=e2863]
+                  - cell "服装鞋包" [ref=e2864]
+                  - cell "15种" [ref=e2865]
+                  - cell "¥999" [ref=e2868]
+                  - cell "200" [ref=e2869]
+                  - cell "1800" [ref=e2870]
+                  - cell "上架" [ref=e2717]
+                  - cell [ref=e2721]:
+                    - generic [ref=e2722]:
+                      - button "编辑" [ref=e2723] [cursor=pointer]
+                      - button "下架" [ref=e2725] [cursor=pointer]
+                - row [ref=e2871]:
+                  - cell "18" [ref=e2872]
+                  - cell "Levi's 501 牛仔裤" [ref=e2873]
+                  - cell "服装鞋包" [ref=e2874]
+                  - cell "18种" [ref=e2875]
+                  - cell "¥599" [ref=e2876]
+                  - cell "250" [ref=e2877]
+                  - cell "1500" [ref=e2878]
+                  - cell "上架" [ref=e2744]
+                  - cell [ref=e2748]:
+                    - generic [ref=e2749]:
+                      - button "编辑" [ref=e2750] [cursor=pointer]
+                      - button "下架" [ref=e2752] [cursor=pointer]
+                - row [ref=e2879]:
+                  - cell "19" [ref=e2880]
+                  - cell "三只松鼠坚果礼盒" [ref=e2881]
+                  - cell "食品饮料" [ref=e2882]
+                  - cell "无" [ref=e2761]
+                  - cell "¥128" [ref=e2883]
+                  - cell "1000" [ref=e2884]
+                  - cell "12500" [ref=e2885]
+                  - cell "上架" [ref=e2769]
+                  - cell [ref=e2773]:
+                    - generic [ref=e2774]:
+                      - button "编辑" [ref=e2775] [cursor=pointer]
+                      - button "下架" [ref=e2777] [cursor=pointer]
+                - row [ref=e2886]:
+                  - cell "20" [ref=e2887]
+                  - cell "农夫山泉矿泉水 24瓶" [ref=e2888]
+                  - cell "食品饮料" [ref=e2889]
+                  - cell "无" [ref=e2786]
+                  - cell "¥39.9" [ref=e2890]
+                  - cell "2000" [ref=e2891]
+                  - cell "18900" [ref=e2892]
+                  - cell "上架" [ref=e2794]
+                  - cell [ref=e2798]:
+                    - generic [ref=e2799]:
+                      - button "编辑" [ref=e2800] [cursor=pointer]
+                      - button "下架" [ref=e2802] [cursor=pointer]
+          - generic [ref=e2805]:
+            - button "上一页" [ref=e2806] [cursor=pointer]
+            - list [ref=e2807]:
+              - listitem "第 1 页" [ref=e2808] [cursor=pointer]: "1"
+              - listitem "第 2 页" [active] [ref=e2809]: "2"
+              - listitem "第 3 页" [ref=e2810] [cursor=pointer]: "3"
+            - button "下一页" [ref=e2811] [cursor=pointer]

@@ -1,0 +1,38 @@
+[      90ms] [WARNING] [Vue warn]: Unhandled error during execution of watcher callback 
+  at <ElInputNumber modelValue=1 onUpdate:modelValue=fn min=1  ... > 
+  at <ProductDetail onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[      91ms] [WARNING] [Vue warn]: Unhandled error during execution of setup function 
+  at <ElInputNumber modelValue=1 onUpdate:modelValue=fn min=1  ... > 
+  at <ProductDetail onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[      91ms] [WARNING] [Vue warn]: Unhandled error during execution of component update 
+  at <ProductDetail onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[      98ms] ElementPlusError: [InputNumber] min should not be greater than max.
+    at throwError (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=06982168:6441:8)
+    at verifyValue (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=06982168:38106:19)
+    at watch.immediate (http://localhost:5173/node_modules/.vite/deps/element-plus.js?v=06982168:38176:21)
+    at callWithErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:1924:17)
+    at callWithAsyncErrorHandling (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:1931:15)
+    at baseWatchOptions.call (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:2425:46)
+    at job (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:1704:13)
+    at watch$1 (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:1726:18)
+    at doWatch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:2447:22)
+    at watch (http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=9c625cf5:2399:9)
+[     808ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://via.placeholder.com/300:0

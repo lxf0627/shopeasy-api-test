@@ -1,0 +1,132 @@
+- generic [ref=f4e244]:
+  - complementary [ref=f4e245]:
+    - generic [ref=f4e246]: ⚙️ 管理后台
+    - menubar [ref=f4e247]:
+      - menuitem [ref=f4e248] [cursor=pointer]
+      - menuitem [ref=f4e252] [cursor=pointer]
+      - menuitem [ref=f4e256] [cursor=pointer]
+      - menuitem [active] [ref=f4e260] [cursor=pointer]
+      - menuitem [ref=f4e264] [cursor=pointer]
+      - menuitem [ref=f4e268] [cursor=pointer]
+    - button "← 返回前台" [ref=f4e274] [cursor=pointer]
+  - generic [ref=f4e276]:
+    - generic [ref=f4e277]:
+      - generic [ref=f4e278]: 管理员（管理员）
+      - button "退出登录" [ref=f4e279] [cursor=pointer]
+    - main [ref=f4e281]:
+      - generic [ref=f4e854]:
+        - heading "订单管理" [level=2] [ref=f4e855]
+        - generic [ref=f4e856]:
+          - generic [ref=f4e857]:
+            - textbox "搜索订单号" [ref=f4e860]
+            - generic [ref=f4e863] [cursor=pointer]:
+              - generic:
+                - combobox [ref=f4e865]
+                - generic [ref=f4e866]: 状态
+            - button "搜索" [ref=f4e871] [cursor=pointer]
+          - generic [ref=f4e874]:
+            - table [ref=f4e876]:
+              - rowgroup [ref=f4e885]:
+                - row [ref=f4e886]:
+                  - columnheader "订单号" [ref=f4e887]
+                  - columnheader "用户" [ref=f4e889]
+                  - columnheader "金额" [ref=f4e891]
+                  - columnheader "商品" [ref=f4e893]
+                  - columnheader "状态" [ref=f4e895]
+                  - columnheader "下单时间" [ref=f4e897]
+                  - columnheader "操作" [ref=f4e899]
+            - table [ref=f4e905]:
+              - rowgroup [ref=f4e914]:
+                - row [ref=f4e915]:
+                  - cell "ORD1790426640504RS7R" [ref=f4e916]
+                  - cell "李四" [ref=f4e918]
+                  - cell "¥9999" [ref=f4e920]
+                  - cell "iPhone 15 Pro Max x1" [ref=f4e922]
+                  - cell "已取消" [ref=f4e925]
+                  - cell "2026-09-26 12:44" [ref=f4e929]
+                  - cell [ref=f4e931]
+                - row [ref=f4e932]:
+                  - cell "ORD1790425822784UO2U" [ref=f4e933]
+                  - cell "张三" [ref=f4e935]
+                  - cell "¥9999" [ref=f4e937]
+                  - cell "iPhone 15 Pro Max x1" [ref=f4e939]
+                  - cell "待支付" [ref=f4e942]
+                  - cell "2026-09-26 12:30" [ref=f4e946]
+                  - cell [ref=f4e948]
+                - row [ref=f4e949]:
+                  - cell "ORD1790425219922EQBD" [ref=f4e950]
+                  - cell "张三" [ref=f4e952]
+                  - cell "¥18998" [ref=f4e954]
+                  - cell "Samsung Galaxy S24 Ultra x1, iPhone 15 Pro Max x1" [ref=f4e956]:
+                    - generic [ref=f4e957]:
+                      - generic [ref=f4e958]: Samsung Galaxy S24 Ultra x1,
+                      - generic [ref=f4e959]: iPhone 15 Pro Max x1
+                  - cell "待支付" [ref=f4e960]
+                  - cell "2026-09-26 12:20" [ref=f4e964]
+                  - cell [ref=f4e966]
+                - row [ref=f4e967]:
+                  - cell "ORD17904230977387Z79" [ref=f4e968]
+                  - cell "李四" [ref=f4e970]
+                  - cell "¥9999" [ref=f4e972]
+                  - cell "iPhone 15 Pro Max x1" [ref=f4e974]
+                  - cell "已取消" [ref=f4e977]
+                  - cell "2026-09-26 11:44" [ref=f4e981]
+                  - cell [ref=f4e983]
+                - row [ref=f4e984]:
+                  - cell "ORD1790421475277QPJD" [ref=f4e985]
+                  - cell "张三" [ref=f4e987]
+                  - cell "¥9999" [ref=f4e989]
+                  - cell "iPhone 15 Pro Max x1" [ref=f4e991]
+                  - cell "已退款" [ref=f4e994]
+                  - cell "2026-09-26 11:17" [ref=f4e998]
+                  - cell [ref=f4e1000]
+                - row [ref=f4e1001]:
+                  - cell "ORD17904214440661PR6" [ref=f4e1002]
+                  - cell "张三" [ref=f4e1004]
+                  - cell "¥9999" [ref=f4e1006]
+                  - cell "iPhone 15 Pro Max x1" [ref=f4e1008]
+                  - cell "已取消" [ref=f4e1011]
+                  - cell "2026-09-26 11:17" [ref=f4e1015]
+                  - cell [ref=f4e1017]
+                - row [ref=f4e1018]:
+                  - cell "ORD1790421267797ZS6Z" [ref=f4e1019]
+                  - cell "张三" [ref=f4e1021]
+                  - cell "¥19998" [ref=f4e1023]
+                  - cell "iPhone 15 Pro Max x2" [ref=f4e1025]
+                  - cell "已收货" [ref=f4e1028]
+                  - cell "2026-09-26 11:14" [ref=f4e1032]
+                  - cell [ref=f4e1034]
+                - row [ref=f4e1035]:
+                  - cell "ORD1790416735399RF7N" [ref=f4e1036]
+                  - cell "张三" [ref=f4e1038]
+                  - cell "¥19998" [ref=f4e1040]
+                  - cell "iPhone 15 Pro Max x2" [ref=f4e1042]
+                  - cell "已取消" [ref=f4e1045]
+                  - cell "2026-09-26 09:58" [ref=f4e1049]
+                  - cell [ref=f4e1051]
+                - row [ref=f4e1052]:
+                  - cell "ORD1790399818761D93T" [ref=f4e1053]
+                  - cell "张三" [ref=f4e1055]
+                  - cell "¥1799" [ref=f4e1057]
+                  - cell "AirPods Pro 2 x1" [ref=f4e1059]
+                  - cell "待支付" [ref=f4e1062]
+                  - cell "2026-09-26 05:16" [ref=f4e1066]
+                  - cell [ref=f4e1068]
+                - row [ref=f4e1069]:
+                  - cell "ORD1789364225448SCMX" [ref=f4e1070]
+                  - cell "管理员" [ref=f4e1072]
+                  - cell "¥41795" [ref=f4e1074]
+                  - cell "iPhone 15 Pro Max x4, AirPods Pro 2 x1" [ref=f4e1076]:
+                    - generic [ref=f4e1077]:
+                      - generic [ref=f4e1078]: iPhone 15 Pro Max x4,
+                      - generic [ref=f4e1079]: AirPods Pro 2 x1
+                  - cell "待支付" [ref=f4e1080]
+                  - cell "2026-09-14 05:37" [ref=f4e1084]
+                  - cell [ref=f4e1086]
+          - generic [ref=f4e1088]:
+            - button "上一页" [disabled] [ref=f4e1089]
+            - list [ref=f4e1090]:
+              - listitem "第 1 页" [ref=f4e1091]: "1"
+              - listitem "第 2 页" [ref=f4e1092] [cursor=pointer]: "2"
+              - listitem "第 3 页" [ref=f4e1093] [cursor=pointer]: "3"
+            - button "下一页" [ref=f4e1094] [cursor=pointer]

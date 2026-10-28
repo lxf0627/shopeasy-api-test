@@ -1,0 +1,63 @@
+- generic [ref=f10e3]:
+  - generic [ref=f10e5]:
+    - link "🛍️ ShopEasy" [ref=f10e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f10e8]:
+      - textbox "搜索商品..." [ref=f10e10]
+      - button [ref=f10e13] [cursor=pointer]
+    - generic [ref=f10e17]:
+      - generic [ref=f10e18]:
+        - button [ref=f10e19] [cursor=pointer]
+        - superscript [ref=f10e24]: "1"
+      - button "张 张三" [ref=f10e26] [cursor=pointer]:
+        - generic [ref=f10e27]: 张
+        - generic [ref=f10e28]: 张三
+  - main [ref=f10e29]:
+    - generic [ref=f10e30]:
+      - heading "确认订单" [level=2] [ref=f10e31]
+      - generic [ref=f10e32]:
+        - generic [ref=f10e33]:
+          - heading "收货地址" [level=3] [ref=f10e34]
+          - generic [ref=f10e35]:
+            - generic [ref=f10e37] [cursor=pointer]:
+              - radio "张三 13800000001 北京市北京市朝阳区三里屯路1号太古里北区 默认" [checked] [ref=f10e39]
+              - generic [ref=f10e41]:
+                - strong [ref=f10e42]: 张三
+                - text: 13800000001 北京市北京市朝阳区三里屯路1号太古里北区
+                - generic: 默认
+            - generic [ref=f10e44] [cursor=pointer]:
+              - radio "张三(公司) 13800000001 北京市北京市海淀区中关村大街1号理想国际大厦" [ref=f10e46]
+              - generic [ref=f10e48]:
+                - strong [ref=f10e49]: 张三(公司)
+                - text: 13800000001 北京市北京市海淀区中关村大街1号理想国际大厦
+            - generic [ref=f10e51] [cursor=pointer]:
+              - radio "测试地址人 13900001111 上海上海浦东新区张江高科" [ref=f10e53]
+              - generic [ref=f10e55]:
+                - strong [ref=f10e56]: 测试地址人
+                - text: 13900001111 上海上海浦东新区张江高科
+        - generic [ref=f10e57]:
+          - heading "商品清单" [level=3] [ref=f10e58]
+          - generic [ref=f10e60]:
+            - table [ref=f10e62]:
+              - rowgroup [ref=f10e68]:
+                - row [ref=f10e69]:
+                  - columnheader "商品" [ref=f10e70]
+                  - columnheader "单价" [ref=f10e72]
+                  - columnheader "数量" [ref=f10e74]
+                  - columnheader "小计" [ref=f10e76]
+            - table [ref=f10e82]:
+              - rowgroup [ref=f10e88]:
+                - row [ref=f10e89]:
+                  - cell "iPhone 15 Pro Max" [ref=f10e90]
+                  - cell "¥9999" [ref=f10e92]
+                  - cell "1" [ref=f10e94]
+                  - cell "¥9999.00" [ref=f10e96]
+        - generic [ref=f10e98]:
+          - heading "订单备注" [level=3] [ref=f10e99]
+          - generic [ref=f10e100]:
+            - textbox "选填" [ref=f10e101]
+            - status "0 / 500 个字符" [ref=f10e102]: 0 / 500
+        - generic [ref=f10e103]:
+          - generic [ref=f10e104]: "共 1 件商品，合计: ¥9999.00"
+          - button "提交订单" [ref=f10e105] [cursor=pointer]
+  - paragraph [ref=f10e108]: © 2024 ShopEasy — 测试用在线购物平台

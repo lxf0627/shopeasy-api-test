@@ -1,0 +1,8 @@
+- generic [ref=f7e96]:
+  - heading "🛍️ ShopEasy 登录" [level=2] [ref=f7e97]
+  - generic [ref=f7e98]:
+    - textbox "用户名" [ref=f7e107]
+    - textbox "密码" [ref=f7e117]
+    - button "登录" [ref=f7e120] [cursor=pointer]
+  - link "还没有账号？立即注册" [ref=f7e123] [cursor=pointer]:
+    - /url: /register

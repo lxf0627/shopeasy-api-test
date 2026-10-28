@@ -1,0 +1,180 @@
+- generic [ref=f8e243]:
+  - complementary [ref=f8e244]:
+    - generic [ref=f8e245]: ⚙️ 管理后台
+    - menubar [ref=f8e246]:
+      - menuitem [ref=f8e247] [cursor=pointer]
+      - menuitem [active] [ref=f8e251] [cursor=pointer]
+      - menuitem [ref=f8e255] [cursor=pointer]
+      - menuitem [ref=f8e259] [cursor=pointer]
+      - menuitem [ref=f8e263] [cursor=pointer]
+      - menuitem [ref=f8e267] [cursor=pointer]
+    - button "← 返回前台" [ref=f8e273] [cursor=pointer]
+  - generic [ref=f8e275]:
+    - generic [ref=f8e276]:
+      - generic [ref=f8e277]: 管理员（管理员）
+      - button "退出登录" [ref=f8e278] [cursor=pointer]
+    - main [ref=f8e280]:
+      - generic [ref=f8e383]:
+        - generic [ref=f8e384]:
+          - heading "商品管理" [level=2] [ref=f8e385]
+          - button "新增商品" [ref=f8e386] [cursor=pointer]
+        - generic [ref=f8e388]:
+          - generic [ref=f8e389]:
+            - textbox "搜索商品" [ref=f8e392]
+            - generic [ref=f8e395] [cursor=pointer]:
+              - generic:
+                - combobox [ref=f8e397]
+                - generic [ref=f8e398]: 状态
+            - button "搜索" [ref=f8e403] [cursor=pointer]
+          - generic [ref=f8e406]:
+            - table [ref=f8e408]:
+              - rowgroup [ref=f8e419]:
+                - row [ref=f8e420]:
+                  - columnheader "ID" [ref=f8e421]
+                  - columnheader "商品名称" [ref=f8e423]
+                  - columnheader "分类" [ref=f8e425]
+                  - columnheader "规格" [ref=f8e427]
+                  - columnheader "价格" [ref=f8e429]
+                  - columnheader "库存" [ref=f8e431]
+                  - columnheader "销量" [ref=f8e433]
+                  - columnheader "状态" [ref=f8e435]
+                  - columnheader "操作" [ref=f8e437]
+            - table [ref=f8e443]:
+              - rowgroup [ref=f8e454]:
+                - row [ref=f8e455]:
+                  - cell "1" [ref=f8e456]
+                  - cell "iPhone 15 Pro Max" [ref=f8e458]
+                  - cell "手机数码" [ref=f8e460]
+                  - cell "9种" [ref=f8e462]
+                  - cell "¥9999" [ref=f8e466]
+                  - cell "69" [ref=f8e468]
+                  - cell "2611" [ref=f8e470]
+                  - cell "上架" [ref=f8e472]
+                  - cell [ref=f8e476]:
+                    - generic [ref=f8e477]:
+                      - button "编辑" [ref=f8e478] [cursor=pointer]
+                      - button "下架" [ref=f8e480] [cursor=pointer]
+                - row [ref=f8e482]:
+                  - cell "2" [ref=f8e483]
+                  - cell "Samsung Galaxy S24 Ultra" [ref=f8e485]
+                  - cell "手机数码" [ref=f8e487]
+                  - cell "6种" [ref=f8e489]
+                  - cell "¥8999" [ref=f8e493]
+                  - cell "80" [ref=f8e495]
+                  - cell "1320" [ref=f8e497]
+                  - cell "上架" [ref=f8e499]
+                  - cell [ref=f8e503]:
+                    - generic [ref=f8e504]:
+                      - button "编辑" [ref=f8e505] [cursor=pointer]
+                      - button "下架" [ref=f8e507] [cursor=pointer]
+                - row [ref=f8e509]:
+                  - cell "3" [ref=f8e510]
+                  - cell "AirPods Pro 2" [ref=f8e512]
+                  - cell "手机数码" [ref=f8e514]
+                  - cell "无" [ref=f8e516]
+                  - cell "¥1799" [ref=f8e518]
+                  - cell "192" [ref=f8e520]
+                  - cell "3768" [ref=f8e522]
+                  - cell "上架" [ref=f8e524]
+                  - cell [ref=f8e528]:
+                    - generic [ref=f8e529]:
+                      - button "编辑" [ref=f8e530] [cursor=pointer]
+                      - button "下架" [ref=f8e532] [cursor=pointer]
+                - row [ref=f8e534]:
+                  - cell "4" [ref=f8e535]
+                  - cell "HUAWEI Mate 60 Pro" [ref=f8e537]
+                  - cell "手机数码" [ref=f8e539]
+                  - cell "6种" [ref=f8e541]
+                  - cell "¥6999" [ref=f8e545]
+                  - cell "60" [ref=f8e547]
+                  - cell "1890" [ref=f8e549]
+                  - cell "上架" [ref=f8e551]
+                  - cell [ref=f8e555]:
+                    - generic [ref=f8e556]:
+                      - button "编辑" [ref=f8e557] [cursor=pointer]
+                      - button "下架" [ref=f8e559] [cursor=pointer]
+                - row [ref=f8e561]:
+                  - cell "5" [ref=f8e562]
+                  - cell "Xiaomi 14 Ultra" [ref=f8e564]
+                  - cell "手机数码" [ref=f8e566]
+                  - cell "无" [ref=f8e568]
+                  - cell "¥5999" [ref=f8e570]
+                  - cell "120" [ref=f8e572]
+                  - cell "980" [ref=f8e574]
+                  - cell "上架" [ref=f8e576]
+                  - cell [ref=f8e580]:
+                    - generic [ref=f8e581]:
+                      - button "编辑" [ref=f8e582] [cursor=pointer]
+                      - button "下架" [ref=f8e584] [cursor=pointer]
+                - row [ref=f8e586]:
+                  - cell "6" [ref=f8e587]
+                  - cell "MacBook Pro 14英寸" [ref=f8e589]
+                  - cell "电脑办公" [ref=f8e591]
+                  - cell "4种" [ref=f8e593]
+                  - cell "¥14999" [ref=f8e597]
+                  - cell "50" [ref=f8e599]
+                  - cell "1210" [ref=f8e601]
+                  - cell "上架" [ref=f8e603]
+                  - cell [ref=f8e607]:
+                    - generic [ref=f8e608]:
+                      - button "编辑" [ref=f8e609] [cursor=pointer]
+                      - button "下架" [ref=f8e611] [cursor=pointer]
+                - row [ref=f8e613]:
+                  - cell "7" [ref=f8e614]
+                  - cell "ThinkPad X1 Carbon" [ref=f8e616]
+                  - cell "电脑办公" [ref=f8e618]
+                  - cell "无" [ref=f8e620]
+                  - cell "¥8999" [ref=f8e622]
+                  - cell "60" [ref=f8e624]
+                  - cell "650" [ref=f8e626]
+                  - cell "上架" [ref=f8e628]
+                  - cell [ref=f8e632]:
+                    - generic [ref=f8e633]:
+                      - button "编辑" [ref=f8e634] [cursor=pointer]
+                      - button "下架" [ref=f8e636] [cursor=pointer]
+                - row [ref=f8e638]:
+                  - cell "8" [ref=f8e639]
+                  - cell "iPad Air" [ref=f8e641]
+                  - cell "电脑办公" [ref=f8e643]
+                  - cell "9种" [ref=f8e645]
+                  - cell "¥5499" [ref=f8e649]
+                  - cell "90" [ref=f8e651]
+                  - cell "1430" [ref=f8e653]
+                  - cell "上架" [ref=f8e655]
+                  - cell [ref=f8e659]:
+                    - generic [ref=f8e660]:
+                      - button "编辑" [ref=f8e661] [cursor=pointer]
+                      - button "下架" [ref=f8e663] [cursor=pointer]
+                - row [ref=f8e665]:
+                  - cell "9" [ref=f8e666]
+                  - cell "Dell XPS 15" [ref=f8e668]
+                  - cell "电脑办公" [ref=f8e670]
+                  - cell "无" [ref=f8e672]
+                  - cell "¥11999" [ref=f8e674]
+                  - cell "35" [ref=f8e676]
+                  - cell "320" [ref=f8e678]
+                  - cell "上架" [ref=f8e680]
+                  - cell [ref=f8e684]:
+                    - generic [ref=f8e685]:
+                      - button "编辑" [ref=f8e686] [cursor=pointer]
+                      - button "下架" [ref=f8e688] [cursor=pointer]
+                - row [ref=f8e690]:
+                  - cell "10" [ref=f8e691]
+                  - cell "Logitech MX Master 3S" [ref=f8e693]
+                  - cell "电脑办公" [ref=f8e695]
+                  - cell "无" [ref=f8e697]
+                  - cell "¥699" [ref=f8e699]
+                  - cell "300" [ref=f8e701]
+                  - cell "2100" [ref=f8e703]
+                  - cell "上架" [ref=f8e705]
+                  - cell [ref=f8e709]:
+                    - generic [ref=f8e710]:
+                      - button "编辑" [ref=f8e711] [cursor=pointer]
+                      - button "下架" [ref=f8e713] [cursor=pointer]
+          - generic [ref=f8e716]:
+            - button "上一页" [disabled] [ref=f8e717]
+            - list [ref=f8e718]:
+              - listitem "第 1 页" [ref=f8e719]: "1"
+              - listitem "第 2 页" [ref=f8e720] [cursor=pointer]: "2"
+              - listitem "第 3 页" [ref=f8e721] [cursor=pointer]: "3"
+            - button "下一页" [ref=f8e722] [cursor=pointer]

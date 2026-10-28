@@ -1,0 +1,10 @@
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/auth/login
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"username": "buyer1", "password": "123456"}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "登录成功", "data": {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTE0NDExNzksImV4cCI6MTc5MjA0NTk3OX0.P8jUFomqvIKf1i5evddTAdgNaUpUcmYRh3tGDR-lGC0", "user": {"id": 2, "username": "buyer1", "role": "user", "nickname": "张三", "avatar": ""}}}
+[32mINFO    [0m api_client:api_client.py:33 Token已设置: eyJhbGciOiJIUzI1NiIs...
+[32mINFO    [0m api_client:api_client.py:125 用户 buyer1 登录成功
+[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/orders/99999
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 404
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 404, "message": "订单不存在", "data": null}
+[32mINFO    [0m api_client:api_client.py:134 API客户端会话已关闭

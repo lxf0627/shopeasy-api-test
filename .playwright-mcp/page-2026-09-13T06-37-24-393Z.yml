@@ -1,0 +1,23 @@
+- generic [ref=f7e3]:
+  - generic [ref=f7e5]:
+    - link "🛍️ ShopEasy" [ref=f7e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f7e8]:
+      - generic [ref=f7e9]:
+        - textbox "搜索商品..." [active] [ref=f7e10]: iPhone
+        - generic [ref=f7e230] [cursor=pointer]
+      - button [ref=f7e13] [cursor=pointer]
+    - generic [ref=f7e17]:
+      - button [ref=f7e19] [cursor=pointer]
+      - button "管 管理员" [ref=f7e25] [cursor=pointer]:
+        - generic [ref=f7e26]: 管
+        - generic [ref=f7e27]: 管理员
+  - main [ref=f7e28]:
+    - generic [ref=f7e234]:
+      - 'heading "搜索结果: \"iPhone\"" [level=2] [ref=f7e235]'
+      - generic [ref=f7e240] [cursor=pointer]:
+        - heading "iPhone 15 Pro Max" [level=4] [ref=f7e241]
+        - generic [ref=f7e242]:
+          - generic [ref=f7e243]: ¥9999
+          - generic [ref=f7e244]: 已售 2582
+  - paragraph [ref=f7e229]: © 2024 ShopEasy — 测试用在线购物平台

@@ -1,0 +1,56 @@
+- generic [ref=f8e522]:
+  - generic [ref=f8e524]:
+    - link "🛍️ ShopEasy" [ref=f8e525] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f8e527]:
+      - textbox "搜索商品..." [ref=f8e529]
+      - button [ref=f8e532] [cursor=pointer]
+    - generic [ref=f8e536]:
+      - button [ref=f8e538] [cursor=pointer]
+      - button "张 张三" [ref=f8e544] [cursor=pointer]:
+        - generic [ref=f8e545]: 张
+        - generic [ref=f8e546]: 张三
+  - main [ref=f8e547]:
+    - generic [ref=f8e948]:
+      - heading "确认订单" [level=2] [ref=f8e949]
+      - generic [ref=f8e950]:
+        - generic [ref=f8e951]:
+          - heading "收货地址" [level=3] [ref=f8e952]
+          - generic [ref=f8e953]:
+            - generic [ref=f8e955] [cursor=pointer]:
+              - radio "张三 13800000001 北京市北京市朝阳区三里屯路1号太古里北区 默认" [checked] [ref=f8e957]
+              - generic [ref=f8e959]:
+                - strong [ref=f8e960]: 张三
+                - text: 13800000001 北京市北京市朝阳区三里屯路1号太古里北区
+                - generic [ref=f8e961]: 默认
+            - generic [ref=f8e964] [cursor=pointer]:
+              - radio "张三(公司) 13800000001 北京市北京市海淀区中关村大街1号理想国际大厦" [ref=f8e966]
+              - generic [ref=f8e968]:
+                - strong [ref=f8e969]: 张三(公司)
+                - text: 13800000001 北京市北京市海淀区中关村大街1号理想国际大厦
+        - generic [ref=f8e970]:
+          - heading "商品清单" [level=3] [ref=f8e971]
+          - generic [ref=f8e973]:
+            - table [ref=f8e975]:
+              - rowgroup [ref=f8e981]:
+                - row [ref=f8e982]:
+                  - columnheader "商品" [ref=f8e983]
+                  - columnheader "单价" [ref=f8e985]
+                  - columnheader "数量" [ref=f8e987]
+                  - columnheader "小计" [ref=f8e989]
+            - table [ref=f8e995]:
+              - rowgroup [ref=f8e1001]:
+                - row [ref=f8e1002]:
+                  - cell "iPhone 15 Pro Max" [ref=f8e1003]
+                  - cell "¥9999" [ref=f8e1005]
+                  - cell "1" [ref=f8e1007]
+                  - cell "¥9999.00" [ref=f8e1009]
+        - generic [ref=f8e1011]:
+          - heading "订单备注" [level=3] [ref=f8e1012]
+          - generic [ref=f8e1013]:
+            - textbox "选填" [ref=f8e1014]
+            - status "0 / 500 个字符" [ref=f8e1015]: 0 / 500
+        - generic [ref=f8e1016]:
+          - generic [ref=f8e1017]: "共 1 件商品，合计: ¥9999.00"
+          - button "提交订单" [ref=f8e1018] [cursor=pointer]
+  - paragraph [ref=f8e744]: © 2024 ShopEasy — 测试用在线购物平台

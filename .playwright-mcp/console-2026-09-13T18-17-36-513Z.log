@@ -1,0 +1,37 @@
+[  384352ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=723d8929:1786
+[  384352ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=723d8929:1786
+[  648879ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:1002
+[  659632ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=723d8929:1786
+[  659633ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/node_modules/.vite/deps/vue.runtime.esm-bundler-2GDp7cey.js?v=723d8929:1786

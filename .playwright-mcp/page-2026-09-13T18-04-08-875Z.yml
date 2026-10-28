@@ -1,0 +1,76 @@
+- generic [ref=f3e252]:
+  - generic [ref=f3e254]:
+    - link "🛍️ ShopEasy" [ref=f3e255] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f3e257]:
+      - textbox "搜索商品..." [ref=f3e259]
+      - button [ref=f3e262] [cursor=pointer]
+    - generic [ref=f3e266]:
+      - generic [ref=f3e267]:
+        - button [ref=f3e268] [cursor=pointer]
+        - superscript [ref=f3e273]: "1"
+      - button "管 管理员" [ref=f3e275] [cursor=pointer]:
+        - generic [ref=f3e276]: 管
+        - generic [ref=f3e277]: 管理员
+  - main [ref=f3e278]:
+    - generic [ref=f3e575]:
+      - heading "确认订单" [level=2] [ref=f3e576]
+      - generic [ref=f3e577]:
+        - generic [ref=f3e578]:
+          - heading "收货地址" [level=3] [ref=f3e579]
+          - generic [ref=f3e580]:
+            - paragraph [ref=f3e581]: 暂无收货地址
+            - button "新增地址" [ref=f3e582] [cursor=pointer]
+        - generic [ref=f3e584]:
+          - heading "商品清单" [level=3] [ref=f3e585]
+          - generic [ref=f3e587]:
+            - table [ref=f3e589]:
+              - rowgroup [ref=f3e595]:
+                - row [ref=f3e596]:
+                  - columnheader "商品" [ref=f3e597]
+                  - columnheader "单价" [ref=f3e599]
+                  - columnheader "数量" [ref=f3e601]
+                  - columnheader "小计" [ref=f3e603]
+            - table [ref=f3e609]:
+              - rowgroup [ref=f3e615]:
+                - row [ref=f3e616]:
+                  - cell "iPhone 15 Pro Max" [ref=f3e617]
+                  - cell "¥9999" [ref=f3e619]
+                  - cell "1" [ref=f3e621]
+                  - cell "¥9999.00" [ref=f3e623]
+        - generic [ref=f3e625]:
+          - heading "订单备注" [level=3] [ref=f3e626]
+          - generic [ref=f3e627]:
+            - textbox "选填" [ref=f3e628]
+            - status "0 / 500 个字符" [ref=f3e629]: 0 / 500
+        - generic [ref=f3e630]:
+          - generic [ref=f3e631]: "共 1 件商品，合计: ¥9999.00"
+          - button "提交订单" [disabled] [ref=f3e632]
+      - dialog "新增地址" [ref=f3e635]:
+        - generic [active] [ref=f3e636]:
+          - generic [ref=f3e637]:
+            - heading "新增地址" [level=2] [ref=f3e638]
+            - button "关闭此对话框" [ref=f3e639] [cursor=pointer]
+          - generic [ref=f3e644]:
+            - generic [ref=f3e645]:
+              - generic [ref=f3e646]: 收货人
+              - textbox "收货人" [ref=f3e650]
+            - generic [ref=f3e651]:
+              - generic [ref=f3e652]: 手机号
+              - textbox "手机号" [ref=f3e656]
+            - generic [ref=f3e657]:
+              - generic [ref=f3e658]: 省份
+              - textbox "省份" [ref=f3e662]
+            - generic [ref=f3e663]:
+              - generic [ref=f3e664]: 城市
+              - textbox "城市" [ref=f3e668]
+            - generic [ref=f3e669]:
+              - generic [ref=f3e670]: 区县
+              - textbox "区县" [ref=f3e674]
+            - generic [ref=f3e675]:
+              - generic [ref=f3e676]: 详细地址
+              - textbox "详细地址" [ref=f3e680]
+          - generic [ref=f3e681]:
+            - button "取消" [ref=f3e682] [cursor=pointer]
+            - button "保存" [ref=f3e684] [cursor=pointer]
+  - paragraph [ref=f3e475]: © 2024 ShopEasy — 测试用在线购物平台

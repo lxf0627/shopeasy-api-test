@@ -1,0 +1,40 @@
+- generic [ref=e1]:
+  - generic [ref=e32]:
+    - generic [ref=e34]:
+      - link "🛍️ ShopEasy" [ref=e35] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e37]:
+        - textbox "搜索商品..." [ref=e39]
+        - button [ref=e42] [cursor=pointer]
+      - generic [ref=e46]:
+        - button [ref=e48] [cursor=pointer]
+        - button "张 张三" [expanded] [ref=e472] [cursor=pointer]:
+          - generic [ref=e55]: 张
+          - generic [ref=e56]: 张三
+    - main [ref=e57]:
+      - generic [ref=e419]:
+        - heading "个人中心" [level=2] [ref=e420]
+        - generic [ref=e421]:
+          - tablist [ref=e425]:
+            - tab "个人信息" [ref=e427]
+            - tab "修改密码" [selected] [ref=e428]
+            - tab "收货地址" [ref=e429]
+          - tabpanel "修改密码" [ref=e478]:
+            - generic [ref=e480]:
+              - generic [ref=e481]:
+                - generic [ref=e482]: "* 原密码"
+                - textbox "* 原密码" [ref=e486]
+              - generic [ref=e487]:
+                - generic [ref=e488]: "* 新密码"
+                - textbox "* 新密码" [ref=e492]
+              - generic [ref=e493]:
+                - generic [ref=e494]: "* 确认密码"
+                - textbox "* 确认密码" [ref=e498]
+              - button "修改密码" [ref=e501] [cursor=pointer]
+    - paragraph [ref=e255]: © 2024 ShopEasy — 测试用在线购物平台
+  - menu "张 张三" [active] [ref=e265]:
+    - menuitem "个人中心" [ref=e266] [cursor=pointer]
+    - menuitem "我的订单" [ref=e267] [cursor=pointer]
+    - menuitem "我的收藏" [ref=e268] [cursor=pointer]
+    - separator [ref=e269]
+    - menuitem "退出登录" [ref=e270] [cursor=pointer]

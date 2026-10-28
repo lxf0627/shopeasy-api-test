@@ -1,0 +1,21 @@
+[     931ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://via.placeholder.com/300:0
+[  251605ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:5173/api/admin/categories:0
+[  251608ms] [WARNING] [Vue warn]: Unhandled error during execution of component event handler 
+  at <ElButton type="primary" onClick=fn<handleSave> > 
+  at <ElDialogContent key=0 ref_key="dialogContentRef" ref=Ref< Proxy(Object) >  ... > 
+  at <ElFocusTrap loop="" trapped=true focus-start-el="container"  ... > 
+  at <ElOverlay custom-mask-event="" mask=true overlay-class= [, el-modal-dialog, ]  ... > 
+  at <BaseTransition onAfterEnter=fn<afterEnter> onBeforeLeave=fn<beforeLeave> onAfterLeave=fn<afterLeave>  ... > 
+  at <Transition name="dialog-fade" onAfterEnter=fn<afterEnter> onBeforeLeave=fn<beforeLeave>  ... > 
+  at <ElDialog modelValue=true onUpdate:modelValue=fn title="新增分类"  ... > 
+  at <CategoryManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  251609ms] AxiosError: Request failed with status code 400
+    at settle (http://localhost:5173/node_modules/.vite/deps/axios.js?v=5afd19c8:2078:14)
+    at XMLHttpRequest.onloadend (http://localhost:5173/node_modules/.vite/deps/axios.js?v=5afd19c8:2539:4)

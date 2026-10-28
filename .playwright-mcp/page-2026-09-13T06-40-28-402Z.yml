@@ -1,0 +1,111 @@
+- generic [ref=f8e3]:
+  - generic [ref=f8e5]:
+    - link "🛍️ ShopEasy" [ref=f8e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f8e8]:
+      - textbox "搜索商品..." [ref=f8e10]
+      - button [ref=f8e13] [cursor=pointer]
+    - generic [ref=f8e17]:
+      - button [ref=f8e19] [cursor=pointer]
+      - button "管 管理员" [ref=f8e25] [cursor=pointer]:
+        - generic [ref=f8e26]: 管
+        - generic [ref=f8e27]: 管理员
+  - main [ref=f8e28]:
+    - generic [ref=f8e29]:
+      - generic [ref=f8e30]:
+        - heading "商品分类" [level=3] [ref=f8e31]
+        - generic [ref=f8e32]:
+          - generic [ref=f8e33] [cursor=pointer]:
+            - generic [ref=f8e34]: 🔥
+            - generic [ref=f8e35]: 全部
+          - generic [ref=f8e36] [cursor=pointer]:
+            - generic [ref=f8e37]: 📱
+            - generic [ref=f8e38]: 手机数码
+          - generic [ref=f8e39] [cursor=pointer]:
+            - generic [ref=f8e40]: 💻
+            - generic [ref=f8e41]: 电脑办公
+          - generic [ref=f8e42] [cursor=pointer]:
+            - generic [ref=f8e43]: 🏠
+            - generic [ref=f8e44]: 家用电器
+          - generic [ref=f8e45] [cursor=pointer]:
+            - generic [ref=f8e46]: 👕
+            - generic [ref=f8e47]: 服装鞋包
+          - generic [ref=f8e48] [cursor=pointer]:
+            - generic [ref=f8e49]: 🍜
+            - generic [ref=f8e50]: 食品饮料
+          - generic [ref=f8e51] [cursor=pointer]:
+            - generic [ref=f8e52]: 📚
+            - generic [ref=f8e53]: 图书文具
+      - radiogroup "radio-group" [ref=f8e55]:
+        - generic [ref=f8e56]:
+          - radio "默认" [checked] [active] [ref=f8e57]
+          - generic [ref=f8e58] [cursor=pointer]: 默认
+        - generic [ref=f8e59]:
+          - radio "销量" [ref=f8e60]
+          - generic [ref=f8e61] [cursor=pointer]: 销量
+        - generic [ref=f8e62]:
+          - radio "价格↑" [ref=f8e63]
+          - generic [ref=f8e64] [cursor=pointer]: 价格↑
+        - generic [ref=f8e65]:
+          - radio "价格↓" [ref=f8e66]
+          - generic [ref=f8e67] [cursor=pointer]: 价格↓
+        - generic [ref=f8e68]:
+          - radio "评分" [ref=f8e69]
+          - generic [ref=f8e70] [cursor=pointer]: 评分
+      - generic [ref=f8e71]:
+        - generic [ref=f8e72] [cursor=pointer]:
+          - img "iPhone 15 Pro Max" [ref=f8e74]
+          - generic [ref=f8e75]:
+            - heading "iPhone 15 Pro Max" [level=4] [ref=f8e76]
+            - paragraph [ref=f8e77]: 苹果最新旗舰手机，A17 Pro芯片，钛金属边框，48MP主摄像头，USB-C接口
+            - generic [ref=f8e78]:
+              - generic [ref=f8e79]: ¥9999
+              - generic [ref=f8e80]: ¥10999
+            - generic [ref=f8e81]:
+              - generic [ref=f8e82]: 已售 2582
+              - generic [ref=f8e83]: ⭐ 4.8
+        - generic [ref=f8e84] [cursor=pointer]:
+          - img "Samsung Galaxy S24 Ultra" [ref=f8e86]
+          - generic [ref=f8e87]:
+            - heading "Samsung Galaxy S24 Ultra" [level=4] [ref=f8e88]
+            - paragraph [ref=f8e89]: 三星Galaxy AI手机，S Pen内置，2亿像素摄像头，钛金属边框
+            - generic [ref=f8e90]:
+              - generic [ref=f8e91]: ¥8999
+              - generic [ref=f8e92]: ¥9999
+            - generic [ref=f8e93]:
+              - generic [ref=f8e94]: 已售 1320
+              - generic [ref=f8e95]: ⭐ 4.7
+        - generic [ref=f8e96] [cursor=pointer]:
+          - img "AirPods Pro 2" [ref=f8e98]
+          - generic [ref=f8e99]:
+            - heading "AirPods Pro 2" [level=4] [ref=f8e100]
+            - paragraph [ref=f8e101]: 主动降噪，自适应透明模式，USB-C充电，个性化空间音频
+            - generic [ref=f8e102]:
+              - generic [ref=f8e103]: ¥1799
+              - generic [ref=f8e104]: ¥1999
+            - generic [ref=f8e105]:
+              - generic [ref=f8e106]: 已售 3760
+              - generic [ref=f8e107]: ⭐ 4.8
+        - generic [ref=f8e108] [cursor=pointer]:
+          - img "HUAWEI Mate 60 Pro" [ref=f8e110]
+          - generic [ref=f8e111]:
+            - heading "HUAWEI Mate 60 Pro" [level=4] [ref=f8e112]
+            - paragraph [ref=f8e113]: 华为旗舰手机，麒麟芯片，卫星通信，XMAGE影像系统
+            - generic [ref=f8e114]:
+              - generic [ref=f8e115]: ¥6999
+              - generic [ref=f8e116]: ¥7999
+            - generic [ref=f8e117]:
+              - generic [ref=f8e118]: 已售 1890
+              - generic [ref=f8e119]: ⭐ 4.6
+        - generic [ref=f8e120] [cursor=pointer]:
+          - img "Xiaomi 14 Ultra" [ref=f8e122]
+          - generic [ref=f8e123]:
+            - heading "Xiaomi 14 Ultra" [level=4] [ref=f8e124]
+            - paragraph [ref=f8e125]: 小米影像旗舰，徕卡光学，骁龙8 Gen3，5000mAh电池
+            - generic [ref=f8e126]:
+              - generic [ref=f8e127]: ¥5999
+              - generic [ref=f8e128]: ¥6499
+            - generic [ref=f8e129]:
+              - generic [ref=f8e130]: 已售 980
+              - generic [ref=f8e131]: ⭐ 4.5
+  - paragraph [ref=f8e229]: © 2024 ShopEasy — 测试用在线购物平台

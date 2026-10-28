@@ -1,0 +1,4 @@
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/auth/login
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"username": "disabled_user", "password": "123456"}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 403
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 403, "message": "账号已被禁用", "data": null}

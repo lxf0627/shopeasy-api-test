@@ -1,0 +1,25 @@
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/auth/login
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"username": "buyer1", "password": "123456"}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "登录成功", "data": {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InVzZXIiLCJpYXQiOjE3OTE0NDExNzgsImV4cCI6MTc5MjA0NTk3OH0.RP-55OlPtnzFhMIRdM4MmJOpmjIDhhNVOiaybI3LWa0", "user": {"id": 2, "username": "buyer1", "role": "user", "nickname": "张三", "avatar": ""}}}
+[32mINFO    [0m api_client:api_client.py:33 Token已设置: eyJhbGciOiJIUzI1NiIs...
+[32mINFO    [0m api_client:api_client.py:125 用户 buyer1 登录成功
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/cart
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"productId": 1, "skuId": 1, "quantity": 1}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 201
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 201, "message": "已加入购物车", "data": {"id": 3, "userId": 2, "productId": 1, "skuId": 1, "specText": "256GB / 原色钛金属", "quantity": 1, "selected": true, "createdAt": "2026-10-08T06:32:58.148Z", "updatedAt": "2026-10-08T06:32:58.148Z"}}
+[32mINFO    [0m api_client:api_client.py:65 请求: GET http://localhost:3000/api/addresses
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "ok", "data": [{"id": 1, "userId": 2, "name": "张三", "phone": "13800000001", "province": "北京市", "city": "北京市", "district": "朝阳区", "detail": "三里屯路1号太古里北区", "isDefault": true, "createdAt": "2026-09-09T06:46:06.601Z", "updatedAt": "2026-09-09T06:46:06.601Z"}, {"id": 2, "userId": 2, "name": "张三(公司)", "phone": "13800000001", "province": "北京市", "city": "北京市", "district": "海淀区", "detail": "中关村大街1号理想国际大厦", "isDefault": false, "createdAt": "2026-09-09T06:46:06.601Z", "updatedAt": "2026-09-09T06:46:06.601Z"}]}
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/orders
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"addressId": 1}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 201
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 201, "message": "订单创建成功", "data": {"id": 116, "orderNo": "ORD1791441178161THZ2", "userId": 2, "totalAmount": 9999, "status": "pending", "addressSnapshot": "{\"id\":1,\"userId\":2,\"name\":\"张三\",\"phone\":\"13800000001\",\"province\":\"北京市\",\"city\":\"北京市\",\"district\":\"朝阳区\",\"detail\":\"三里屯路1号太古里北区\",\"isDefault\":true,\"createdAt\":\"2026-09-09T06:46:06.601Z\",\"updatedAt\":\"2026-09-09T06:46:06.601Z\"}", "remark": "", "createdAt": "2026-10-08T06:32:58.161Z", "updatedAt": "2026-10-08T06:32:58.161Z"}}
+[32mINFO    [0m api_client:api_client.py:65 请求: POST http://localhost:3000/api/orders/116/pay
+[32mINFO    [0m api_client:api_client.py:67 请求体: {"method": "balance"}
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 200
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 200, "message": "支付成功", "data": {"order": {"id": 116, "orderNo": "ORD1791441178161THZ2", "userId": 2, "totalAmount": 9999, "status": "paid", "addressSnapshot": "{\"id\":1,\"userId\":2,\"name\":\"张三\",\"phone\":\"13800000001\",\"province\":\"北京市\",\"city\":\"北京市\",\"district\":\"朝阳区\",\"detail\":\"三里屯路1号太古里北区\",\"isDefault\":true,\"createdAt\":\"2026-09-09T06:46:06.601Z\",\"updatedAt\":\"2026-09-09T06:46:06.601Z\"}", "remark": "", "createdAt": "2026-10-08T06:32:58.161Z", "updatedAt": "2026-10-08T06:32:58.198Z", "payTime": "2026-10-08T06:32:58.198Z"}, "payment": {"id": 37, "orderId": 116, "method": "balance", "amount": 9999, "status": "success", "paidAt": "2026-10-08T06:32:58.196Z", "createdAt": "2026-10-08T06:32:58.196Z", "updatedAt": "2026-10-08T06:32:58.196Z"}}}
+[32mINFO    [0m api_client:api_client.py:65 请求: PUT http://localhost:3000/api/orders/116/cancel
+[32mINFO    [0m api_client:api_client.py:80 响应状态码: 400
+[32mINFO    [0m api_client:api_client.py:83 响应体: {"code": 400, "message": "只能取消待支付的订单", "data": null}
+[32mINFO    [0m api_client:api_client.py:134 API客户端会话已关闭

@@ -1,0 +1,124 @@
+- generic [ref=f1e254]:
+  - generic [ref=f1e256]:
+    - link "🛍️ ShopEasy" [ref=f1e257] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f1e259]:
+      - textbox "搜索商品..." [ref=f1e261]
+      - button [ref=f1e264] [cursor=pointer]
+    - generic [ref=f1e268]:
+      - button [ref=f1e270] [cursor=pointer]
+      - button "李 李四" [ref=f1e276] [cursor=pointer]:
+        - generic [ref=f1e277]: 李
+        - generic [ref=f1e278]: 李四
+  - main [ref=f1e279]:
+    - generic [ref=f1e280]:
+      - generic [ref=f1e281]:
+        - heading "商品分类" [level=3] [ref=f1e282]
+        - generic [ref=f1e283]:
+          - generic [ref=f1e284] [cursor=pointer]:
+            - generic [ref=f1e285]: 🔥
+            - generic [ref=f1e286]: 全部
+          - generic [ref=f1e287] [cursor=pointer]:
+            - generic [ref=f1e288]: 📱
+            - generic [ref=f1e289]: 手机数码
+          - generic [ref=f1e290] [cursor=pointer]:
+            - generic [ref=f1e291]: 💻
+            - generic [ref=f1e292]: 电脑办公
+          - generic [ref=f1e293] [cursor=pointer]:
+            - generic [ref=f1e294]: 🏠
+            - generic [ref=f1e295]: 家用电器
+          - generic [ref=f1e296] [cursor=pointer]:
+            - generic [ref=f1e297]: 👕
+            - generic [ref=f1e298]: 服装鞋包
+          - generic [ref=f1e299] [cursor=pointer]:
+            - generic [ref=f1e300]: 🍜
+            - generic [ref=f1e301]: 食品饮料
+          - generic [ref=f1e302] [cursor=pointer]:
+            - generic [ref=f1e303]: 📚
+            - generic [ref=f1e304]: 图书文具
+      - radiogroup "radio-group" [ref=f1e306]:
+        - generic [ref=f1e307]:
+          - radio "默认" [checked] [ref=f1e308]
+          - generic [ref=f1e309] [cursor=pointer]: 默认
+        - generic [ref=f1e310]:
+          - radio "销量" [ref=f1e311]
+          - generic [ref=f1e312] [cursor=pointer]: 销量
+        - generic [ref=f1e313]:
+          - radio "价格↑" [ref=f1e314]
+          - generic [ref=f1e315] [cursor=pointer]: 价格↑
+        - generic [ref=f1e316]:
+          - radio "价格↓" [ref=f1e317]
+          - generic [ref=f1e318] [cursor=pointer]: 价格↓
+        - generic [ref=f1e319]:
+          - radio "评分" [ref=f1e320]
+          - generic [ref=f1e321] [cursor=pointer]: 评分
+      - generic [ref=f1e322]:
+        - generic [ref=f1e519] [cursor=pointer]:
+          - generic [ref=f1e520]:
+            - img "测试商品-零库存" [ref=f1e521]
+            - generic [ref=f1e522]: 已售罄
+          - generic [ref=f1e523]:
+            - heading "测试商品-零库存" [level=4] [ref=f1e524]
+            - paragraph [ref=f1e525]: 自动化测试创建的零库存商品
+            - generic [ref=f1e526]:
+              - generic [ref=f1e527]: ¥999
+              - generic [ref=f1e528]: ¥1099
+            - generic [ref=f1e529]:
+              - generic [ref=f1e530]: 已售 0
+              - generic [ref=f1e531]: ⭐ 5
+        - generic [ref=f1e532] [cursor=pointer]:
+          - img "iPhone 15 Pro Max" [ref=f1e534]
+          - generic [ref=f1e535]:
+            - heading "iPhone 15 Pro Max" [level=4] [ref=f1e536]
+            - paragraph [ref=f1e537]: 苹果最新旗舰手机，A17 Pro芯片，钛金属边框，48MP主摄像头，USB-C接口
+            - generic [ref=f1e538]:
+              - generic [ref=f1e539]: ¥9999
+              - generic [ref=f1e540]: ¥10999
+            - generic [ref=f1e541]:
+              - generic [ref=f1e542]: 已售 2616
+              - generic [ref=f1e543]: ⭐ 4.8
+        - generic [ref=f1e544] [cursor=pointer]:
+          - img "Samsung Galaxy S24 Ultra" [ref=f1e546]
+          - generic [ref=f1e547]:
+            - heading "Samsung Galaxy S24 Ultra" [level=4] [ref=f1e548]
+            - paragraph [ref=f1e549]: 三星Galaxy AI手机，S Pen内置，2亿像素摄像头，钛金属边框
+            - generic [ref=f1e550]:
+              - generic [ref=f1e551]: ¥8999
+              - generic [ref=f1e552]: ¥9999
+            - generic [ref=f1e553]:
+              - generic [ref=f1e554]: 已售 1321
+              - generic [ref=f1e555]: ⭐ 4.7
+        - generic [ref=f1e556] [cursor=pointer]:
+          - img "AirPods Pro 2" [ref=f1e558]
+          - generic [ref=f1e559]:
+            - heading "AirPods Pro 2" [level=4] [ref=f1e560]
+            - paragraph [ref=f1e561]: 主动降噪，自适应透明模式，USB-C充电，个性化空间音频
+            - generic [ref=f1e562]:
+              - generic [ref=f1e563]: ¥1799
+              - generic [ref=f1e564]: ¥1999
+            - generic [ref=f1e565]:
+              - generic [ref=f1e566]: 已售 3768
+              - generic [ref=f1e567]: ⭐ 4.8
+        - generic [ref=f1e568] [cursor=pointer]:
+          - img "HUAWEI Mate 60 Pro" [ref=f1e570]
+          - generic [ref=f1e571]:
+            - heading "HUAWEI Mate 60 Pro" [level=4] [ref=f1e572]
+            - paragraph [ref=f1e573]: 华为旗舰手机，麒麟芯片，卫星通信，XMAGE影像系统
+            - generic [ref=f1e574]:
+              - generic [ref=f1e575]: ¥6999
+              - generic [ref=f1e576]: ¥7999
+            - generic [ref=f1e577]:
+              - generic [ref=f1e578]: 已售 1890
+              - generic [ref=f1e579]: ⭐ 4.6
+        - generic [ref=f1e580] [cursor=pointer]:
+          - img "Xiaomi 14 Ultra" [ref=f1e582]
+          - generic [ref=f1e583]:
+            - heading "Xiaomi 14 Ultra" [level=4] [ref=f1e584]
+            - paragraph [ref=f1e585]: 小米影像旗舰，徕卡光学，骁龙8 Gen3，5000mAh电池
+            - generic [ref=f1e586]:
+              - generic [ref=f1e587]: ¥5999
+              - generic [ref=f1e588]: ¥6499
+            - generic [ref=f1e589]:
+              - generic [ref=f1e590]: 已售 980
+              - generic [ref=f1e591]: ⭐ 4.5
+  - paragraph [ref=f1e477]: © 2024 ShopEasy — 测试用在线购物平台

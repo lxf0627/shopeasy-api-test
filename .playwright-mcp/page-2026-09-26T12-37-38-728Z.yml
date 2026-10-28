@@ -1,0 +1,35 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e32]:
+    - generic [ref=e34]:
+      - link "🛍️ ShopEasy" [ref=e35] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e37]:
+        - textbox "搜索商品..." [ref=e39]
+        - button [ref=e42] [cursor=pointer]
+      - generic [ref=e46]:
+        - button [ref=e48] [cursor=pointer]
+        - button "张 张三" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 张
+          - generic [ref=e56]: 张三
+    - main [ref=e57]:
+      - generic [ref=e375]:
+        - heading "❤️ 我的收藏" [level=2] [ref=e376]
+        - generic [ref=e377]:
+          - generic [ref=e390] [cursor=pointer]:
+            - heading "MacBook Pro 14英寸" [level=4] [ref=e391]
+            - generic [ref=e392]:
+              - generic [ref=e393]: ¥14999
+              - button "取消收藏" [ref=e394]
+          - generic [ref=e399] [cursor=pointer]:
+            - heading "Nike Air Max 270" [level=4] [ref=e400]
+            - generic [ref=e401]:
+              - generic [ref=e402]: ¥899
+              - button "取消收藏" [ref=e403]
+          - generic [ref=e408] [cursor=pointer]:
+            - heading "JavaScript高级程序设计(第4版)" [level=4] [ref=e409]
+            - generic [ref=e410]:
+              - generic [ref=e411]: ¥89
+              - button "取消收藏" [ref=e412]
+    - paragraph [ref=e255]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=e414]:
+    - paragraph [ref=e418]: 已取消收藏

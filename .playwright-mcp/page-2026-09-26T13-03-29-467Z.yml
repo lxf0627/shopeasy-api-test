@@ -1,0 +1,68 @@
+- generic [ref=f7e247]:
+  - complementary [ref=f7e248]:
+    - generic [ref=f7e249]: ⚙️ 管理后台
+    - menubar [ref=f7e250]:
+      - menuitem [active] [ref=f7e251] [cursor=pointer]
+      - menuitem [ref=f7e255] [cursor=pointer]
+      - menuitem [ref=f7e259] [cursor=pointer]
+      - menuitem [ref=f7e263] [cursor=pointer]
+      - menuitem [ref=f7e267] [cursor=pointer]
+      - menuitem [ref=f7e271] [cursor=pointer]
+    - button "← 返回前台" [ref=f7e277] [cursor=pointer]
+  - generic [ref=f7e279]:
+    - generic [ref=f7e280]:
+      - generic [ref=f7e281]: 管理员（管理员）
+      - button "退出登录" [ref=f7e282] [cursor=pointer]
+    - main [ref=f7e284]:
+      - generic [ref=f7e285]:
+        - heading "📊 数据概览" [level=2] [ref=f7e286]
+        - generic [ref=f7e287]:
+          - generic [ref=f7e288]:
+            - generic [ref=f7e289]: "6"
+            - generic [ref=f7e290]: 用户总数
+          - generic [ref=f7e291]:
+            - generic [ref=f7e292]: "28"
+            - generic [ref=f7e293]: 商品总数
+          - generic [ref=f7e294]:
+            - generic [ref=f7e295]: "25"
+            - generic [ref=f7e296]: 订单总数
+          - generic [ref=f7e297]:
+            - generic [ref=f7e298]: ¥36024.00
+            - generic [ref=f7e299]: 总营收
+        - generic [ref=f7e300]:
+          - heading "最近订单" [level=3] [ref=f7e301]
+          - generic [ref=f7e303]:
+            - table [ref=f7e305]:
+              - rowgroup [ref=f7e311]:
+                - row [ref=f7e312]:
+                  - columnheader "订单号" [ref=f7e313]
+                  - columnheader "用户" [ref=f7e315]
+                  - columnheader "金额" [ref=f7e317]
+                  - columnheader "状态" [ref=f7e319]
+            - table [ref=f7e325]:
+              - rowgroup [ref=f7e331]:
+                - row [ref=f7e332]:
+                  - cell "ORD1790426640504RS7R" [ref=f7e333]
+                  - cell "buyer2" [ref=f7e335]
+                  - cell "¥9999" [ref=f7e337]
+                  - cell "已取消" [ref=f7e339]
+                - row [ref=f7e343]:
+                  - cell "ORD1790425822784UO2U" [ref=f7e344]
+                  - cell "buyer1" [ref=f7e346]
+                  - cell "¥9999" [ref=f7e348]
+                  - cell "待支付" [ref=f7e350]
+                - row [ref=f7e354]:
+                  - cell "ORD1790425219922EQBD" [ref=f7e355]
+                  - cell "buyer1" [ref=f7e357]
+                  - cell "¥18998" [ref=f7e359]
+                  - cell "待支付" [ref=f7e361]
+                - row [ref=f7e365]:
+                  - cell "ORD17904230977387Z79" [ref=f7e366]
+                  - cell "buyer2" [ref=f7e368]
+                  - cell "¥9999" [ref=f7e370]
+                  - cell "已取消" [ref=f7e372]
+                - row [ref=f7e376]:
+                  - cell "ORD1790421475277QPJD" [ref=f7e377]
+                  - cell "buyer1" [ref=f7e379]
+                  - cell "¥9999" [ref=f7e381]
+                  - cell "已退款" [ref=f7e383]

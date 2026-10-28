@@ -1,0 +1,59 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e3]:
+    - generic [ref=f2e5]:
+      - link "🛍️ ShopEasy" [ref=f2e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f2e8]:
+        - textbox "搜索商品..." [ref=f2e10]
+        - button [ref=f2e13] [cursor=pointer]
+      - generic [ref=f2e17]:
+        - button [ref=f2e19] [cursor=pointer]
+        - button "张 张三" [ref=f2e35] [cursor=pointer]:
+          - generic [ref=f2e26]: 张
+          - generic [ref=f2e36]: 张三
+    - main [ref=f2e27]:
+      - generic [ref=f2e475]:
+        - generic [ref=f2e476]:
+          - heading "订单详情" [level=2] [ref=f2e477]
+          - generic [ref=f2e478]: 已取消
+        - table [ref=f2e482]:
+          - rowgroup [ref=f2e483]:
+            - row [ref=f2e484]:
+              - cell "订单号" [ref=f2e485]
+              - cell "ORD1790416735399RF7N" [ref=f2e486]
+              - cell "下单时间" [ref=f2e487]
+              - cell "2026-09-26 09:58" [ref=f2e488]
+            - row [ref=f2e489]:
+              - cell "收货人" [ref=f2e490]
+              - cell [ref=f2e491]
+              - cell "手机号" [ref=f2e492]
+              - cell [ref=f2e493]
+            - row [ref=f2e494]:
+              - cell "收货地址" [ref=f2e495]
+              - cell [ref=f2e496]
+            - row [ref=f2e497]:
+              - cell "备注" [ref=f2e498]
+              - cell "无" [ref=f2e499]
+        - heading "商品清单" [level=3] [ref=f2e500]
+        - generic [ref=f2e502]:
+          - table [ref=f2e504]:
+            - rowgroup [ref=f2e510]:
+              - row [ref=f2e511]:
+                - columnheader "商品" [ref=f2e512]
+                - columnheader "单价" [ref=f2e514]
+                - columnheader "数量" [ref=f2e516]
+                - columnheader "小计" [ref=f2e518]
+          - table [ref=f2e524]:
+            - rowgroup [ref=f2e530]:
+              - row [ref=f2e531]:
+                - cell "iPhone 15 Pro Max 256GB / 原色钛金属" [ref=f2e532]:
+                  - generic [ref=f2e533]:
+                    - text: iPhone 15 Pro Max
+                    - generic [ref=f2e534]: 256GB / 原色钛金属
+                - cell "¥9999" [ref=f2e536]
+                - cell "2" [ref=f2e538]
+                - cell "¥19998.00" [ref=f2e540]
+        - generic [ref=f2e542]: "合计: ¥19998"
+    - paragraph [ref=f2e34]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=f2e566]:
+    - paragraph [ref=f2e570]: 订单已取消

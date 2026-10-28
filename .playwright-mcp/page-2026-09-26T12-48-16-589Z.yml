@@ -1,0 +1,43 @@
+- generic [ref=f7e1]:
+  - generic [ref=f7e3]:
+    - generic [ref=f7e5]:
+      - link "🛍️ ShopEasy" [ref=f7e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f7e8]:
+        - textbox "搜索商品..." [ref=f7e10]
+        - button [ref=f7e13] [cursor=pointer]
+      - generic [ref=f7e17]:
+        - button [ref=f7e19] [cursor=pointer]
+        - button "李 李四" [ref=f7e78] [cursor=pointer]:
+          - generic [ref=f7e26]: 李
+          - generic [ref=f7e27]: 李四
+    - main [ref=f7e28]:
+      - generic [ref=f7e29]:
+        - heading "个人中心" [level=2] [ref=f7e30]
+        - generic [ref=f7e31]:
+          - tablist [ref=f7e35]:
+            - tab "个人信息" [selected] [ref=f7e37]
+            - tab "修改密码" [ref=f7e38]
+            - tab "收货地址" [ref=f7e39]
+          - generic [ref=f7e40]:
+            - tabpanel "个人信息" [ref=f7e41]:
+              - generic [ref=f7e43]:
+                - group "头像" [ref=f7e44]:
+                  - generic [ref=f7e46]: 李
+                - generic [ref=f7e48]:
+                  - generic [ref=f7e49]: 用户名
+                  - textbox "用户名" [disabled] [ref=f7e53]: buyer2
+                - generic [ref=f7e54]:
+                  - generic [ref=f7e55]: 昵称
+                  - textbox "昵称" [ref=f7e59]: 李四
+                - generic [ref=f7e60]:
+                  - generic [ref=f7e61]: 邮箱
+                  - textbox "邮箱" [ref=f7e65]: lisi@test.com
+                - generic [ref=f7e66]:
+                  - generic [ref=f7e67]: 手机号
+                  - textbox "手机号" [ref=f7e71]: "13800000002"
+                - button "保存修改" [active] [ref=f7e74] [cursor=pointer]
+            - text: "* * *"
+    - paragraph [ref=f7e77]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=f7e79]:
+    - paragraph [ref=f7e83]: 更新成功

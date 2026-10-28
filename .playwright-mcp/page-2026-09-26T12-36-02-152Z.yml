@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e32]:
+    - generic [ref=e34]:
+      - link "🛍️ ShopEasy" [ref=e35] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e37]:
+        - textbox "搜索商品..." [ref=e39]
+        - button [ref=e42] [cursor=pointer]
+      - generic [ref=e46]:
+        - button [ref=e48] [cursor=pointer]
+        - button "张 张三" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 张
+          - generic [ref=e56]: 张三
+    - main [ref=e57]:
+      - generic [ref=e272]:
+        - heading "个人中心" [level=2] [ref=e273]
+        - generic [ref=e274]:
+          - tablist [ref=e278]:
+            - tab "个人信息" [ref=e280]
+            - tab "修改密码" [ref=e281]
+            - tab "收货地址" [selected] [ref=e282]
+          - generic [ref=e283]:
+            - text: "* * *"
+            - tabpanel "收货地址" [ref=e319]:
+              - generic [ref=e320]:
+                - button "新增地址" [ref=e321] [cursor=pointer]
+                - generic [ref=e323]:
+                  - generic [ref=e324]:
+                    - strong [ref=e325]: 张三
+                    - text: "13800000001"
+                    - generic [ref=e326]: 默认
+                    - paragraph [ref=e328]: 北京市北京市朝阳区三里屯路1号太古里北区
+                  - generic [ref=e329]:
+                    - button "编辑" [ref=e330] [cursor=pointer]
+                    - button "删除" [ref=e332] [cursor=pointer]
+                - generic [ref=e334]:
+                  - generic [ref=e335]:
+                    - strong [ref=e336]: 张三(公司)
+                    - text: "13800000001"
+                    - paragraph [ref=e337]: 北京市北京市海淀区中关村大街1号理想国际大厦
+                  - generic [ref=e338]:
+                    - button "编辑" [ref=e339] [cursor=pointer]
+                    - button "删除" [ref=e341] [cursor=pointer]
+    - paragraph [ref=e255]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=e370]:
+    - paragraph [ref=e374]: 已删除

@@ -1,0 +1,32 @@
+[   46847ms] [WARNING] [Vue warn]: Unhandled error during execution of component event handler 
+  at <ElButton type="danger" text="" onClick=fn<onClick> > 
+  at <TableTdWrapper style= {} class="el-table_1_column_6 el-table__cell" key="0,5"  ... > 
+  at <ElTableBody context= {uid: 120, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object] style= {width: 100%} onSelectionChange=fn<handleSelectionChange> > 
+  at <CartView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[   46919ms] cancel
+[   60121ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[   60122ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" > 
+  at <OrderList onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="main" > 
+  at <ElContainer class="layout" > 
+  at <MainLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532

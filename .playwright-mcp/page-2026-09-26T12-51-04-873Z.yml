@@ -1,0 +1,180 @@
+- generic [ref=f10e244]:
+  - complementary [ref=f10e245]:
+    - generic [ref=f10e246]: ⚙️ 管理后台
+    - menubar [ref=f10e247]:
+      - menuitem [ref=f10e248] [cursor=pointer]
+      - menuitem [ref=f10e252] [cursor=pointer]
+      - menuitem [ref=f10e256] [cursor=pointer]
+      - menuitem [ref=f10e260] [cursor=pointer]
+      - menuitem [ref=f10e264] [cursor=pointer]
+      - menuitem [ref=f10e268] [cursor=pointer]
+    - button "← 返回前台" [ref=f10e274] [cursor=pointer]
+  - generic [ref=f10e276]:
+    - generic [ref=f10e277]:
+      - generic [ref=f10e278]: 管理员（管理员）
+      - button "退出登录" [ref=f10e279] [cursor=pointer]
+    - main [ref=f10e281]:
+      - generic [ref=f10e384]:
+        - generic [ref=f10e385]:
+          - heading "商品管理" [level=2] [ref=f10e386]
+          - button "新增商品" [ref=f10e387] [cursor=pointer]
+        - generic [ref=f10e389]:
+          - generic [ref=f10e390]:
+            - textbox "搜索商品" [ref=f10e393]
+            - generic [ref=f10e396] [cursor=pointer]:
+              - generic:
+                - combobox [ref=f10e398]
+                - generic [ref=f10e399]: 状态
+            - button "搜索" [ref=f10e404] [cursor=pointer]
+          - generic [ref=f10e407]:
+            - table [ref=f10e409]:
+              - rowgroup [ref=f10e420]:
+                - row [ref=f10e421]:
+                  - columnheader "ID" [ref=f10e422]
+                  - columnheader "商品名称" [ref=f10e424]
+                  - columnheader "分类" [ref=f10e426]
+                  - columnheader "规格" [ref=f10e428]
+                  - columnheader "价格" [ref=f10e430]
+                  - columnheader "库存" [ref=f10e432]
+                  - columnheader "销量" [ref=f10e434]
+                  - columnheader "状态" [ref=f10e436]
+                  - columnheader "操作" [ref=f10e438]
+            - table [ref=f10e444]:
+              - rowgroup [ref=f10e455]:
+                - row [ref=f10e865]:
+                  - cell "9" [ref=f10e866]
+                  - cell "Dell XPS 15" [ref=f10e867]
+                  - cell "电脑办公" [ref=f10e868]
+                  - cell "无" [ref=f10e463]
+                  - cell "¥11999" [ref=f10e869]
+                  - cell "35" [ref=f10e870]
+                  - cell "320" [ref=f10e871]
+                  - cell "上架" [ref=f10e471]
+                  - cell [ref=f10e475]:
+                    - generic [ref=f10e476]:
+                      - button "编辑" [ref=f10e477] [cursor=pointer]
+                      - button "下架" [ref=f10e479] [cursor=pointer]
+                - row [ref=f10e872]:
+                  - cell "10" [ref=f10e873]
+                  - cell "Logitech MX Master 3S" [ref=f10e874]
+                  - cell "电脑办公" [ref=f10e875]
+                  - cell "无" [ref=f10e876]
+                  - cell "¥699" [ref=f10e877]
+                  - cell "300" [ref=f10e878]
+                  - cell "2100" [ref=f10e879]
+                  - cell "上架" [ref=f10e498]
+                  - cell [ref=f10e502]:
+                    - generic [ref=f10e503]:
+                      - button "编辑" [ref=f10e504] [cursor=pointer]
+                      - button "下架" [ref=f10e506] [cursor=pointer]
+                - row [ref=f10e880]:
+                  - cell "11" [ref=f10e881]
+                  - cell "Dyson V15 Detect" [ref=f10e882]
+                  - cell "家用电器" [ref=f10e883]
+                  - cell "无" [ref=f10e884]
+                  - cell "¥4990" [ref=f10e885]
+                  - cell "201" [ref=f10e886]
+                  - cell "1420" [ref=f10e887]
+                  - cell "上架" [ref=f10e525]
+                  - cell [ref=f10e529]:
+                    - generic [ref=f10e530]:
+                      - button "编辑" [ref=f10e531] [cursor=pointer]
+                      - button "下架" [ref=f10e533] [cursor=pointer]
+                - row [ref=f10e888]:
+                  - cell "12" [ref=f10e889]
+                  - cell "小米电视 65英寸" [ref=f10e890]
+                  - cell "家用电器" [ref=f10e891]
+                  - cell "无" [ref=f10e542]
+                  - cell "¥3999" [ref=f10e892]
+                  - cell "150" [ref=f10e893]
+                  - cell "2680" [ref=f10e894]
+                  - cell "上架" [ref=f10e550]
+                  - cell [ref=f10e554]:
+                    - generic [ref=f10e555]:
+                      - button "编辑" [ref=f10e556] [cursor=pointer]
+                      - button "下架" [ref=f10e558] [cursor=pointer]
+                - row [ref=f10e895]:
+                  - cell "13" [ref=f10e896]
+                  - cell "海底捞自热火锅" [ref=f10e897]
+                  - cell "家用电器" [ref=f10e898]
+                  - cell "无" [ref=f10e899]
+                  - cell "¥39.9" [ref=f10e900]
+                  - cell "500" [ref=f10e901]
+                  - cell "8500" [ref=f10e902]
+                  - cell "上架" [ref=f10e577]
+                  - cell [ref=f10e581]:
+                    - generic [ref=f10e582]:
+                      - button "编辑" [ref=f10e583] [cursor=pointer]
+                      - button "下架" [ref=f10e585] [cursor=pointer]
+                - row [ref=f10e903]:
+                  - cell "14" [ref=f10e904]
+                  - cell "飞利浦空气炸锅" [ref=f10e905]
+                  - cell "家用电器" [ref=f10e906]
+                  - cell "无" [ref=f10e594]
+                  - cell "¥499" [ref=f10e907]
+                  - cell "180" [ref=f10e908]
+                  - cell "3200" [ref=f10e909]
+                  - cell "上架" [ref=f10e602]
+                  - cell [ref=f10e606]:
+                    - generic [ref=f10e607]:
+                      - button "编辑" [ref=f10e608] [cursor=pointer]
+                      - button "下架" [ref=f10e610] [cursor=pointer]
+                - row [ref=f10e910]:
+                  - cell "15" [ref=f10e911]
+                  - cell "Nike Air Max 270" [ref=f10e912]
+                  - cell "服装鞋包" [ref=f10e913]
+                  - cell "15种" [ref=f10e914]
+                  - cell "¥899" [ref=f10e915]
+                  - cell "300" [ref=f10e916]
+                  - cell "4200" [ref=f10e917]
+                  - cell "上架" [ref=f10e629]
+                  - cell [ref=f10e633]:
+                    - generic [ref=f10e634]:
+                      - button "编辑" [ref=f10e635] [cursor=pointer]
+                      - button "下架" [ref=f10e637] [cursor=pointer]
+                - row [ref=f10e918]:
+                  - cell "16" [ref=f10e919]
+                  - cell "优衣库轻薄羽绒服" [ref=f10e920]
+                  - cell "服装鞋包" [ref=f10e921]
+                  - cell "15种" [ref=f10e922]
+                  - cell "¥599" [ref=f10e925]
+                  - cell "500" [ref=f10e926]
+                  - cell "3950" [ref=f10e927]
+                  - cell "上架" [ref=f10e654]
+                  - cell [ref=f10e658]:
+                    - generic [ref=f10e659]:
+                      - button "编辑" [ref=f10e660] [cursor=pointer]
+                      - button "下架" [ref=f10e662] [cursor=pointer]
+                - row [ref=f10e928]:
+                  - cell "17" [ref=f10e929]
+                  - cell "Adidas Ultraboost" [ref=f10e930]
+                  - cell "服装鞋包" [ref=f10e931]
+                  - cell "15种" [ref=f10e932]
+                  - cell "¥999" [ref=f10e933]
+                  - cell "200" [ref=f10e934]
+                  - cell "1800" [ref=f10e935]
+                  - cell "上架" [ref=f10e681]
+                  - cell [ref=f10e685]:
+                    - generic [ref=f10e686]:
+                      - button "编辑" [ref=f10e687] [cursor=pointer]
+                      - button "下架" [ref=f10e689] [cursor=pointer]
+                - row [ref=f10e936]:
+                  - cell "18" [ref=f10e937]
+                  - cell "Levi's 501 牛仔裤" [ref=f10e938]
+                  - cell "服装鞋包" [ref=f10e939]
+                  - cell "18种" [ref=f10e940]
+                  - cell "¥599" [ref=f10e943]
+                  - cell "250" [ref=f10e944]
+                  - cell "1500" [ref=f10e945]
+                  - cell "上架" [ref=f10e706]
+                  - cell [ref=f10e710]:
+                    - generic [ref=f10e711]:
+                      - button "编辑" [ref=f10e712] [cursor=pointer]
+                      - button "下架" [ref=f10e714] [cursor=pointer]
+          - generic [ref=f10e717]:
+            - button "上一页" [ref=f10e718] [cursor=pointer]
+            - list [ref=f10e719]:
+              - listitem "第 1 页" [ref=f10e720] [cursor=pointer]: "1"
+              - listitem "第 2 页" [ref=f10e721]: "2"
+              - listitem "第 3 页" [ref=f10e722] [cursor=pointer]: "3"
+            - button "下一页" [active] [ref=f10e723] [cursor=pointer]

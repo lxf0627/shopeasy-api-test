@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API自动化测试报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 20px; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header .subtitle { opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .stat-card { background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .stat-card .number { font-size: 32px; font-weight: bold; }
+        .stat-card .label { color: #666; margin-top: 5px; }
+        .stat-card.passed .number { color: #4CAF50; }
+        .stat-card.failed .number { color: #f44336; }
+        .stat-card.skipped .number { color: #FF9800; }
+        .stat-card.total .number { color: #2196F3; }
+        .progress-bar { background: #e0e0e0; border-radius: 10px; height: 20px; margin-bottom: 20px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 10px; transition: width 0.3s; }
+        .progress-fill.passed { background: linear-gradient(90deg, #4CAF50, #8BC34A); }
+        .progress-fill.failed { background: linear-gradient(90deg, #f44336, #FF5722); }
+        .feature-section { background: white; border-radius: 10px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .feature-header { padding: 15px 20px; background: #f8f9fa; border-bottom: 1px solid #e0e0e0; cursor: pointer; }
+        .feature-header h3 { color: #333; }
+        .feature-header .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; margin-left: 10px; }
+        .badge.passed { background: #E8F5E9; color: #2E7D32; }
+        .badge.failed { background: #FFEBEE; color: #C62828; }
+        .test-case { padding: 15px 20px; border-bottom: 1px solid #f0f0f0; }
+        .test-case:last-child { border-bottom: none; }
+        .test-case .name { font-weight: 500; margin-bottom: 5px; }
+        .test-case .status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; }
+        .status.passed { background: #E8F5E9; color: #2E7D32; }
+        .status.failed { background: #FFEBEE; color: #C62828; }
+        .status.skipped { background: #FFF3E0; color: #E65100; }
+        .status.broken { background: #FCE4EC; color: #880E4F; }
+        .test-case .duration { color: #999; font-size: 12px; }
+        .test-case .error { background: #FFF3F3; padding: 10px; border-radius: 5px; margin-top: 10px; font-size: 13px; color: #C62828; }
+        .footer { text-align: center; padding: 20px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>API自动化测试报告</h1>
+            <div class="subtitle">生成时间: 2026-10-08 14:33:00</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card total">
+                <div class="number">24</div>
+                <div class="label">总用例数</div>
+            </div>
+            <div class="stat-card passed">
+                <div class="number">24</div>
+                <div class="label">通过</div>
+            </div>
+            <div class="stat-card failed">
+                <div class="number">0</div>
+                <div class="label">失败</div>
+            </div>
+            <div class="stat-card skipped">
+                <div class="number">0</div>
+                <div class="label">跳过/异常</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill passed" style="width: 100.0%"></div>
+        </div>
+        <p style="text-align: center; margin-bottom: 20px;">通过率: 100.0%</p>
+
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>订单状态
+                    <span class="badge passed">4/4</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_sts_001_pay_non_pending_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_sts_002_cancel_non_pending_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_sts_003_ship_pending_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_sts_004_confirm_pending_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>库存管理
+                    <span class="badge passed">1/1</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_pos_003_cancel_order_restore_stock
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>订单异常
+                    <span class="badge passed">2/2</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_005_invalid_address
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_006_empty_cart_create_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>购物车
+                    <span class="badge passed">2/2</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_003_no_sku_selected
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_004_nonexistent_product
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>数据一致性
+                    <span class="badge passed">2/2</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_dat_001_cart_empty_after_order
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_dat_002_order_amount_matches_price
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>权限控制
+                    <span class="badge passed">3/3</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_auth_002_invalid_token
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_auth_003_normal_user_admin_api
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_auth_001_unauthenticated_access
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>登录模块
+                    <span class="badge passed">3/3</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_login_success
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_001_disabled_user_login
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exc_002_wrong_password_login
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>购物车行为
+                    <span class="badge passed">3/3</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exp_003_no_spec_product_without_sku
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exp_001_zero_stock_product
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_exp_002_duplicate_add_to_cart
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>订单流程
+                    <span class="badge passed">2/2</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_pos_001_full_order_flow
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_pos_002_order_status_flow
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="feature-section">
+            <div class="feature-header">
+                <h3>边界测试
+                    <span class="badge passed">2/2</span>
+                </h3>
+            </div>
+
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_bnd_003_nonexistent_product_id
+                    <span class="duration">0.00s</span>
+                </div>
+</div>
+            <div class="test-case">
+                <div class="name">
+                    <span class="status passed">PASSED</span>
+                    test_tc_bnd_004_nonexistent_order_id
+                    <span class="duration">0.00s</span>
+                </div>
+</div></div>
+        <div class="footer">
+            <p>Powered by Pytest + Allure</p>
+        </div>
+    </div>
+</body>
+</html>

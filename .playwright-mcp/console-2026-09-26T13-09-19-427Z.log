@@ -1,0 +1,421 @@
+[     881ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://via.placeholder.com/300:0
+[  182545ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182572ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182621ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182671ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182719ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182768ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182821ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182874ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182932ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  182987ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205515ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205550ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205603ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205657ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205714ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205772ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205827ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205883ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205941ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  205998ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211186ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211221ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="1,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211272ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211325ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="2,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211377ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211432ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="3,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211487ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211543ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="4,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211601ms] [WARNING] [Vue warn]: Invalid prop: validation failed for prop "type". Expected one of ["primary", "success", "info", "warning", "danger"], got value "". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532
+[  211657ms] [WARNING] [Vue warn]: Invalid prop: custom validator check failed for prop "type". 
+  at <ElTag type="" size="small" > 
+  at <TableTdWrapper style= {} class="el-table_4_column_22 el-table__cell" key="5,5"  ... > 
+  at <ElTableBody context= {uid: 539, vnode: Object, type: Object, parent: Object, appContext: Object} highlight=false row-class-name=undefined  ... > 
+  at <ElScrollbar ref_key="scrollBarRef" ref=Ref< Proxy(Object) > view-style= {display: inline-block, verticalAlign: middle}  ... > 
+  at <ElTable data= [Object, Object, Object, Object, Object, Object] style= {width: 100%} > 
+  at <UserManage onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <ElMain class="admin-main" > 
+  at <ElContainer> 
+  at <ElContainer class="admin-layout" > 
+  at <AdminLayout onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > 
+  at <RouterView> 
+  at <App> @ http://localhost:5173/@vite/client:532

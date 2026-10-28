@@ -1,0 +1,185 @@
+- generic [ref=e1]:
+  - generic [ref=e243]:
+    - complementary [ref=e244]:
+      - generic [ref=e245]: ⚙️ 管理后台
+      - menubar [ref=e246]:
+        - menuitem [ref=e247] [cursor=pointer]
+        - menuitem [ref=e251] [cursor=pointer]
+        - menuitem [ref=e255] [cursor=pointer]
+        - menuitem [ref=e259] [cursor=pointer]
+        - menuitem [ref=e263] [cursor=pointer]
+        - menuitem [ref=e267] [cursor=pointer]
+      - button "← 返回前台" [ref=e273] [cursor=pointer]
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: 管理员（管理员）
+        - button "退出登录" [ref=e278] [cursor=pointer]
+      - main [ref=e280]:
+        - generic [ref=e383]:
+          - generic [ref=e384]:
+            - heading "商品管理" [level=2] [ref=e385]
+            - button "新增商品" [ref=e386] [cursor=pointer]
+          - generic [ref=e388]:
+            - generic [ref=e389]:
+              - textbox "搜索商品" [ref=e392]
+              - generic [ref=e395] [cursor=pointer]:
+                - generic:
+                  - combobox [ref=e397]
+                  - generic [ref=e398]: 状态
+              - button "搜索" [ref=e403] [cursor=pointer]
+            - generic [ref=e406]:
+              - table [ref=e408]:
+                - rowgroup [ref=e419]:
+                  - row [ref=e420]:
+                    - columnheader "ID" [ref=e421]
+                    - columnheader "商品名称" [ref=e423]
+                    - columnheader "分类" [ref=e425]
+                    - columnheader "规格" [ref=e427]
+                    - columnheader "价格" [ref=e429]
+                    - columnheader "库存" [ref=e431]
+                    - columnheader "销量" [ref=e433]
+                    - columnheader "状态" [ref=e435]
+                    - columnheader "操作" [ref=e437]
+              - generic [ref=e440]:
+                - table [ref=e443]:
+                  - rowgroup [ref=e454]:
+                    - row [ref=e1650]:
+                      - cell "1" [ref=e456]
+                      - cell "iPhone 15 Pro Max" [ref=e458]
+                      - cell "手机数码" [ref=e460]
+                      - cell "9种" [ref=e462]
+                      - cell "¥9999" [ref=e466]
+                      - cell "69" [ref=e468]
+                      - cell "2611" [ref=e470]
+                      - cell "上架" [ref=e1651]
+                      - cell [ref=e1652]:
+                        - generic [ref=e477]:
+                          - button "编辑" [ref=e478] [cursor=pointer]
+                          - button "下架" [active] [ref=e1653] [cursor=pointer]
+                    - row [ref=e1404]:
+                      - cell "2" [ref=e1405]
+                      - cell "Samsung Galaxy S24 Ultra" [ref=e1407]
+                      - cell "手机数码" [ref=e1409]
+                      - cell "6种" [ref=e1411]
+                      - cell "¥8999" [ref=e1415]
+                      - cell "80" [ref=e1417]
+                      - cell "1320" [ref=e1419]
+                      - cell "上架" [ref=e1421]
+                      - cell [ref=e1425]:
+                        - generic [ref=e1426]:
+                          - button "编辑" [ref=e1427] [cursor=pointer]
+                          - button "下架" [ref=e1429] [cursor=pointer]
+                    - row [ref=e1431]:
+                      - cell "3" [ref=e1432]
+                      - cell "AirPods Pro 2" [ref=e1434]
+                      - cell "手机数码" [ref=e1436]
+                      - cell "无" [ref=e1438]
+                      - cell "¥1799" [ref=e1440]
+                      - cell "193" [ref=e1442]
+                      - cell "3767" [ref=e1444]
+                      - cell "上架" [ref=e1446]
+                      - cell [ref=e1450]:
+                        - generic [ref=e1451]:
+                          - button "编辑" [ref=e1452] [cursor=pointer]
+                          - button "下架" [ref=e1454] [cursor=pointer]
+                    - row [ref=e1456]:
+                      - cell "4" [ref=e1457]
+                      - cell "HUAWEI Mate 60 Pro" [ref=e1459]
+                      - cell "手机数码" [ref=e1461]
+                      - cell "6种" [ref=e1463]
+                      - cell "¥6999" [ref=e1467]
+                      - cell "60" [ref=e1469]
+                      - cell "1890" [ref=e1471]
+                      - cell "上架" [ref=e1473]
+                      - cell [ref=e1477]:
+                        - generic [ref=e1478]:
+                          - button "编辑" [ref=e1479] [cursor=pointer]
+                          - button "下架" [ref=e1481] [cursor=pointer]
+                    - row [ref=e1483]:
+                      - cell "5" [ref=e1484]
+                      - cell "Xiaomi 14 Ultra" [ref=e1486]
+                      - cell "手机数码" [ref=e1488]
+                      - cell "无" [ref=e1490]
+                      - cell "¥5999" [ref=e1492]
+                      - cell "120" [ref=e1494]
+                      - cell "980" [ref=e1496]
+                      - cell "上架" [ref=e1498]
+                      - cell [ref=e1502]:
+                        - generic [ref=e1503]:
+                          - button "编辑" [ref=e1504] [cursor=pointer]
+                          - button "下架" [ref=e1506] [cursor=pointer]
+                    - row [ref=e1508]:
+                      - cell "6" [ref=e1509]
+                      - cell "MacBook Pro 14英寸" [ref=e1511]
+                      - cell "电脑办公" [ref=e1513]
+                      - cell "4种" [ref=e1515]
+                      - cell "¥14999" [ref=e1519]
+                      - cell "50" [ref=e1521]
+                      - cell "1210" [ref=e1523]
+                      - cell "上架" [ref=e1525]
+                      - cell [ref=e1529]:
+                        - generic [ref=e1530]:
+                          - button "编辑" [ref=e1531] [cursor=pointer]
+                          - button "下架" [ref=e1533] [cursor=pointer]
+                    - row [ref=e1535]:
+                      - cell "7" [ref=e1536]
+                      - cell "ThinkPad X1 Carbon" [ref=e1538]
+                      - cell "电脑办公" [ref=e1540]
+                      - cell "无" [ref=e1542]
+                      - cell "¥8999" [ref=e1544]
+                      - cell "60" [ref=e1546]
+                      - cell "650" [ref=e1548]
+                      - cell "上架" [ref=e1550]
+                      - cell [ref=e1554]:
+                        - generic [ref=e1555]:
+                          - button "编辑" [ref=e1556] [cursor=pointer]
+                          - button "下架" [ref=e1558] [cursor=pointer]
+                    - row [ref=e1560]:
+                      - cell "8" [ref=e1561]
+                      - cell "iPad Air" [ref=e1563]
+                      - cell "电脑办公" [ref=e1565]
+                      - cell "9种" [ref=e1567]
+                      - cell "¥5499" [ref=e1571]
+                      - cell "90" [ref=e1573]
+                      - cell "1430" [ref=e1575]
+                      - cell "上架" [ref=e1577]
+                      - cell [ref=e1581]:
+                        - generic [ref=e1582]:
+                          - button "编辑" [ref=e1583] [cursor=pointer]
+                          - button "下架" [ref=e1585] [cursor=pointer]
+                    - row [ref=e1587]:
+                      - cell "9" [ref=e1588]
+                      - cell "Dell XPS 15" [ref=e1590]
+                      - cell "电脑办公" [ref=e1592]
+                      - cell "无" [ref=e1594]
+                      - cell "¥11999" [ref=e1596]
+                      - cell "35" [ref=e1598]
+                      - cell "320" [ref=e1600]
+                      - cell "上架" [ref=e1602]
+                      - cell [ref=e1606]:
+                        - generic [ref=e1607]:
+                          - button "编辑" [ref=e1608] [cursor=pointer]
+                          - button "下架" [ref=e1610] [cursor=pointer]
+                    - row [ref=e1612]:
+                      - cell "10" [ref=e1613]
+                      - cell "Logitech MX Master 3S" [ref=e1615]
+                      - cell "电脑办公" [ref=e1617]
+                      - cell "无" [ref=e1619]
+                      - cell "¥699" [ref=e1621]
+                      - cell "300" [ref=e1623]
+                      - cell "2100" [ref=e1625]
+                      - cell "上架" [ref=e1627]
+                      - cell [ref=e1631]:
+                        - generic [ref=e1632]:
+                          - button "编辑" [ref=e1633] [cursor=pointer]
+                          - button "下架" [ref=e1635] [cursor=pointer]
+                - generic [ref=e1644] [cursor=pointer]
+            - generic [ref=e716]:
+              - button "上一页" [disabled] [ref=e717]
+              - list [ref=e718]:
+                - listitem "第 1 页" [ref=e719]: "1"
+                - listitem "第 2 页" [ref=e1637] [cursor=pointer]: "2"
+                - listitem "第 3 页" [ref=e1638] [cursor=pointer]: "3"
+              - button "下一页" [ref=e722] [cursor=pointer]
+  - alert [ref=e1654]:
+    - paragraph [ref=e1658]: 已上架

@@ -1,0 +1,77 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e3]:
+    - generic [ref=f4e5]:
+      - link "🛍️ ShopEasy" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f4e8]:
+        - textbox "搜索商品..." [ref=f4e10]
+        - button [ref=f4e13] [cursor=pointer]
+      - generic [ref=f4e17]:
+        - generic [ref=f4e18]:
+          - button [ref=f4e19] [cursor=pointer]
+          - superscript [ref=f4e24]: "1"
+        - button "李 李四" [ref=f4e26] [cursor=pointer]:
+          - generic [ref=f4e27]: 李
+          - generic [ref=f4e28]: 李四
+    - main [ref=f4e29]:
+      - generic [ref=f4e195]:
+        - heading "我的订单" [level=2] [ref=f4e196]
+        - generic [ref=f4e197]:
+          - tablist [ref=f4e201]:
+            - tab "全部" [selected] [ref=f4e203]
+            - tab "待支付" [ref=f4e204]
+            - tab "已支付" [ref=f4e205]
+            - tab "已发货" [ref=f4e206]
+            - tab "已完成" [ref=f4e207]
+            - tab "已取消" [ref=f4e208]
+          - generic:
+            - tabpanel "全部"
+        - generic [ref=f4e209]:
+          - generic [ref=f4e210] [cursor=pointer]:
+            - generic [ref=f4e211]:
+              - generic [ref=f4e212]: "订单号: ORD17904230977387Z79"
+              - generic [ref=f4e213]: 待支付
+            - generic [ref=f4e216]:
+              - generic [ref=f4e217]:
+                - text: iPhone 15 Pro Max
+                - generic [ref=f4e218]: 256GB / 原色钛金属
+              - generic [ref=f4e220]: x1
+              - generic [ref=f4e221]: ¥9999
+            - generic [ref=f4e222]:
+              - generic [ref=f4e223]: "下单时间: 2026-09-26 11:44"
+              - generic [ref=f4e224]:
+                - text: "合计:"
+                - strong [ref=f4e225]: ¥9999
+          - generic [ref=f4e226] [cursor=pointer]:
+            - generic [ref=f4e227]:
+              - generic [ref=f4e228]: "订单号: ORD20240105001"
+              - generic [ref=f4e229]: 已取消
+            - generic [ref=f4e232]:
+              - generic [ref=f4e233]:
+                - text: 优衣库轻薄羽绒服
+                - generic [ref=f4e234]: 黑色 / M
+              - generic [ref=f4e236]: x1
+              - generic [ref=f4e237]: ¥599
+            - generic [ref=f4e238]:
+              - generic [ref=f4e239]: "下单时间: 2024-01-05 10:00"
+              - generic [ref=f4e240]:
+                - text: "合计:"
+                - strong [ref=f4e241]: ¥599
+          - generic [ref=f4e242] [cursor=pointer]:
+            - generic [ref=f4e243]:
+              - generic [ref=f4e244]: "订单号: ORD20240103001"
+              - generic [ref=f4e245]: 已发货
+            - generic [ref=f4e248]:
+              - generic [ref=f4e249]:
+                - text: Nike Air Max 270
+                - generic [ref=f4e250]: 经典黑白 / 42
+              - generic [ref=f4e252]: x1
+              - generic [ref=f4e253]: ¥899
+            - generic [ref=f4e254]:
+              - generic [ref=f4e255]: "下单时间: 2024-01-03 10:00"
+              - generic [ref=f4e256]:
+                - text: "合计:"
+                - strong [ref=f4e257]: ¥899
+    - paragraph [ref=f4e127]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=f4e258]:
+    - paragraph [ref=f4e262]: 订单创建成功

@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy 自动化测试报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --color-passed: #52c41a;
+            --color-failed: #ff4d4f;
+            --color-broken: #fa8c16;
+            --color-skipped: #d9d9d9;
+            --color-unknown: #bfbfbf;
+            --color-bg: #f5f7fa;
+            --color-card: #ffffff;
+            --color-border: #e8e8e8;
+            --color-text: #333333;
+            --color-text-secondary: #666666;
+            --color-primary: #1890ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* 头部 */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .header .meta {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        /* 导航标签 */
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-bottom: 2px solid var(--color-border);
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .nav-tab:hover {
+            color: var(--color-primary);
+            background: #f0f5ff;
+        }
+
+        .nav-tab.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* 主体 */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 32px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* 概览卡片 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--color-card);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-border);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card .number {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .stat-card .label {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+            margin-top: 4px;
+        }
+
+        .stat-card.passed .number { color: var(--color-passed); }
+        .stat-card.failed .number { color: var(--color-failed); }
+        .stat-card.broken .number { color: var(--color-broken); }
+        .stat-card.skipped .number { color: var(--color-skipped); }
+        .stat-card.total .number { color: var(--color-primary); }
+        .stat-card.rate .number { color: #52c41a; }
+
+        /* 图表区 */
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .chart-card {
+            background: var(--color-card);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-border);
+        }
+
+        .chart-card h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            color: var(--color-text);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+        }
+
+        /* 进度条 */
+        .progress-bar {
+            width: 100%;
+            height: 24px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            margin-bottom: 24px;
+        }
+
+        .progress-segment {
+            height: 100%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            min-width: 0;
+        }
+
+        .progress-segment.passed { background: var(--color-passed); }
+        .progress-segment.failed { background: var(--color-failed); }
+        .progress-segment.broken { background: var(--color-broken); }
+        .progress-segment.skipped { background: var(--color-skipped); }
+
+        /* 表格 */
+        .table-wrapper {
+            background: var(--color-card);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-border);
+            margin-bottom: 24px;
+        }
+
+        .table-header {
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #fafafa;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            border-bottom: 1px solid var(--color-border);
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background: #fafafa;
+        }
+
+        tr.expandable {
+            cursor: pointer;
+        }
+
+        /* 状态标签 */
+        .status-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-badge.passed { background: #f6ffed; color: var(--color-passed); border: 1px solid #b7eb8f; }
+        .status-badge.failed { background: #fff2f0; color: var(--color-failed); border: 1px solid #ffccc7; }
+        .status-badge.broken { background: #fff7e6; color: var(--color-broken); border: 1px solid #ffd591; }
+        .status-badge.skipped { background: #fafafa; color: #999; border: 1px solid #d9d9d9; }
+        .status-badge.unknown { background: #fafafa; color: #999; border: 1px solid #d9d9d9; }
+
+        /* 严重级别 */
+        .severity-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .severity-badge.blocker { background: #ff4d4f; color: white; }
+        .severity-badge.critical { background: #fa541c; color: white; }
+        .severity-badge.normal { background: #1890ff; color: white; }
+        .severity-badge.minor { background: #52c41a; color: white; }
+        .severity-badge.trivial { background: #d9d9d9; color: #666; }
+
+        /* 步骤展开区 */
+        .steps-container {
+            display: none;
+            padding: 0 16px 16px;
+            background: #fafafa;
+        }
+
+        .steps-container.open {
+            display: table-row;
+        }
+
+        .step-item {
+            padding: 8px 16px;
+            border-left: 3px solid var(--color-border);
+            margin: 4px 0;
+            font-size: 13px;
+            background: white;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .step-item.passed { border-left-color: var(--color-passed); }
+        .step-item.failed { border-left-color: var(--color-failed); }
+        .step-item.broken { border-left-color: var(--color-broken); }
+
+        .step-item .step-status {
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .step-item .step-status.passed { color: var(--color-passed); }
+        .step-item .step-status.failed { color: var(--color-failed); }
+        .step-item .step-status.broken { color: var(--color-broken); }
+
+        .step-children {
+            margin-left: 20px;
+        }
+
+        /* 错误信息 */
+        .error-info {
+            background: #fff2f0;
+            border: 1px solid #ffccc7;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-top: 8px;
+            font-size: 12px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: var(--color-failed);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        /* 筛选区 */
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-bar input, .filter-bar select {
+            padding: 8px 12px;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            font-size: 13px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .filter-bar input:focus, .filter-bar select:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+
+        .filter-bar input {
+            width: 280px;
+        }
+
+        .btn-filter {
+            padding: 8px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .btn-filter:hover { background: #f0f5ff; border-color: var(--color-primary); color: var(--color-primary); }
+        .btn-filter.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+
+        /* Epic / Feature 卡片 */
+        .group-card {
+            background: var(--color-card);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+        }
+
+        .group-card-header {
+            padding: 14px 20px;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: #fafafa;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .group-card-header:hover {
+            background: #f0f5ff;
+        }
+
+        .group-card-body {
+            padding: 0;
+        }
+
+        .group-mini-stats {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+        }
+
+        .group-mini-stats span {
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header { flex-direction: column; gap: 8px; }
+            .charts-row { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .container { padding: 16px; }
+            .filter-bar input { width: 100%; }
+        }
+
+        /* 展开/折叠箭头 */
+        .expand-icon {
+            transition: transform 0.2s;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .expand-icon.open {
+            transform: rotate(90deg);
+        }
+
+        /* 无数据提示 */
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: var(--color-text-secondary);
+            font-size: 14px;
+        }
+
+        /* 搜索高亮 */
+        mark {
+            background: #fff3cd;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--color-text-secondary);
+            font-size: 12px;
+            border-top: 1px solid var(--color-border);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 头部 -->
+<div class="header">
+    <h1> ShopEasy 自动化测试报告</h1>
+    <div class="meta">
+        <div>生成时间: 2026-09-14 13:46:39</div>
+        <div>总耗时: 18.6s | 主机: Lxf</div>
+    </div>
+</div>
+
+<!-- 导航标签 -->
+<div class="nav-tabs">
+    <div class="nav-tab active" onclick="switchTab('overview')"> 概览</div>
+    <div class="nav-tab" onclick="switchTab('suites')"> 按模块</div>
+    <div class="nav-tab" onclick="switchTab('behaviors')"> 按行为</div>
+    <div class="nav-tab" onclick="switchTab('all-tests')"> 全部用例</div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 概览 Tab ==================== -->
+<div id="tab-overview" class="tab-content active">
+
+    <!-- 统计卡片 -->
+    <div class="stats-grid">
+        <div class="stat-card total">
+            <div class="number">15</div>
+            <div class="label">用例总数</div>
+        </div>
+        <div class="stat-card passed">
+            <div class="number">15</div>
+            <div class="label">通过</div>
+        </div>
+        <div class="stat-card failed">
+            <div class="number">0</div>
+            <div class="label">失败</div>
+        </div>
+        <div class="stat-card broken">
+            <div class="number">0</div>
+            <div class="label">异常</div>
+        </div>
+        <div class="stat-card skipped">
+            <div class="number">0</div>
+            <div class="label">跳过</div>
+        </div>
+        <div class="stat-card rate">
+            <div class="number">100.0%</div>
+            <div class="label">通过率</div>
+        </div>
+    </div>
+
+    <!-- 通过率进度条 -->
+    <div class="progress-bar">
+        <div class="progress-segment passed" style="width:100.0%">15</div>
+        
+        
+        
+    </div>
+
+    <!-- 图表区 -->
+    <div class="charts-row">
+        <div class="chart-card">
+            <h3>用例状态分布</h3>
+            <div class="chart-container">
+                <canvas id="statusChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3>严重级别分布</h3>
+            <div class="chart-container">
+                <canvas id="severityChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- 严重级别统计表 -->
+    
+    <div class="table-wrapper">
+        <div class="table-header"> 严重级别统计</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>级别</th><th>总数</th><th>通过</th><th>失败</th><th>异常</th><th>跳过</th><th>通过率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>10</td>
+                    <td style="color:var(--color-passed);">10</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr>
+                <tr>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>5</td>
+                    <td style="color:var(--color-passed);">5</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr></tbody>
+        </table>
+    </div>
+
+    <!-- Epic 统计表 -->
+    
+    <div class="table-wrapper">
+        <div class="table-header"> Epic 模块统计</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Epic</th><th>总数</th><th>通过</th><th>失败</th><th>异常</th><th>跳过</th><th>通过率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>订单管理</strong></td>
+                    <td>4</td>
+                    <td style="color:var(--color-passed);">4</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr>
+                <tr>
+                    <td><strong>购物车</strong></td>
+                    <td>3</td>
+                    <td style="color:var(--color-passed);">3</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr>
+                <tr>
+                    <td><strong>用户认证</strong></td>
+                    <td>3</td>
+                    <td style="color:var(--color-passed);">3</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr>
+                <tr>
+                    <td><strong>商品管理</strong></td>
+                    <td>5</td>
+                    <td style="color:var(--color-passed);">5</td>
+                    <td style="color:var(--color-failed);">0</td>
+                    <td style="color:var(--color-broken);">0</td>
+                    <td>0</td>
+                    <td>100.0%</td>
+                </tr></tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- ==================== 按模块 Tab ==================== -->
+<div id="tab-suites" class="tab-content">
+    <h2 style="margin-bottom:16px;">按模块（Suite）分组</h2>
+    
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('f-0')">
+                <div>
+                    <span id="group-icon-f-0" class="expand-icon">&#9654;</span>
+                    订单管理 &gt; 订单功能
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#f6ffed;color:var(--color-passed);">通过 4</span>
+                    <span style="background:#fff2f0;color:var(--color-failed);">失败 0</span>
+                    <span style="background:#fff7e6;color:var(--color-broken);">异常 0</span>
+                    <span style="background:#e6f7ff;color:var(--color-primary);">通过率 100%</span>
+                </div>
+            </div>
+            <div id="group-f-0" class="group-card-body" style="display:none;">
+                <table>
+                    <thead><tr><th>用例名称</th><th>状态</th><th>级别</th><th>耗时</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>test_create_order_success</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.6s</td>
+                    </tr>
+                    <tr>
+                        <td>test_checkout_flow_explore</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.5s</td>
+                    </tr>
+                    <tr>
+                        <td>test_order_amount_consistency</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge normal">一般</span></td>
+                        <td>833ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_order_list_display</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge normal">一般</span></td>
+                        <td>686ms</td>
+                    </tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('f-1')">
+                <div>
+                    <span id="group-icon-f-1" class="expand-icon">&#9654;</span>
+                    购物车 &gt; 购物车功能
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#f6ffed;color:var(--color-passed);">通过 3</span>
+                    <span style="background:#fff2f0;color:var(--color-failed);">失败 0</span>
+                    <span style="background:#fff7e6;color:var(--color-broken);">异常 0</span>
+                    <span style="background:#e6f7ff;color:var(--color-primary);">通过率 100%</span>
+                </div>
+            </div>
+            <div id="group-f-1" class="group-card-body" style="display:none;">
+                <table>
+                    <thead><tr><th>用例名称</th><th>状态</th><th>级别</th><th>耗时</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>test_cart_product_info</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.4s</td>
+                    </tr>
+                    <tr>
+                        <td>test_cart_empty_state</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge normal">一般</span></td>
+                        <td>698ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_cart_multiple_products</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge normal">一般</span></td>
+                        <td>2.9s</td>
+                    </tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('f-2')">
+                <div>
+                    <span id="group-icon-f-2" class="expand-icon">&#9654;</span>
+                    用户认证 &gt; 登录功能
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#f6ffed;color:var(--color-passed);">通过 3</span>
+                    <span style="background:#fff2f0;color:var(--color-failed);">失败 0</span>
+                    <span style="background:#fff7e6;color:var(--color-broken);">异常 0</span>
+                    <span style="background:#e6f7ff;color:var(--color-primary);">通过率 100%</span>
+                </div>
+            </div>
+            <div id="group-f-2" class="group-card-body" style="display:none;">
+                <table>
+                    <thead><tr><th>用例名称</th><th>状态</th><th>级别</th><th>耗时</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>test_buyer_login_success</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.9s</td>
+                    </tr>
+                    <tr>
+                        <td>test_disabled_user_login_blocked</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.9s</td>
+                    </tr>
+                    <tr>
+                        <td>test_admin_login_success</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>1.9s</td>
+                    </tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('f-3')">
+                <div>
+                    <span id="group-icon-f-3" class="expand-icon">&#9654;</span>
+                    商品管理 &gt; 商品浏览
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#f6ffed;color:var(--color-passed);">通过 5</span>
+                    <span style="background:#fff2f0;color:var(--color-failed);">失败 0</span>
+                    <span style="background:#fff7e6;color:var(--color-broken);">异常 0</span>
+                    <span style="background:#e6f7ff;color:var(--color-primary);">通过率 100%</span>
+                </div>
+            </div>
+            <div id="group-f-3" class="group-card-body" style="display:none;">
+                <table>
+                    <thead><tr><th>用例名称</th><th>状态</th><th>级别</th><th>耗时</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>test_buyer_menu_permissions</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>528ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_product_detail_page_loads</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>674ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_spec_stock_changes</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge normal">一般</span></td>
+                        <td>742ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_admin_menu_visibility</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>531ms</td>
+                    </tr>
+                    <tr>
+                        <td>test_spec_selection_completeness</td>
+                        <td><span class="status-badge passed">通过</span></td>
+                        <td><span class="severity-badge critical">严重</span></td>
+                        <td>724ms</td>
+                    </tr></tbody>
+                </table>
+            </div>
+        </div>
+</div>
+
+<!-- ==================== 按行为 Tab ==================== -->
+<div id="tab-behaviors" class="tab-content">
+    <h2 style="margin-bottom:16px;">按行为（Epic / Feature / Story）分组</h2>
+    
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('b-0')">
+                <div>
+                    <span id="group-icon-b-0" class="expand-icon">&#9654;</span>
+                    订单管理
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#e6f7ff;color:var(--color-primary);">4/4 通过</span>
+                </div>
+            </div>
+            <div id="group-b-0" class="group-card-body" style="display:none;padding:16px;">
+                <div style="margin:12px 0;"><div style="font-weight:600;font-size:14px;padding:8px 0;">订单功能</div><div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">订单创建流程 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_create_order_success <span style="color:#999;font-size:11px;">(1.6s)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">结算流程探索 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_checkout_flow_explore <span style="color:#999;font-size:11px;">(1.5s)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">订单金额一致性 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_order_amount_consistency <span style="color:#999;font-size:11px;">(833ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">订单列表显示 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_order_list_display <span style="color:#999;font-size:11px;">(686ms)</span></div></div>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('b-1')">
+                <div>
+                    <span id="group-icon-b-1" class="expand-icon">&#9654;</span>
+                    购物车
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#e6f7ff;color:var(--color-primary);">3/3 通过</span>
+                </div>
+            </div>
+            <div id="group-b-1" class="group-card-body" style="display:none;padding:16px;">
+                <div style="margin:12px 0;"><div style="font-weight:600;font-size:14px;padding:8px 0;">购物车功能</div><div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">购物车商品信息验证 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_cart_product_info <span style="color:#999;font-size:11px;">(1.4s)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">购物车空态显示 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_cart_empty_state <span style="color:#999;font-size:11px;">(698ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">购物车多商品验证 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_cart_multiple_products <span style="color:#999;font-size:11px;">(2.9s)</span></div></div>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('b-2')">
+                <div>
+                    <span id="group-icon-b-2" class="expand-icon">&#9654;</span>
+                    用户认证
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#e6f7ff;color:var(--color-primary);">3/3 通过</span>
+                </div>
+            </div>
+            <div id="group-b-2" class="group-card-body" style="display:none;padding:16px;">
+                <div style="margin:12px 0;"><div style="font-weight:600;font-size:14px;padding:8px 0;">登录功能</div><div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">普通用户登录 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_buyer_login_success <span style="color:#999;font-size:11px;">(1.9s)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">禁用用户登录 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_disabled_user_login_blocked <span style="color:#999;font-size:11px;">(1.9s)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">管理员登录 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_admin_login_success <span style="color:#999;font-size:11px;">(1.9s)</span></div></div>
+            </div>
+        </div>
+
+        <div class="group-card">
+            <div class="group-card-header" onclick="toggleGroup('b-3')">
+                <div>
+                    <span id="group-icon-b-3" class="expand-icon">&#9654;</span>
+                    商品管理
+                </div>
+                <div class="group-mini-stats">
+                    <span style="background:#e6f7ff;color:var(--color-primary);">5/5 通过</span>
+                </div>
+            </div>
+            <div id="group-b-3" class="group-card-body" style="display:none;padding:16px;">
+                <div style="margin:12px 0;"><div style="font-weight:600;font-size:14px;padding:8px 0;">商品浏览</div><div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">普通用户菜单权限 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_buyer_menu_permissions <span style="color:#999;font-size:11px;">(528ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">商品详情页加载 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_product_detail_page_loads <span style="color:#999;font-size:11px;">(674ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">规格库存变化 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_spec_stock_changes <span style="color:#999;font-size:11px;">(742ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">管理员菜单可见性 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_admin_menu_visibility <span style="color:#999;font-size:11px;">(531ms)</span></div>
+<div style="margin:8px 0 4px 16px;font-weight:500;font-size:13px;color:#555;">规格选择完整性 (1)</div><div class="step-item passed"><span class="step-status passed">✓</span> test_spec_selection_completeness <span style="color:#999;font-size:11px;">(724ms)</span></div></div>
+            </div>
+        </div>
+</div>
+
+<!-- ==================== 全部用例 Tab ==================== -->
+<div id="tab-all-tests" class="tab-content">
+
+    <!-- 筛选栏 -->
+    <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder=" 搜索用例名称..." oninput="filterTests()">
+        <select id="statusFilter" onchange="filterTests()">
+            <option value="">全部状态</option>
+            <option value="passed">通过</option>
+            <option value="failed">失败</option>
+            <option value="broken">异常</option>
+            <option value="skipped">跳过</option>
+        </select>
+        <select id="severityFilter" onchange="filterTests()">
+            <option value="">全部级别</option>
+            <option value="blocker">阻塞</option>
+            <option value="critical">严重</option>
+            <option value="normal">一般</option>
+            <option value="minor">次要</option>
+            <option value="trivial">轻微</option>
+        </select>
+        <button class="btn-filter" onclick="clearFilters()">清除筛选</button>
+    </div>
+
+    <!-- 测试用例表格 -->
+    <div class="table-wrapper">
+        <table id="testTable">
+            <thead>
+                <tr>
+                    <th style="width:40px;"></th>
+                    <th>用例名称</th>
+                    <th>状态</th>
+                    <th>级别</th>
+                    <th>Epic</th>
+                    <th>Feature</th>
+                    <th>Story</th>
+                    <th>耗时</th>
+                    <th>开始时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr class="expandable" data-id="0" data-name="test_create_order_success" data-status="passed" data-severity="critical" data-epic="订单管理" data-feature="订单功能" data-story="订单创建流程" onclick="toggleSteps(0)">
+                    <td><span id="icon-0" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_create_order_success</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试订单创建成功
+
+验证完整的下单流程：选择商品 -&gt; 加入购物车 -&gt; 结算 -&gt; 提交订单。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>订单管理</td>
+                    <td>订单功能</td>
+                    <td>订单创建流程</td>
+                    <td>1.6s</td>
+                    <td>2026-09-14 05:37:03</td>
+                </tr>
+                <tr id="steps-0" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(654ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(654ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(26ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(26ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击加入购物车 <span style="color:#999;font-size:11px;">(22ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;加入购物车&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(22ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(644ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(644ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言购物车页面已加载 <span style="color:#999;font-size:11px;">(22ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(18ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(4ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击去结算按钮 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/cart&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;去结算&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(17ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言结算页面已加载 <span style="color:#999;font-size:11px;">(73ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(64ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击提交订单 <span style="color:#999;font-size:11px;">(66ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/checkout&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;提交订单&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(66ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言订单页面已加载 <span style="color:#999;font-size:11px;">(55ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(51ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="1" data-name="test_checkout_flow_explore" data-status="passed" data-severity="critical" data-epic="订单管理" data-feature="订单功能" data-story="结算流程探索" onclick="toggleSteps(1)">
+                    <td><span id="icon-1" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_checkout_flow_explore</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试结算流程页面结构
+
+探索并验证结算页面的各个区域和元素。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>订单管理</td>
+                    <td>订单功能</td>
+                    <td>结算流程探索</td>
+                    <td>1.5s</td>
+                    <td>2026-09-14 05:37:10</td>
+                </tr>
+                <tr id="steps-1" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(665ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(665ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(29ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(29ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(19ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(19ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击加入购物车 <span style="color:#999;font-size:11px;">(23ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;加入购物车&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(23ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(643ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(643ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击去结算按钮 <span style="color:#999;font-size:11px;">(29ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/cart&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;去结算&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(29ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言结算页面已加载 <span style="color:#999;font-size:11px;">(71ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(63ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品在清单中: &#x27;iPhone 15 Pro Max&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="2" data-name="test_cart_product_info" data-status="passed" data-severity="critical" data-epic="购物车" data-feature="购物车功能" data-story="购物车商品信息验证" onclick="toggleSteps(2)">
+                    <td><span id="icon-2" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_cart_product_info</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试购物车商品信息显示正确
+
+验证购物车中商品的名称、单价显示正确。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>购物车</td>
+                    <td>购物车功能</td>
+                    <td>购物车商品信息验证</td>
+                    <td>1.4s</td>
+                    <td>2026-09-14 05:36:46</td>
+                </tr>
+                <tr id="steps-2" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(666ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(666ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击加入购物车 <span style="color:#999;font-size:11px;">(22ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;加入购物车&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(22ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(647ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(647ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言购物车页面已加载 <span style="color:#999;font-size:11px;">(22ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(18ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品在购物车中: &#x27;iPhone 15 Pro Max&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品单价: &#x27;iPhone 15 Pro Max&#x27; -&gt; &#x27;¥9999&#x27; <span style="color:#999;font-size:11px;">(4ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素包含文本: &#x27;¥9999&#x27; <span style="color:#999;font-size:11px;">(4ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="3" data-name="test_buyer_login_success" data-status="passed" data-severity="critical" data-epic="用户认证" data-feature="登录功能" data-story="普通用户登录" onclick="toggleSteps(3)">
+                    <td><span id="icon-3" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_buyer_login_success</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试普通用户登录成功
+
+验证普通用户账号能够成功登录系统，并跳转到首页。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>用户认证</td>
+                    <td>登录功能</td>
+                    <td>普通用户登录</td>
+                    <td>1.9s</td>
+                    <td>2026-09-14 05:36:57</td>
+                </tr>
+                <tr id="steps-3" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开登录页面 <span style="color:#999;font-size:11px;">(792ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/login&#x27; <span style="color:#999;font-size:11px;">(792ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录页面已加载 <span style="color:#999;font-size:11px;">(25ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 执行登录操作: &#x27;buyer1&#x27; <span style="color:#999;font-size:11px;">(1.1s)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入用户名: &#x27;buyer1&#x27; <span style="color:#999;font-size:11px;">(9ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;buyer1&#x27; <span style="color:#999;font-size:11px;">(9ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入密码 <span style="color:#999;font-size:11px;">(10ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;123456&#x27; <span style="color:#999;font-size:11px;">(10ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击登录按钮 <span style="color:#999;font-size:11px;">(31ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/login&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;登录&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(30ms)</span></div>
+</div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录成功 <span style="color:#999;font-size:11px;">(1ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 获取当前页面URL <span style="color:#999;font-size:11px;">(0ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言首页已加载 <span style="color:#999;font-size:11px;">(9ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="4" data-name="test_buyer_menu_permissions" data-status="passed" data-severity="critical" data-epic="商品管理" data-feature="商品浏览" data-story="普通用户菜单权限" onclick="toggleSteps(4)">
+                    <td><span id="icon-4" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_buyer_menu_permissions</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试普通用户菜单权限
+
+验证普通用户看不到&quot;管理后台&quot;菜单项。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>商品管理</td>
+                    <td>商品浏览</td>
+                    <td>普通用户菜单权限</td>
+                    <td>528ms</td>
+                    <td>2026-09-14 05:37:27</td>
+                </tr>
+                <tr id="steps-4" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="5" data-name="test_product_detail_page_loads" data-status="passed" data-severity="critical" data-epic="商品管理" data-feature="商品浏览" data-story="商品详情页加载" onclick="toggleSteps(5)">
+                    <td><span id="icon-5" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_product_detail_page_loads</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试商品详情页正确加载
+
+验证商品详情页显示完整的商品信息。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>商品管理</td>
+                    <td>商品浏览</td>
+                    <td>商品详情页加载</td>
+                    <td>674ms</td>
+                    <td>2026-09-14 05:37:16</td>
+                </tr>
+                <tr id="steps-5" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(650ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(650ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品详情页已加载 <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(15ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(5ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言加入购物车按钮禁用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素禁用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="6" data-name="test_order_amount_consistency" data-status="passed" data-severity="normal" data-epic="订单管理" data-feature="订单功能" data-story="订单金额一致性" onclick="toggleSteps(6)">
+                    <td><span id="icon-6" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_order_amount_consistency</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试订单金额一致性
+
+验证购物车和结算页面都能正确显示金额。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>订单管理</td>
+                    <td>订单功能</td>
+                    <td>订单金额一致性</td>
+                    <td>833ms</td>
+                    <td>2026-09-14 05:37:13</td>
+                </tr>
+                <tr id="steps-6" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(696ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(696ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(18ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击去结算按钮 <span style="color:#999;font-size:11px;">(27ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/cart&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;去结算&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(27ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言结算页面已加载 <span style="color:#999;font-size:11px;">(88ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(80ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="7" data-name="test_cart_empty_state" data-status="passed" data-severity="normal" data-epic="购物车" data-feature="购物车功能" data-story="购物车空态显示" onclick="toggleSteps(7)">
+                    <td><span id="icon-7" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_cart_empty_state</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试购物车空态显示
+
+验证购物车为空时显示空态提示。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>购物车</td>
+                    <td>购物车功能</td>
+                    <td>购物车空态显示</td>
+                    <td>698ms</td>
+                    <td>2026-09-14 05:36:54</td>
+                </tr>
+                <tr id="steps-7" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(698ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(698ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="8" data-name="test_disabled_user_login_blocked" data-status="passed" data-severity="critical" data-epic="用户认证" data-feature="登录功能" data-story="禁用用户登录" onclick="toggleSteps(8)">
+                    <td><span id="icon-8" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_disabled_user_login_blocked</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试禁用用户登录被拦截
+
+验证禁用用户无法登录系统，页面停留在登录页。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>用户认证</td>
+                    <td>登录功能</td>
+                    <td>禁用用户登录</td>
+                    <td>1.9s</td>
+                    <td>2026-09-14 05:36:59</td>
+                </tr>
+                <tr id="steps-8" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开登录页面 <span style="color:#999;font-size:11px;">(864ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/login&#x27; <span style="color:#999;font-size:11px;">(864ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录页面已加载 <span style="color:#999;font-size:11px;">(24ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(18ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 执行登录操作: &#x27;disabled_user&#x27; <span style="color:#999;font-size:11px;">(1.1s)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入用户名: &#x27;disabled_user&#x27; <span style="color:#999;font-size:11px;">(7ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;disabled_user&#x27; <span style="color:#999;font-size:11px;">(7ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入密码 <span style="color:#999;font-size:11px;">(10ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;123456&#x27; <span style="color:#999;font-size:11px;">(9ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击登录按钮 <span style="color:#999;font-size:11px;">(26ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/login&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;登录&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(26ms)</span></div>
+</div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录失败 <span style="color:#999;font-size:11px;">(0ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言页面URL包含: &#x27;/login&#x27; <span style="color:#999;font-size:11px;">(0ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="9" data-name="test_cart_multiple_products" data-status="passed" data-severity="normal" data-epic="购物车" data-feature="购物车功能" data-story="购物车多商品验证" onclick="toggleSteps(9)">
+                    <td><span id="icon-9" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_cart_multiple_products</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试购物车多商品显示
+
+验证购物车中多个商品的金额计算正确。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>购物车</td>
+                    <td>购物车功能</td>
+                    <td>购物车多商品验证</td>
+                    <td>2.9s</td>
+                    <td>2026-09-14 05:36:49</td>
+                </tr>
+                <tr id="steps-9" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(666ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(665ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击加入购物车 <span style="color:#999;font-size:11px;">(23ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;加入购物车&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(22ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开首页 <span style="color:#999;font-size:11px;">(615ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/&#x27; <span style="color:#999;font-size:11px;">(615ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击商品: &#x27;AirPods Pro 2&#x27; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/&#x27;&gt; selector=&#x27;internal:text=&quot;AirPods Pro 2&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(27ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 点击加入购物车 <span style="color:#999;font-size:11px;">(837ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;加入购物车&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(837ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开购物车页面 <span style="color:#999;font-size:11px;">(673ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/cart&#x27; <span style="color:#999;font-size:11px;">(673ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品在购物车中: &#x27;iPhone 15 Pro Max&#x27; <span style="color:#999;font-size:11px;">(17ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言商品在购物车中: &#x27;AirPods Pro 2&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言已选件数: 2 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素包含文本: &#x27;2&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="10" data-name="test_admin_login_success" data-status="passed" data-severity="critical" data-epic="用户认证" data-feature="登录功能" data-story="管理员登录" onclick="toggleSteps(10)">
+                    <td><span id="icon-10" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_admin_login_success</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试管理员登录成功
+
+验证管理员账号能够成功登录系统，并跳转到首页。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>用户认证</td>
+                    <td>登录功能</td>
+                    <td>管理员登录</td>
+                    <td>1.9s</td>
+                    <td>2026-09-14 05:36:55</td>
+                </tr>
+                <tr id="steps-10" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开登录页面 <span style="color:#999;font-size:11px;">(852ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/login&#x27; <span style="color:#999;font-size:11px;">(852ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录页面已加载 <span style="color:#999;font-size:11px;">(26ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(18ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 执行登录操作: &#x27;admin&#x27; <span style="color:#999;font-size:11px;">(1.1s)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入用户名: &#x27;admin&#x27; <span style="color:#999;font-size:11px;">(9ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;admin&#x27; <span style="color:#999;font-size:11px;">(9ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 输入密码 <span style="color:#999;font-size:11px;">(8ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 填写输入框: &#x27;123456&#x27; <span style="color:#999;font-size:11px;">(8ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击登录按钮 <span style="color:#999;font-size:11px;">(28ms)</span></div>
+<div class="step-children" style="margin-left:20px;">
+<div class="step-item passed" style="margin-left:40px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/login&#x27;&gt; selector=&#x27;internal:role=button[name=&quot;登录&quot;i]&#x27;&gt; <span style="color:#999;font-size:11px;">(28ms)</span></div>
+</div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言登录成功 <span style="color:#999;font-size:11px;">(1ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 获取当前页面URL <span style="color:#999;font-size:11px;">(0ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言首页已加载 <span style="color:#999;font-size:11px;">(9ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="11" data-name="test_spec_stock_changes" data-status="passed" data-severity="normal" data-epic="商品管理" data-feature="商品浏览" data-story="规格库存变化" onclick="toggleSteps(11)">
+                    <td><span id="icon-11" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_spec_stock_changes</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试规格库存变化
+
+验证选择不同规格后库存数量正确变化。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>商品管理</td>
+                    <td>商品浏览</td>
+                    <td>规格库存变化</td>
+                    <td>742ms</td>
+                    <td>2026-09-14 05:37:22</td>
+                </tr>
+                <tr id="steps-11" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(670ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(670ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(27ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(27ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(20ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言库存数量: 30 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素包含文本: &#x27;30&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;512GB&#x27; <span style="color:#999;font-size:11px;">(19ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;512GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(19ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言库存数量: 15 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素包含文本: &#x27;15&#x27; <span style="color:#999;font-size:11px;">(2ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="12" data-name="test_admin_menu_visibility" data-status="passed" data-severity="critical" data-epic="商品管理" data-feature="商品浏览" data-story="管理员菜单可见性" onclick="toggleSteps(12)">
+                    <td><span id="icon-12" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_admin_menu_visibility</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试管理员菜单可见性
+
+验证管理员可以看到&quot;管理后台&quot;菜单项。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>商品管理</td>
+                    <td>商品浏览</td>
+                    <td>管理员菜单可见性</td>
+                    <td>531ms</td>
+                    <td>2026-09-14 05:37:25</td>
+                </tr>
+                <tr id="steps-12" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="13" data-name="test_order_list_display" data-status="passed" data-severity="normal" data-epic="订单管理" data-feature="订单功能" data-story="订单列表显示" onclick="toggleSteps(13)">
+                    <td><span id="icon-13" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_order_list_display</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试订单列表显示
+
+验证订单列表正确显示订单信息。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge normal">一般</span></td>
+                    <td>订单管理</td>
+                    <td>订单功能</td>
+                    <td>订单列表显示</td>
+                    <td>686ms</td>
+                    <td>2026-09-14 05:37:07</td>
+                </tr>
+                <tr id="steps-13" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开订单页面 <span style="color:#999;font-size:11px;">(652ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/orders&#x27; <span style="color:#999;font-size:11px;">(652ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言订单页面已加载 <span style="color:#999;font-size:11px;">(20ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言元素可见 <span style="color:#999;font-size:11px;">(2ms)</span></div>
+                            
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="expandable" data-id="14" data-name="test_spec_selection_completeness" data-status="passed" data-severity="critical" data-epic="商品管理" data-feature="商品浏览" data-story="规格选择完整性" onclick="toggleSteps(14)">
+                    <td><span id="icon-14" class="expand-icon">&#9654;</span></td>
+                    <td>
+                        <strong>test_spec_selection_completeness</strong>
+                        <div style="font-size:11px;color:#999;margin-top:2px;">测试规格选择完整性
+
+验证必须选择所有规格才能启用加入购物车按钮。</div>
+                    </td>
+                    <td><span class="status-badge passed">通过</span></td>
+                    <td><span class="severity-badge critical">严重</span></td>
+                    <td>商品管理</td>
+                    <td>商品浏览</td>
+                    <td>规格选择完整性</td>
+                    <td>724ms</td>
+                    <td>2026-09-14 05:37:19</td>
+                </tr>
+                <tr id="steps-14" style="display:none;">
+                    <td colspan="9" style="padding:0;">
+                        <div style="padding:16px 20px;background:#fafafa;">
+                            <h4 style="margin-bottom:12px;font-size:14px;">测试步骤</h4>
+                            <div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 打开商品详情页: 1 <span style="color:#999;font-size:11px;">(661ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 导航到页面: &#x27;/product/1&#x27; <span style="color:#999;font-size:11px;">(661ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言加入购物车按钮禁用 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素禁用 <span style="color:#999;font-size:11px;">(17ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;256GB&#x27; <span style="color:#999;font-size:11px;">(13ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;256GB&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(12ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言加入购物车按钮禁用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素禁用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 选择规格: &#x27;原色钛金属&#x27; <span style="color:#999;font-size:11px;">(24ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 点击元素: &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:5173/product/1&#x27;&gt; selector=&#x27;internal:text=&quot;\\u539f\\u8272\\u949b\\u91d1\\u5c5e&quot;i &gt;&gt; nth=0&#x27;&gt; <span style="color:#999;font-size:11px;">(24ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言加入购物车按钮启用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素启用 <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+<div class="step-item passed" style="margin-left:0px;"><span class="step-status passed">✓</span> 断言已选规格: &#x27;256GB / 原色钛金属&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+<div class="step-children" style="margin-left:0px;">
+<div class="step-item passed" style="margin-left:20px;"><span class="step-status passed">✓</span> 断言元素包含文本: &#x27;256GB / 原色钛金属&#x27; <span style="color:#999;font-size:11px;">(3ms)</span></div>
+</div>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    ShopEasy 自动化测试报告 · 由 Allure 数据生成 · 2026-09-14 13:46:39
+</div>
+
+<script>
+// ==================== Tab 切换 ====================
+function switchTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tabName).classList.add('active');
+    event.target.classList.add('active');
+}
+
+// ==================== 展开/折叠步骤 ====================
+function toggleSteps(id) {
+    const container = document.getElementById('steps-' + id);
+    const icon = document.getElementById('icon-' + id);
+    if (container.style.display === 'none' || container.style.display === '') {
+        container.style.display = 'table-row';
+        icon.classList.add('open');
+    } else {
+        container.style.display = 'none';
+        icon.classList.remove('open');
+    }
+}
+
+// ==================== 展开/折叠分组 ====================
+function toggleGroup(id) {
+    const body = document.getElementById('group-' + id);
+    const icon = document.getElementById('group-icon-' + id);
+    if (body.style.display === 'none' || body.style.display === '') {
+        body.style.display = 'block';
+        icon.classList.add('open');
+    } else {
+        body.style.display = 'none';
+        icon.classList.remove('open');
+    }
+}
+
+// ==================== 筛选 ====================
+function filterTests() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const statusFilter = document.getElementById('statusFilter').value;
+    const severityFilter = document.getElementById('severityFilter').value;
+
+    const rows = document.querySelectorAll('#testTable tbody tr[data-name]');
+    rows.forEach(row => {
+        const name = (row.dataset.name || '').toLowerCase();
+        const status = row.dataset.status || '';
+        const severity = row.dataset.severity || '';
+        const epic = (row.dataset.epic || '').toLowerCase();
+        const feature = (row.dataset.feature || '').toLowerCase();
+        const story = (row.dataset.story || '').toLowerCase();
+
+        const matchSearch = !search || name.includes(search) || epic.includes(search) || feature.includes(search) || story.includes(search);
+        const matchStatus = !statusFilter || status === statusFilter;
+        const matchSeverity = !severityFilter || severity === severityFilter;
+
+        // 同时控制步骤行
+        const stepsRow = document.getElementById('steps-' + row.dataset.id);
+        if (matchSearch && matchStatus && matchSeverity) {
+            row.style.display = '';
+            if (stepsRow) stepsRow.style.display = 'none';
+        } else {
+            row.style.display = 'none';
+            if (stepsRow) stepsRow.style.display = 'none';
+        }
+    });
+}
+
+function clearFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('statusFilter').value = '';
+    document.getElementById('severityFilter').value = '';
+    filterTests();
+}
+
+// ==================== 图表 ====================
+const chartData = {"passed": 15, "failed": 0, "broken": 0, "skipped": 0};
+const severityData = {"critical": 10, "normal": 5};
+
+// 状态分布饼图
+new Chart(document.getElementById('statusChart'), {
+    type: 'doughnut',
+    data: {
+        labels: ['通过', '失败', '异常', '跳过'],
+        datasets: [{
+            data: [chartData.passed, chartData.failed, chartData.broken, chartData.skipped],
+            backgroundColor: ['#52c41a', '#ff4d4f', '#fa8c16', '#d9d9d9'],
+            borderWidth: 2,
+            borderColor: '#ffffff'
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: { padding: 16, font: { size: 13 } }
+            }
+        }
+    }
+});
+
+// 严重级别柱状图
+const sevLabels = Object.keys(severityData).map(k => {
+    const map = {'blocker':'阻塞','critical':'严重','normal':'一般','minor':'次要','trivial':'轻微'};
+    return map[k] || k;
+});
+const sevColors = Object.keys(severityData).map(k => {
+    const map = {'blocker':'#ff4d4f','critical':'#fa541c','normal':'#1890ff','minor':'#52c41a','trivial':'#d9d9d9'};
+    return map[k] || '#1890ff';
+});
+
+new Chart(document.getElementById('severityChart'), {
+    type: 'bar',
+    data: {
+        labels: sevLabels,
+        datasets: [{
+            label: '用例数',
+            data: Object.values(severityData),
+            backgroundColor: sevColors,
+            borderRadius: 6,
+            maxBarThickness: 60
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: { legend: { display: false } },
+        scales: {
+            y: { beginAtZero: true, ticks: { stepSize: 1 } }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

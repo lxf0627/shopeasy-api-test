@@ -1,0 +1,59 @@
+- generic [ref=f2e3]:
+  - generic [ref=f2e5]:
+    - link "🛍️ ShopEasy" [ref=f2e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f2e8]:
+      - textbox "搜索商品..." [ref=f2e10]
+      - button [ref=f2e13] [cursor=pointer]
+    - generic [ref=f2e17]:
+      - button [ref=f2e19] [cursor=pointer]
+      - button "张 张三" [ref=f2e25] [cursor=pointer]:
+        - generic [ref=f2e26]: 张
+        - generic [ref=f2e27]: 张三
+  - main [ref=f2e28]:
+    - generic [ref=f2e222]:
+      - generic [ref=f2e223]:
+        - heading "订单详情" [level=2] [ref=f2e224]
+        - generic [ref=f2e225]: 待支付
+      - table [ref=f2e229]:
+        - rowgroup [ref=f2e230]:
+          - row [ref=f2e231]:
+            - cell "订单号" [ref=f2e232]
+            - cell "ORD1790425822784UO2U" [ref=f2e233]
+            - cell "下单时间" [ref=f2e234]
+            - cell "2026-09-26 12:30" [ref=f2e235]
+          - row [ref=f2e236]:
+            - cell "收货人" [ref=f2e237]
+            - cell [ref=f2e238]
+            - cell "手机号" [ref=f2e239]
+            - cell [ref=f2e240]
+          - row [ref=f2e241]:
+            - cell "收货地址" [ref=f2e242]
+            - cell [ref=f2e243]
+          - row [ref=f2e244]:
+            - cell "备注" [ref=f2e245]
+            - cell "无" [ref=f2e246]
+      - heading "商品清单" [level=3] [ref=f2e247]
+      - generic [ref=f2e249]:
+        - table [ref=f2e251]:
+          - rowgroup [ref=f2e257]:
+            - row [ref=f2e258]:
+              - columnheader "商品" [ref=f2e259]
+              - columnheader "单价" [ref=f2e261]
+              - columnheader "数量" [ref=f2e263]
+              - columnheader "小计" [ref=f2e265]
+        - table [ref=f2e271]:
+          - rowgroup [ref=f2e277]:
+            - row [ref=f2e278]:
+              - cell "iPhone 15 Pro Max 256GB / 原色钛金属" [ref=f2e279]:
+                - generic [ref=f2e280]:
+                  - text: iPhone 15 Pro Max
+                  - generic [ref=f2e281]: 256GB / 原色钛金属
+              - cell "¥9999" [ref=f2e283]
+              - cell "1" [ref=f2e285]
+              - cell "¥9999.00" [ref=f2e287]
+      - generic [ref=f2e289]: "合计: ¥9999"
+      - generic [ref=f2e290]:
+        - button "取消订单" [ref=f2e291] [cursor=pointer]
+        - button "去支付" [ref=f2e293] [cursor=pointer]
+  - paragraph [ref=f2e180]: © 2024 ShopEasy — 测试用在线购物平台

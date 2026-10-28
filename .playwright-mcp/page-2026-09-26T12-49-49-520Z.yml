@@ -1,0 +1,241 @@
+- generic [ref=f10e244]:
+  - complementary [ref=f10e245]:
+    - generic [ref=f10e246]: ⚙️ 管理后台
+    - menubar [ref=f10e247]:
+      - menuitem [ref=f10e248] [cursor=pointer]
+      - menuitem [ref=f10e252] [cursor=pointer]
+      - menuitem [ref=f10e256] [cursor=pointer]
+      - menuitem [ref=f10e260] [cursor=pointer]
+      - menuitem [ref=f10e264] [cursor=pointer]
+      - menuitem [ref=f10e268] [cursor=pointer]
+    - button "← 返回前台" [ref=f10e274] [cursor=pointer]
+  - generic [ref=f10e276]:
+    - generic [ref=f10e277]:
+      - generic [ref=f10e278]: 管理员（管理员）
+      - button "退出登录" [ref=f10e279] [cursor=pointer]
+    - main [ref=f10e281]:
+      - generic [ref=f10e384]:
+        - generic [ref=f10e385]:
+          - heading "商品管理" [level=2] [ref=f10e386]
+          - button "新增商品" [ref=f10e387] [cursor=pointer]
+        - generic [ref=f10e389]:
+          - generic [ref=f10e390]:
+            - textbox "搜索商品" [ref=f10e393]
+            - generic [ref=f10e396] [cursor=pointer]:
+              - generic:
+                - combobox [ref=f10e398]
+                - generic [ref=f10e399]: 状态
+            - button "搜索" [ref=f10e404] [cursor=pointer]
+          - generic [ref=f10e407]:
+            - table [ref=f10e409]:
+              - rowgroup [ref=f10e420]:
+                - row [ref=f10e421]:
+                  - columnheader "ID" [ref=f10e422]
+                  - columnheader "商品名称" [ref=f10e424]
+                  - columnheader "分类" [ref=f10e426]
+                  - columnheader "规格" [ref=f10e428]
+                  - columnheader "价格" [ref=f10e430]
+                  - columnheader "库存" [ref=f10e432]
+                  - columnheader "销量" [ref=f10e434]
+                  - columnheader "状态" [ref=f10e436]
+                  - columnheader "操作" [ref=f10e438]
+            - table [ref=f10e444]:
+              - rowgroup [ref=f10e455]:
+                - row [ref=f10e456]:
+                  - cell "27" [ref=f10e457]
+                  - cell "测试商品-零库存" [ref=f10e459]
+                  - cell "手机数码" [ref=f10e461]
+                  - cell "无" [ref=f10e463]
+                  - cell "¥999" [ref=f10e465]
+                  - cell "0" [ref=f10e467]
+                  - cell "0" [ref=f10e469]
+                  - cell "上架" [ref=f10e471]
+                  - cell [ref=f10e475]:
+                    - generic [ref=f10e476]:
+                      - button "编辑" [ref=f10e477] [cursor=pointer]
+                      - button "下架" [ref=f10e479] [cursor=pointer]
+                - row [ref=f10e481]:
+                  - cell "1" [ref=f10e482]
+                  - cell "iPhone 15 Pro Max" [ref=f10e484]
+                  - cell "手机数码" [ref=f10e486]
+                  - cell "9种" [ref=f10e488]
+                  - cell "¥9999" [ref=f10e492]
+                  - cell "65" [ref=f10e494]
+                  - cell "2616" [ref=f10e496]
+                  - cell "上架" [ref=f10e498]
+                  - cell [ref=f10e502]:
+                    - generic [ref=f10e503]:
+                      - button "编辑" [ref=f10e504] [cursor=pointer]
+                      - button "下架" [ref=f10e506] [cursor=pointer]
+                - row [ref=f10e508]:
+                  - cell "2" [ref=f10e509]
+                  - cell "Samsung Galaxy S24 Ultra" [ref=f10e511]
+                  - cell "手机数码" [ref=f10e513]
+                  - cell "6种" [ref=f10e515]
+                  - cell "¥8999" [ref=f10e519]
+                  - cell "79" [ref=f10e521]
+                  - cell "1321" [ref=f10e523]
+                  - cell "上架" [ref=f10e525]
+                  - cell [ref=f10e529]:
+                    - generic [ref=f10e530]:
+                      - button "编辑" [ref=f10e531] [cursor=pointer]
+                      - button "下架" [ref=f10e533] [cursor=pointer]
+                - row [ref=f10e535]:
+                  - cell "3" [ref=f10e536]
+                  - cell "AirPods Pro 2" [ref=f10e538]
+                  - cell "手机数码" [ref=f10e540]
+                  - cell "无" [ref=f10e542]
+                  - cell "¥1799" [ref=f10e544]
+                  - cell "192" [ref=f10e546]
+                  - cell "3768" [ref=f10e548]
+                  - cell "上架" [ref=f10e550]
+                  - cell [ref=f10e554]:
+                    - generic [ref=f10e555]:
+                      - button "编辑" [ref=f10e556] [cursor=pointer]
+                      - button "下架" [ref=f10e558] [cursor=pointer]
+                - row [ref=f10e560]:
+                  - cell "4" [ref=f10e561]
+                  - cell "HUAWEI Mate 60 Pro" [ref=f10e563]
+                  - cell "手机数码" [ref=f10e565]
+                  - cell "6种" [ref=f10e567]
+                  - cell "¥6999" [ref=f10e571]
+                  - cell "60" [ref=f10e573]
+                  - cell "1890" [ref=f10e575]
+                  - cell "上架" [ref=f10e577]
+                  - cell [ref=f10e581]:
+                    - generic [ref=f10e582]:
+                      - button "编辑" [ref=f10e583] [cursor=pointer]
+                      - button "下架" [ref=f10e585] [cursor=pointer]
+                - row [ref=f10e587]:
+                  - cell "5" [ref=f10e588]
+                  - cell "Xiaomi 14 Ultra" [ref=f10e590]
+                  - cell "手机数码" [ref=f10e592]
+                  - cell "无" [ref=f10e594]
+                  - cell "¥5999" [ref=f10e596]
+                  - cell "120" [ref=f10e598]
+                  - cell "980" [ref=f10e600]
+                  - cell "上架" [ref=f10e602]
+                  - cell [ref=f10e606]:
+                    - generic [ref=f10e607]:
+                      - button "编辑" [ref=f10e608] [cursor=pointer]
+                      - button "下架" [ref=f10e610] [cursor=pointer]
+                - row [ref=f10e612]:
+                  - cell "6" [ref=f10e613]
+                  - cell "MacBook Pro 14英寸" [ref=f10e615]
+                  - cell "电脑办公" [ref=f10e617]
+                  - cell "4种" [ref=f10e619]
+                  - cell "¥14999" [ref=f10e623]
+                  - cell "50" [ref=f10e625]
+                  - cell "1210" [ref=f10e627]
+                  - cell "上架" [ref=f10e629]
+                  - cell [ref=f10e633]:
+                    - generic [ref=f10e634]:
+                      - button "编辑" [ref=f10e635] [cursor=pointer]
+                      - button "下架" [ref=f10e637] [cursor=pointer]
+                - row [ref=f10e639]:
+                  - cell "7" [ref=f10e640]
+                  - cell "ThinkPad X1 Carbon" [ref=f10e642]
+                  - cell "电脑办公" [ref=f10e644]
+                  - cell "无" [ref=f10e646]
+                  - cell "¥8999" [ref=f10e648]
+                  - cell "60" [ref=f10e650]
+                  - cell "650" [ref=f10e652]
+                  - cell "上架" [ref=f10e654]
+                  - cell [ref=f10e658]:
+                    - generic [ref=f10e659]:
+                      - button "编辑" [ref=f10e660] [cursor=pointer]
+                      - button "下架" [ref=f10e662] [cursor=pointer]
+                - row [ref=f10e664]:
+                  - cell "8" [ref=f10e665]
+                  - cell "iPad Air" [ref=f10e667]
+                  - cell "电脑办公" [ref=f10e669]
+                  - cell "9种" [ref=f10e671]
+                  - cell "¥5499" [ref=f10e675]
+                  - cell "90" [ref=f10e677]
+                  - cell "1430" [ref=f10e679]
+                  - cell "上架" [ref=f10e681]
+                  - cell [ref=f10e685]:
+                    - generic [ref=f10e686]:
+                      - button "编辑" [ref=f10e687] [cursor=pointer]
+                      - button "下架" [ref=f10e689] [cursor=pointer]
+                - row [ref=f10e691]:
+                  - cell "9" [ref=f10e692]
+                  - cell "Dell XPS 15" [ref=f10e694]
+                  - cell "电脑办公" [ref=f10e696]
+                  - cell "无" [ref=f10e698]
+                  - cell "¥11999" [ref=f10e700]
+                  - cell "35" [ref=f10e702]
+                  - cell "320" [ref=f10e704]
+                  - cell "上架" [ref=f10e706]
+                  - cell [ref=f10e710]:
+                    - generic [ref=f10e711]:
+                      - button "编辑" [ref=f10e712] [cursor=pointer]
+                      - button "下架" [ref=f10e714] [cursor=pointer]
+          - generic [ref=f10e717]:
+            - button "上一页" [disabled] [ref=f10e718]
+            - list [ref=f10e719]:
+              - listitem "第 1 页" [ref=f10e720]: "1"
+              - listitem "第 2 页" [ref=f10e721] [cursor=pointer]: "2"
+              - listitem "第 3 页" [ref=f10e722] [cursor=pointer]: "3"
+            - button "下一页" [ref=f10e723] [cursor=pointer]
+        - dialog "新增商品" [ref=f10e725]:
+          - generic [ref=f10e726]:
+            - generic [ref=f10e727]:
+              - heading "新增商品" [level=2] [ref=f10e728]
+              - button "关闭此对话框" [ref=f10e729] [cursor=pointer]
+            - generic [ref=f10e734]:
+              - generic [ref=f10e735]:
+                - generic [ref=f10e736]: 名称
+                - textbox "名称" [ref=f10e740]: 测试商品-自动化测试
+              - generic [ref=f10e741]:
+                - generic [ref=f10e742]: 描述
+                - textbox "描述" [ref=f10e745]: 这是自动化测试创建的商品，请勿购买
+              - generic [ref=f10e746]:
+                - generic [ref=f10e747]: 分类
+                - generic [ref=f10e750] [cursor=pointer]:
+                  - generic:
+                    - combobox "分类" [ref=f10e752]
+                    - generic [ref=f10e753]: 手机数码
+              - generic [ref=f10e758]:
+                - generic [ref=f10e759]: 基础价格
+                - generic [ref=f10e761]:
+                  - button "减少数值" [ref=f10e762]
+                  - button "增加数值" [ref=f10e766] [cursor=pointer]
+                  - spinbutton "基础价格" [active] [ref=f10e772]: "0.00"
+              - generic [ref=f10e773]:
+                - generic [ref=f10e774]: 基础原价
+                - generic [ref=f10e776]:
+                  - button "减少数值" [ref=f10e777] [cursor=pointer]
+                  - button "增加数值" [ref=f10e781] [cursor=pointer]
+                  - spinbutton "基础原价" [ref=f10e787]
+              - generic [ref=f10e788]:
+                - generic [ref=f10e789]: 基础库存
+                - generic [ref=f10e791]:
+                  - button "减少数值" [ref=f10e792]
+                  - button "增加数值" [ref=f10e796] [cursor=pointer]
+                  - spinbutton "基础库存" [ref=f10e802]: "0"
+              - generic [ref=f10e803]:
+                - generic [ref=f10e804]: 状态
+                - radiogroup "状态" [ref=f10e806]:
+                  - generic [ref=f10e807] [cursor=pointer]:
+                    - radio "上架" [checked] [ref=f10e809]
+                    - generic [ref=f10e811]: 上架
+                  - generic [ref=f10e812] [cursor=pointer]:
+                    - radio "下架" [ref=f10e814]
+                    - generic [ref=f10e816]: 下架
+              - separator [ref=f10e817]:
+                - generic [ref=f10e818]: 商品图片（至少1张，最多6张）
+              - generic [ref=f10e819]:
+                - generic [ref=f10e822]:
+                  - button [ref=f10e824] [cursor=pointer]:
+                    - button "替换" [ref=f10e825]
+                  - generic [ref=f10e827]: 封面
+                - button [ref=f10e830] [cursor=pointer]:
+                  - button "+ 添加图片" [ref=f10e831]
+              - generic [ref=f10e833]: 支持 jpg/png/gif/webp/svg，单张最大 5MB
+              - separator [ref=f10e834]:
+                - generic [ref=f10e835]: 商品规格
+              - button "+ 添加规格组" [ref=f10e836] [cursor=pointer]
+            - generic [ref=f10e838]:
+              - button "取消" [ref=f10e839] [cursor=pointer]
+              - button "保存" [ref=f10e841] [cursor=pointer]

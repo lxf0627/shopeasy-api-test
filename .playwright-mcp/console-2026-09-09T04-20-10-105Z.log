@@ -1,0 +1,13 @@
+[      -1ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://ims.pinduoduo.com/:0
+[       0ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://ims.pinduoduo.com/:0
+[     225ms] [ERROR] 没有上报具体监控值 @ https://mms-static.pddpic.com/static/js/15.f144cce8.chunk.v20260901161359_d2ad0da6.js:1
+[     227ms] [INFO] gray----->>><<<-----yarg @ https://mms-static.pddpic.com/static/js/main.9a7e6080.chunk.v20260901161359_d2ad0da6.js:0
+[     227ms] [INFO] ------sid------ c1d1abbe-abf8-4087-8298-9ec6c4477ce1 @ https://mms-static.pddpic.com/static/js/main.9a7e6080.chunk.v20260901161359_d2ad0da6.js:0
+[     227ms] [INFO] ------next ims------ @ https://mms-static.pddpic.com/static/js/main.9a7e6080.chunk.v20260901161359_d2ad0da6.js:0
+[     352ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://mms-static.pddpic.com/static/js/home.77d84e73.chunk.v20260901161359_d2ad0da6.js:1
+[     352ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://mms-static.pddpic.com/static/js/home.77d84e73.chunk.v20260901161359_d2ad0da6.js:1
+[     352ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://mms-static.pddpic.com/static/js/home.77d84e73.chunk.v20260901161359_d2ad0da6.js:1
+[     352ms] [ERROR] The Content Security Policy directive 'report-uri' specifies as endpoint 'htts://mms.pinduoduo.com/csp-report'. This endpoint will be ignored since it violates the policy for Mixed Content. @ https://mms-static.pddpic.com/static/js/home.77d84e73.chunk.v20260901161359_d2ad0da6.js:1
+[     373ms] [ERROR] 没有上报具体监控值 @ https://mms-static.pddpic.com/static/js/15.f144cce8.chunk.v20260901161359_d2ad0da6.js:1
+[    1558ms] [VERBOSE] [DOM] Multiple forms should be contained in their own form elements; break up complex forms into ones that represent a single action: (More info: https://goo.gl/9p2vKq) %o @ https://ims.pinduoduo.com/:0
+[    1644ms] [ERROR] Failed to load resource: the server responded with a status of 405 () @ https://ims.pinduoduo.com/janus/api/new/userinfo:0

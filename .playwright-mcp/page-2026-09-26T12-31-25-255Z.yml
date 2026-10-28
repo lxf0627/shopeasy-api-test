@@ -1,0 +1,62 @@
+- generic [ref=f11e3]:
+  - generic [ref=f11e5]:
+    - link "🛍️ ShopEasy" [ref=f11e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f11e8]:
+      - textbox "搜索商品..." [ref=f11e10]
+      - button [ref=f11e13] [cursor=pointer]
+    - generic [ref=f11e17]:
+      - button [ref=f11e19] [cursor=pointer]
+      - button "张 张三" [ref=f11e25] [cursor=pointer]:
+        - generic [ref=f11e26]: 张
+        - generic [ref=f11e27]: 张三
+  - main [ref=f11e28]:
+    - generic [ref=f11e30]:
+      - generic [ref=f11e31]:
+        - generic [ref=f11e34]:
+          - img [ref=f11e35] [cursor=pointer]
+          - img [ref=f11e36] [cursor=pointer]
+          - img [ref=f11e37] [cursor=pointer]
+          - img [ref=f11e38] [cursor=pointer]
+        - generic [ref=f11e39]:
+          - heading "iPhone 15 Pro Max" [level=1] [ref=f11e40]
+          - paragraph [ref=f11e41]: 苹果最新旗舰手机，A17 Pro芯片，钛金属边框，48MP主摄像头，USB-C接口
+          - generic [ref=f11e42]: ¥13999¥14999
+          - generic [ref=f11e43]:
+            - generic [ref=f11e44]: "销量: 2616"
+            - generic [ref=f11e45]: "库存: 3"
+            - generic [ref=f11e46]: "评分: ⭐ 4.8"
+          - generic [ref=f11e47]: "分类: 手机数码"
+          - generic [ref=f11e49]:
+            - generic [ref=f11e50]:
+              - generic [ref=f11e51]: "内存:"
+              - generic [ref=f11e52]:
+                - generic [ref=f11e53] [cursor=pointer]: 256GB
+                - generic [ref=f11e54] [cursor=pointer]: 512GB
+                - generic [ref=f11e55] [cursor=pointer]: 1TB
+            - generic [ref=f11e56]:
+              - generic [ref=f11e57]: "颜色:"
+              - generic [ref=f11e58]:
+                - generic [ref=f11e59] [cursor=pointer]: 原色钛金属
+                - generic [ref=f11e60] [cursor=pointer]: 蓝色钛金属
+                - generic [ref=f11e61] [cursor=pointer]: 白色钛金属
+            - generic [ref=f11e120]:
+              - text: "已选:"
+              - generic [ref=f11e121]: 1TB / 蓝色钛金属
+          - generic [ref=f11e62]:
+            - generic [ref=f11e63]:
+              - button "减少数值" [ref=f11e64]
+              - button "增加数值" [ref=f11e68] [cursor=pointer]
+              - spinbutton [ref=f11e74]: "1"
+            - button "加入购物车" [ref=f11e75] [cursor=pointer]
+            - button "已收藏" [ref=f11e80] [cursor=pointer]
+      - generic [ref=f11e85]:
+        - heading "商品评价 (1)" [level=3] [ref=f11e86]
+        - generic [ref=f11e87]:
+          - generic [ref=f11e88]:
+            - generic [ref=f11e89]: 李
+            - generic [ref=f11e90]: 李四
+            - slider "rating" [disabled] [ref=f11e91]
+            - generic [ref=f11e112]: 2024-01-09
+          - paragraph [ref=f11e113]: 手机很好用，拍照效果棒，就是价格有点贵
+  - paragraph [ref=f11e119]: © 2024 ShopEasy — 测试用在线购物平台

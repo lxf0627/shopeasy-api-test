@@ -1,0 +1,97 @@
+- generic [ref=e247]:
+  - complementary [ref=e248]:
+    - generic [ref=e249]: ⚙️ 管理后台
+    - menubar [ref=e250]:
+      - menuitem [ref=e251] [cursor=pointer]
+      - menuitem [ref=e255] [cursor=pointer]
+      - menuitem [ref=e259] [cursor=pointer]
+      - menuitem [ref=e263] [cursor=pointer]
+      - menuitem [ref=e267] [cursor=pointer]
+      - menuitem [active] [ref=e271] [cursor=pointer]
+    - button "← 返回前台" [ref=e277] [cursor=pointer]
+  - generic [ref=e279]:
+    - generic [ref=e280]:
+      - generic [ref=e281]: 管理员（管理员）
+      - button "退出登录" [ref=e282] [cursor=pointer]
+    - main [ref=e284]:
+      - generic [ref=e835]:
+        - heading "评价管理" [level=2] [ref=e836]
+        - generic [ref=e837]:
+          - generic [ref=e839]:
+            - table [ref=e841]:
+              - rowgroup [ref=e850]:
+                - row [ref=e851]:
+                  - columnheader "ID" [ref=e852]
+                  - columnheader "用户" [ref=e854]
+                  - columnheader "商品" [ref=e856]
+                  - columnheader "评分" [ref=e858]
+                  - columnheader "评价内容" [ref=e860]
+                  - columnheader "评价时间" [ref=e862]
+                  - columnheader "操作" [ref=e864]
+            - table [ref=e870]:
+              - rowgroup [ref=e879]:
+                - row [ref=e880]:
+                  - cell "6" [ref=e881]
+                  - cell "李四" [ref=e883]
+                  - cell "Dyson V15 Detect" [ref=e885]
+                  - cell [ref=e887]:
+                    - slider "rating" [disabled] [ref=e889]
+                  - cell "吸力很强，激光照灰尘很直观，就是有点重" [ref=e910]
+                  - cell "2024-01-13 10:00" [ref=e912]
+                  - cell [ref=e914]:
+                    - button "删除" [ref=e916] [cursor=pointer]
+                - row [ref=e918]:
+                  - cell "5" [ref=e919]
+                  - cell "张三" [ref=e921]
+                  - cell "JavaScript高级程序设计(第4版)" [ref=e923]
+                  - cell [ref=e925]:
+                    - slider "rating" [disabled] [ref=e927]
+                  - cell "前端必读书籍，内容全面深入，第4版更新了很多ES6+内容" [ref=e948]
+                  - cell "2024-01-12 10:00" [ref=e950]
+                  - cell [ref=e952]:
+                    - button "删除" [ref=e954] [cursor=pointer]
+                - row [ref=e956]:
+                  - cell "4" [ref=e957]
+                  - cell "李四" [ref=e959]
+                  - cell "Nike Air Max 270" [ref=e961]
+                  - cell [ref=e963]:
+                    - slider "rating" [disabled] [ref=e965]
+                  - cell "鞋子很舒服，气垫软弹，日常穿很百搭，尺码标准" [ref=e986]
+                  - cell "2024-01-11 10:00" [ref=e988]
+                  - cell [ref=e990]:
+                    - button "删除" [ref=e992] [cursor=pointer]
+                - row [ref=e994]:
+                  - cell "3" [ref=e995]
+                  - cell "张三" [ref=e997]
+                  - cell "MacBook Pro 14英寸" [ref=e999]
+                  - cell [ref=e1001]:
+                    - slider "rating" [disabled] [ref=e1003]
+                  - cell "M3 Pro芯片性能强劲，续航给力，屏幕素质一流" [ref=e1024]
+                  - cell "2024-01-10 10:00" [ref=e1026]
+                  - cell [ref=e1028]:
+                    - button "删除" [ref=e1030] [cursor=pointer]
+                - row [ref=e1032]:
+                  - cell "2" [ref=e1033]
+                  - cell "李四" [ref=e1035]
+                  - cell "iPhone 15 Pro Max" [ref=e1037]
+                  - cell [ref=e1039]:
+                    - slider "rating" [disabled] [ref=e1041]
+                  - cell "手机很好用，拍照效果棒，就是价格有点贵" [ref=e1062]
+                  - cell "2024-01-09 10:00" [ref=e1064]
+                  - cell [ref=e1066]:
+                    - button "删除" [ref=e1068] [cursor=pointer]
+                - row [ref=e1070]:
+                  - cell "1" [ref=e1071]
+                  - cell "张三" [ref=e1073]
+                  - cell "三只松鼠坚果礼盒" [ref=e1075]
+                  - cell [ref=e1077]:
+                    - slider "rating" [disabled] [ref=e1079]
+                  - cell "坚果很新鲜，种类丰富，包装精美，送人自用都不错！" [ref=e1100]
+                  - cell "2024-01-08 10:00" [ref=e1102]
+                  - cell [ref=e1104]:
+                    - button "删除" [ref=e1106] [cursor=pointer]
+          - generic [ref=e1109]:
+            - button "上一页" [disabled] [ref=e1110]
+            - list [ref=e1111]:
+              - listitem "第 1 页" [ref=e1112]: "1"
+            - button "下一页" [disabled] [ref=e1113]

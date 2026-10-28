@@ -1,0 +1,67 @@
+- generic [ref=f3e252]:
+  - generic [ref=f3e254]:
+    - link "🛍️ ShopEasy" [ref=f3e255] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f3e257]:
+      - textbox "搜索商品..." [ref=f3e259]
+      - button [ref=f3e262] [cursor=pointer]
+    - generic [ref=f3e266]:
+      - generic [ref=f3e267]:
+        - button [active] [ref=f3e268] [cursor=pointer]
+        - superscript [ref=f3e273]: "1"
+      - button "管 管理员" [ref=f3e275] [cursor=pointer]:
+        - generic [ref=f3e276]: 管
+        - generic [ref=f3e277]: 管理员
+  - main [ref=f3e278]:
+    - generic [ref=f3e481]:
+      - heading "🛒 购物车" [level=2] [ref=f3e482]
+      - generic [ref=f3e483]:
+        - generic [ref=f3e485]:
+          - table [ref=f3e487]:
+            - rowgroup [ref=f3e495]:
+              - row [ref=f3e496]:
+                - columnheader [ref=f3e497]:
+                  - generic "选择所有行" [ref=f3e499] [cursor=pointer]:
+                    - generic [ref=f3e500]:
+                      - checkbox "选择所有行"
+                - columnheader "商品" [ref=f3e502]
+                - columnheader "单价" [ref=f3e504]
+                - columnheader "数量" [ref=f3e506]
+                - columnheader "小计" [ref=f3e508]
+                - columnheader "操作" [ref=f3e510]
+          - table [ref=f3e516]:
+            - rowgroup [ref=f3e524]:
+              - row [ref=f3e525]:
+                - cell [ref=f3e526]:
+                  - generic "选择当前行" [ref=f3e528] [cursor=pointer]:
+                    - generic [ref=f3e529]:
+                      - checkbox "选择当前行"
+                - cell "iPhone 15 Pro Max 256GB / 原色钛金属 手机数码" [ref=f3e531]:
+                  - generic [ref=f3e535] [cursor=pointer]:
+                    - paragraph [ref=f3e536]: iPhone 15 Pro Max
+                    - generic [ref=f3e537]: 256GB / 原色钛金属
+                    - paragraph [ref=f3e539]: 手机数码
+                - cell "¥9999" [ref=f3e540]
+                - cell [ref=f3e542]:
+                  - generic [ref=f3e544]:
+                    - button "减少数值" [ref=f3e545]
+                    - button "增加数值" [ref=f3e549] [cursor=pointer]
+                    - spinbutton [ref=f3e555]: "1"
+                - cell "¥9999.00" [ref=f3e556]
+                - cell [ref=f3e558]:
+                  - button "删除" [ref=f3e560] [cursor=pointer]
+        - generic [ref=f3e562]:
+          - generic [ref=f3e564] [cursor=pointer]:
+            - generic [ref=f3e565]:
+              - checkbox "全选" [checked]
+            - generic [ref=f3e567]: 全选
+          - generic [ref=f3e568]:
+            - generic [ref=f3e569]:
+              - text: 已选
+              - strong [ref=f3e570]: "1"
+              - text: 件
+            - generic [ref=f3e571]:
+              - text: "合计:"
+              - strong [ref=f3e572]: ¥9999.00
+            - button "去结算" [ref=f3e573] [cursor=pointer]
+  - paragraph [ref=f3e475]: © 2024 ShopEasy — 测试用在线购物平台

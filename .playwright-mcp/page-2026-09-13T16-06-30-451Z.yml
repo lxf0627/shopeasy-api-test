@@ -1,0 +1,68 @@
+- generic [ref=e242]:
+  - complementary [ref=e243]:
+    - generic [ref=e244]: ⚙️ 管理后台
+    - menubar [ref=e245]:
+      - menuitem [ref=e246] [cursor=pointer]
+      - menuitem [ref=e250] [cursor=pointer]
+      - menuitem [ref=e254] [cursor=pointer]
+      - menuitem [ref=e258] [cursor=pointer]
+      - menuitem [ref=e262] [cursor=pointer]
+      - menuitem [ref=e266] [cursor=pointer]
+    - button "← 返回前台" [ref=e272] [cursor=pointer]
+  - generic [ref=e274]:
+    - generic [ref=e275]:
+      - generic [ref=e276]: 管理员（管理员）
+      - button "退出登录" [ref=e277] [cursor=pointer]
+    - main [ref=e279]:
+      - generic [ref=e280]:
+        - heading "📊 数据概览" [level=2] [ref=e281]
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - generic [ref=e284]: "4"
+            - generic [ref=e285]: 用户总数
+          - generic [ref=e286]:
+            - generic [ref=e287]: "26"
+            - generic [ref=e288]: 商品总数
+          - generic [ref=e289]:
+            - generic [ref=e290]: "8"
+            - generic [ref=e291]: 订单总数
+          - generic [ref=e292]:
+            - generic [ref=e293]: ¥16026.00
+            - generic [ref=e294]: 总营收
+        - generic [ref=e295]:
+          - heading "最近订单" [level=3] [ref=e296]
+          - generic [ref=e298]:
+            - table [ref=e300]:
+              - rowgroup [ref=e306]:
+                - row [ref=e307]:
+                  - columnheader "订单号" [ref=e308]
+                  - columnheader "用户" [ref=e310]
+                  - columnheader "金额" [ref=e312]
+                  - columnheader "状态" [ref=e314]
+            - table [ref=e320]:
+              - rowgroup [ref=e326]:
+                - row [ref=e327]:
+                  - cell "ORD17892777829327DUJ" [ref=e328]
+                  - cell "buyer1" [ref=e330]
+                  - cell "¥9999" [ref=e332]
+                  - cell "待支付" [ref=e334]
+                - row [ref=e336]:
+                  - cell "ORD17889377882231WZ9" [ref=e337]
+                  - cell "buyer1" [ref=e339]
+                  - cell "¥9999" [ref=e341]
+                  - cell "待支付" [ref=e343]
+                - row [ref=e345]:
+                  - cell "ORD20240106001" [ref=e346]
+                  - cell "buyer1" [ref=e348]
+                  - cell "¥4990" [ref=e350]
+                  - cell "已退款" [ref=e352]
+                - row [ref=e354]:
+                  - cell "ORD20240105001" [ref=e355]
+                  - cell "buyer2" [ref=e357]
+                  - cell "¥599" [ref=e359]
+                  - cell "已取消" [ref=e361]
+                - row [ref=e363]:
+                  - cell "ORD20240104001" [ref=e364]
+                  - cell "buyer1" [ref=e366]
+                  - cell "¥128" [ref=e368]
+                  - cell "已完成" [ref=e370]

@@ -1,0 +1,85 @@
+- generic [ref=f3e282]:
+  - complementary [ref=f3e283]:
+    - generic [ref=f3e284]: ⚙️ 管理后台
+    - menubar [ref=f3e285]:
+      - menuitem [ref=f3e286] [cursor=pointer]
+      - menuitem [ref=f3e290] [cursor=pointer]
+      - menuitem [ref=f3e294] [cursor=pointer]
+      - menuitem [ref=f3e298] [cursor=pointer]
+      - menuitem [active] [ref=f3e302] [cursor=pointer]
+      - menuitem [ref=f3e306] [cursor=pointer]
+    - button "← 返回前台" [ref=f3e312] [cursor=pointer]
+  - generic [ref=f3e314]:
+    - generic [ref=f3e315]:
+      - generic [ref=f3e316]: 管理员（管理员）
+      - button "退出登录" [ref=f3e317] [cursor=pointer]
+    - main [ref=f3e319]:
+      - generic [ref=f3e1089]:
+        - heading "用户管理" [level=2] [ref=f3e1090]
+        - generic [ref=f3e1091]:
+          - generic [ref=f3e1092]:
+            - textbox "搜索用户名/昵称" [ref=f3e1095]
+            - button "搜索" [ref=f3e1097] [cursor=pointer]
+          - generic [ref=f3e1100]:
+            - table [ref=f3e1102]:
+              - rowgroup [ref=f3e1113]:
+                - row [ref=f3e1114]:
+                  - columnheader "ID" [ref=f3e1115]
+                  - columnheader "用户名" [ref=f3e1117]
+                  - columnheader "昵称" [ref=f3e1119]
+                  - columnheader "邮箱" [ref=f3e1121]
+                  - columnheader "手机号" [ref=f3e1123]
+                  - columnheader "角色" [ref=f3e1125]
+                  - columnheader "状态" [ref=f3e1127]
+                  - columnheader "注册时间" [ref=f3e1129]
+                  - columnheader "操作" [ref=f3e1131]
+            - table [ref=f3e1137]:
+              - rowgroup [ref=f3e1148]:
+                - row [ref=f3e1149]:
+                  - cell "1" [ref=f3e1150]
+                  - cell "admin" [ref=f3e1152]
+                  - cell "管理员" [ref=f3e1154]
+                  - cell "admin@shopeasy.com" [ref=f3e1156]
+                  - cell "13800000000" [ref=f3e1158]
+                  - cell "管理员" [ref=f3e1160]
+                  - cell "正常" [ref=f3e1164]
+                  - cell "2026-09-09 06:46" [ref=f3e1168]
+                  - cell [ref=f3e1170]
+                - row [ref=f3e1171]:
+                  - cell "2" [ref=f3e1172]
+                  - cell "buyer1" [ref=f3e1174]
+                  - cell "张三" [ref=f3e1176]
+                  - cell "zhangsan@test.com" [ref=f3e1178]
+                  - cell "13800000001" [ref=f3e1180]
+                  - cell "用户" [ref=f3e1182]
+                  - cell "正常" [ref=f3e1186]
+                  - cell "2026-09-09 06:46" [ref=f3e1190]
+                  - cell [ref=f3e1192]:
+                    - button "禁用" [ref=f3e1194] [cursor=pointer]
+                - row [ref=f3e1196]:
+                  - cell "3" [ref=f3e1197]
+                  - cell "buyer2" [ref=f3e1199]
+                  - cell "李四" [ref=f3e1201]
+                  - cell "lisi@test.com" [ref=f3e1203]
+                  - cell "13800000002" [ref=f3e1205]
+                  - cell "用户" [ref=f3e1207]
+                  - cell "正常" [ref=f3e1211]
+                  - cell "2026-09-09 06:46" [ref=f3e1215]
+                  - cell [ref=f3e1217]:
+                    - button "禁用" [ref=f3e1219] [cursor=pointer]
+                - row [ref=f3e1221]:
+                  - cell "4" [ref=f3e1222]
+                  - cell "disabled_user" [ref=f3e1224]
+                  - cell "已禁用用户" [ref=f3e1226]
+                  - cell [ref=f3e1228]
+                  - cell [ref=f3e1229]
+                  - cell "用户" [ref=f3e1230]
+                  - cell "禁用" [ref=f3e1234]
+                  - cell "2026-09-09 06:46" [ref=f3e1238]
+                  - cell [ref=f3e1240]:
+                    - button "启用" [ref=f3e1242] [cursor=pointer]
+          - generic [ref=f3e1245]:
+            - button "上一页" [disabled] [ref=f3e1246]
+            - list [ref=f3e1247]:
+              - listitem "第 1 页" [ref=f3e1248]: "1"
+            - button "下一页" [disabled] [ref=f3e1249]

@@ -1,0 +1,65 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e3]:
+    - generic [ref=f4e5]:
+      - link "🛍️ ShopEasy" [ref=f4e6] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f4e8]:
+        - textbox "搜索商品..." [ref=f4e10]
+        - button [ref=f4e13] [cursor=pointer]
+      - generic [ref=f4e17]:
+        - button [ref=f4e19] [cursor=pointer]
+        - button "张 张三" [ref=f4e25] [cursor=pointer]:
+          - generic [ref=f4e26]: 张
+          - generic [ref=f4e27]: 张三
+    - main [ref=f4e28]:
+      - generic [ref=f4e30]:
+        - generic [ref=f4e31]:
+          - generic [ref=f4e34]:
+            - img [ref=f4e35] [cursor=pointer]
+            - img [ref=f4e36] [cursor=pointer]
+            - img [ref=f4e37] [cursor=pointer]
+            - img [ref=f4e38] [cursor=pointer]
+          - generic [ref=f4e39]:
+            - heading "iPhone 15 Pro Max" [level=1] [ref=f4e40]
+            - paragraph [ref=f4e41]: 苹果最新旗舰手机，A17 Pro芯片，钛金属边框，48MP主摄像头，USB-C接口
+            - generic [ref=f4e42]: ¥9999¥10999
+            - generic [ref=f4e43]:
+              - generic [ref=f4e44]: "销量: 2614"
+              - generic [ref=f4e45]: "库存: 30"
+              - generic [ref=f4e46]: "评分: ⭐ 4.8"
+            - generic [ref=f4e47]: "分类: 手机数码"
+            - generic [ref=f4e49]:
+              - generic [ref=f4e50]:
+                - generic [ref=f4e51]: "内存:"
+                - generic [ref=f4e52]:
+                  - generic [ref=f4e53] [cursor=pointer]: 256GB
+                  - generic [ref=f4e54] [cursor=pointer]: 512GB
+                  - generic [ref=f4e55] [cursor=pointer]: 1TB
+              - generic [ref=f4e56]:
+                - generic [ref=f4e57]: "颜色:"
+                - generic [ref=f4e58]:
+                  - generic [ref=f4e59] [cursor=pointer]: 原色钛金属
+                  - generic [ref=f4e60] [cursor=pointer]: 蓝色钛金属
+                  - generic [ref=f4e61] [cursor=pointer]: 白色钛金属
+              - generic [ref=f4e120]:
+                - text: "已选:"
+                - generic [ref=f4e121]: 256GB / 原色钛金属
+            - generic [ref=f4e62]:
+              - generic [ref=f4e63]:
+                - button "减少数值" [ref=f4e64]
+                - button "增加数值" [ref=f4e68] [cursor=pointer]
+                - spinbutton [ref=f4e74]: "1"
+              - button "加入购物车" [active] [ref=f4e75] [cursor=pointer]
+              - button "已收藏" [ref=f4e80] [cursor=pointer]
+        - generic [ref=f4e85]:
+          - heading "商品评价 (1)" [level=3] [ref=f4e86]
+          - generic [ref=f4e87]:
+            - generic [ref=f4e88]:
+              - generic [ref=f4e89]: 李
+              - generic [ref=f4e90]: 李四
+              - slider "rating" [disabled] [ref=f4e91]
+              - generic [ref=f4e112]: 2024-01-09
+            - paragraph [ref=f4e113]: 手机很好用，拍照效果棒，就是价格有点贵
+    - paragraph [ref=f4e119]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=f4e123]:
+    - paragraph [ref=f4e127]: 已加入购物车

@@ -1,0 +1,745 @@
+- generic [ref=f2e1]:
+  - link "欢迎进入 淘宝,盲人用户使用操作智能引导，请按快捷键Ctrl+Alt+R；阅读详细操作说明请按快捷键Ctrl+Alt+问号键。":
+    - /url: javascript:void(0)
+  - generic [ref=f2e3]:
+    - list [ref=f2e4]:
+      - listitem [ref=f2e5]:
+        - generic [ref=f2e6]:
+          - generic [ref=f2e7]: 中国大陆
+          - generic [ref=f2e8]: 
+      - listitem [ref=f2e10]:
+        - generic [ref=f2e11]:
+          - generic:
+            - link "亲，请登录" [ref=f2e12] [cursor=pointer]:
+              - /url: //login.taobao.com/member/login.jhtml?f=top&redirectURL=https%3A%2F%2Fwww.taobao.com%2F
+            - link "免费注册" [ref=f2e13] [cursor=pointer]:
+              - /url: //reg.taobao.com/member/new_register.jhtml?from=tbtop&ex_info=&ex_sign=
+      - listitem [ref=f2e14]:
+        - link "网页无障碍" [ref=f2e16] [cursor=pointer]:
+          - /url: javascript:void(0)
+      - listitem [ref=f2e18]:
+        - link "切换企业版" [ref=f2e20] [cursor=pointer]:
+          - /url: //b.taobao.com/?from=PCzhannei
+    - list [ref=f2e22]:
+      - listitem [ref=f2e23]:
+        - link "已买到的宝贝" [ref=f2e25] [cursor=pointer]:
+          - /url: //buyertrade.taobao.com/trade/itemlist/list_bought_items.htm
+      - listitem [ref=f2e27]:
+        - generic [ref=f2e28]:
+          - link "我的淘宝" [ref=f2e29] [cursor=pointer]:
+            - /url: //i.taobao.com/my_itaobao
+          - generic [ref=f2e31]: 
+      - listitem [ref=f2e33]:
+        - link " 购物车" [ref=f2e35] [cursor=pointer]:
+          - /url: //cart.taobao.com/cart.htm?from=mini&ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739
+          - generic [ref=f2e36]: 
+          - generic [ref=f2e37]: 购物车
+      - listitem [ref=f2e38]:
+        - generic [ref=f2e39]:
+          - link " 收藏夹" [ref=f2e40] [cursor=pointer]:
+            - /url: //i.taobao.com/my_itaobao/itao-tool/collect
+            - generic [ref=f2e41]: 
+            - generic [ref=f2e42]: 收藏夹
+          - generic [ref=f2e43]: 
+      - listitem [ref=f2e45]:
+        - generic [ref=f2e46]:
+          - link "免费开店" [ref=f2e47] [cursor=pointer]:
+            - /url: //ishop.taobao.com/openshop/tb_open_shop_landing.htm?source=tbweb1st
+          - generic [ref=f2e49]: 
+      - listitem [ref=f2e51]:
+        - generic [ref=f2e52]:
+          - link "千牛卖家中心" [ref=f2e53] [cursor=pointer]:
+            - /url: //myseller.taobao.com/home.htm/QnworkbenchHome/
+          - generic [ref=f2e55]: 
+      - listitem [ref=f2e57]:
+        - generic [ref=f2e58]:
+          - link "帮助中心" [ref=f2e59] [cursor=pointer]:
+            - /url: https://consumerservice.taobao.com
+          - generic [ref=f2e61]: 
+  - generic [ref=f2e63]:
+    - generic [ref=f2e64]:
+      - link [ref=f2e66] [cursor=pointer]:
+        - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083?custom_content_source=a2113w.46759041
+      - generic [ref=f2e67] [cursor=pointer]
+    - generic [ref=f2e74]:
+      - generic [ref=f2e77]:
+        - heading [level=1] [ref=f2e80]:
+          - img [ref=f2e81] [cursor=pointer]: 淘宝网
+        - link [ref=f2e83] [cursor=pointer]:
+          - /url: https://jianghu.taobao.com/coin.html
+          - img "logo" [ref=f2e84]
+        - generic [ref=f2e86]:
+          - generic [ref=f2e87]:
+            - list [ref=f2e89]:
+              - listitem: 宝贝
+              - listitem [ref=f2e90] [cursor=pointer]: 天猫
+              - listitem [ref=f2e91] [cursor=pointer]: 店铺
+            - generic [ref=f2e92]:
+              - button "搜索" [ref=f2e94] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: 书立架
+                  - generic: 防晒车衣榜
+                  - generic: 平安夜苹果礼盒
+              - combobox "请输入搜索文字" [active] [ref=f2e96]
+            - generic [ref=f2e97]:
+              - link "小米折叠屏首发" [ref=f2e98] [cursor=pointer]:
+                - /url: https://s.taobao.com/?page=1&q=Xiaomi%2018%20Fold&spm=a21bo.jianhua%2Fa.201856-fline.2.5af92a89uD9ipp&tab=all
+              - link "券后低至7.7折起" [ref=f2e99] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083
+              - link "月饼好蟹8.8折起" [ref=f2e100] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-596995
+              - link "抢运动加补券" [ref=f2e101] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-597004
+              - link "动感单车榜" [ref=f2e102] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%8A%A8%E6%84%9F%E5%8D%95%E8%BD%A6%E6%A6%9C&ie=utf8&tab=all&
+              - link "冰箱收纳盒榜" [ref=f2e103] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%86%B0%E7%AE%B1%E6%94%B6%E7%BA%B3%E7%9B%92%E6%A6%9C&ie=utf8&tab=all&
+              - link "扫把" [ref=f2e104] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E6%89%AB%E6%8A%8A&ie=utf8&tab=all&
+              - link "工厂扫把" [ref=f2e105] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%B7%A5%E5%8E%82%E6%89%AB%E6%8A%8A&ie=utf8&tab=all&
+              - link "笤帚" [ref=f2e106] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E7%AC%A4%E5%B8%9A&ie=utf8&tab=all&
+              - link "家用扫把" [ref=f2e107] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%AE%B6%E7%94%A8%E6%89%AB%E6%8A%8A&ie=utf8&tab=all&
+              - link "家用扫地笤帚" [ref=f2e108] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%AE%B6%E7%94%A8%E6%89%AB%E5%9C%B0%E7%AC%A4%E5%B8%9A&ie=utf8&tab=all&
+              - link "芒草扫把" [ref=f2e109] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E8%8A%92%E8%8D%89%E6%89%AB%E6%8A%8A&ie=utf8&tab=all&
+              - link "苕帚" [ref=f2e110] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E8%8B%95%E5%B8%9A&ie=utf8&tab=all&
+              - link "家用扫帚" [ref=f2e111] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E5%AE%B6%E7%94%A8%E6%89%AB%E5%B8%9A&ie=utf8&tab=all&
+              - link "扫帚" [ref=f2e112] [cursor=pointer]:
+                - /url: https://s.taobao.com/search?q=%E6%89%AB%E5%B8%9A&ie=utf8&tab=all&
+          - generic [ref=f2e113]: 搜同款
+      - generic [ref=f2e122]:
+        - navigation [ref=f2e126]:
+          - list [ref=f2e127]:
+            - listitem [ref=f2e128]:
+              - link "天猫" [ref=f2e129] [cursor=pointer]:
+                - /url: https://www.tmall.com
+          - list [ref=f2e130]:
+            - listitem [ref=f2e131]:
+              - link "淘宝直播" [ref=f2e132] [cursor=pointer]:
+                - /url: https://tbzb.taobao.com
+          - list [ref=f2e133]:
+            - listitem [ref=f2e134]:
+              - link "阿里企业购" [ref=f2e135] [cursor=pointer]:
+                - /url: https://b.taobao.com/?from=PCzhannei
+          - list [ref=f2e136]:
+            - listitem [ref=f2e137]:
+              - link "司法拍卖" [ref=f2e138] [cursor=pointer]:
+                - /url: https://sf.taobao.com
+          - list [ref=f2e139]:
+            - listitem [ref=f2e140]:
+              - link "天猫超市" [ref=f2e141] [cursor=pointer]:
+                - /url: https://chaoshi.tmall.com
+          - list [ref=f2e142]:
+            - listitem [ref=f2e143]:
+              - link "国家补贴" [ref=f2e144] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/z/tbhome/tbpc-venue/gov-subsidy
+          - list [ref=f2e145]:
+            - listitem [ref=f2e146]:
+              - link "领券中心" [ref=f2e147] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?spm=a21bo.jianhua/a.201859.9.4f0f2a89Odac4P&wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true
+          - list [ref=f2e148]:
+            - listitem [ref=f2e149]:
+              - link "超级88" [ref=f2e150] [cursor=pointer]:
+                - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083
+          - list [ref=f2e151]:
+            - listitem [ref=f2e152]:
+              - link [ref=f2e153] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=f2e154]:
+                  - img "全部频道" [ref=f2e155]
+                  - text: 全部频道
+        - main [ref=f2e156]:
+          - menubar [ref=f2e159]:
+            - menuitem "查看更多" [ref=f2e160]:
+              - generic [ref=f2e161]:
+                - generic [aria-hidden] [ref=f2e162]: 
+                - link "大牌好物5折起" [ref=f2e163] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083
+                - generic [ref=f2e164]: 
+                - link "抢大额券" [ref=f2e165] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true
+            - menuitem "查看更多" [ref=f2e166]:
+              - generic [ref=f2e167]:
+                - generic [aria-hidden] [ref=f2e168]: 
+                - link "电脑" [ref=f2e169] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%94%B5%E8%84%91
+                - generic [ref=f2e170]: 
+                - link "配件" [ref=f2e171] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%94%B5%E8%84%91%E9%85%8D%E4%BB%B6
+                - generic [ref=f2e172]: 
+                - link "办公" [ref=f2e173] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%8A%9E%E5%85%AC
+                - generic [ref=f2e174]: 
+                - link "文具" [ref=f2e175] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%96%87%E5%85%B7
+            - menuitem "查看更多" [ref=f2e176]:
+              - generic [ref=f2e177]:
+                - generic [aria-hidden] [ref=f2e178]: 
+                - link "工业品" [ref=f2e179] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E5%B7%A5%E4%B8%9A%E9%9B%B6%E4%BB%B6%E8%80%97%E6%9D%90&tab=all
+                - generic [ref=f2e180]: 
+                - link "商业" [ref=f2e181] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E5%95%86%E4%B8%9A%E5%8A%9E%E5%85%AC&tab=all
+                - generic [ref=f2e182]: 
+                - link "农业" [ref=f2e183] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E5%86%9C%E4%B8%9A%E7%89%A9%E8%B5%84&tab=all
+                - generic [ref=f2e184]: 
+                - link "定制" [ref=f2e185] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E4%B8%AA%E6%80%A7%E5%AE%9A%E5%88%B6%E5%A5%BD%E7%89%A9&tab=all
+            - menuitem "查看更多" [ref=f2e186]:
+              - generic [ref=f2e187]:
+                - generic [aria-hidden] [ref=f2e188]: 
+                - link "家电" [ref=f2e189] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%AE%B6%E7%94%B5
+                - generic [ref=f2e190]: 
+                - link "手机" [ref=f2e191] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%89%8B%E6%9C%BA
+                - generic [ref=f2e192]: 
+                - link "通信" [ref=f2e193] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E8%BF%90%E8%90%A5%E5%95%86
+                - generic [ref=f2e194]: 
+                - link "数码" [ref=f2e195] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%95%B0%E7%A0%81
+            - menuitem "查看更多" [ref=f2e196]:
+              - generic [ref=f2e197]:
+                - generic [aria-hidden] [ref=f2e198]: 
+                - link "家具" [ref=f2e199] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%AE%B6%E5%85%B7
+                - generic [ref=f2e200]: 
+                - link "家装" [ref=f2e201] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%AE%B6%E8%A3%85
+                - generic [ref=f2e202]: 
+                - link "家居" [ref=f2e203] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E5%AE%B6%E5%B1%85&tab=all
+                - generic [ref=f2e204]: 
+                - link "厨具" [ref=f2e205] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%8E%A8%E5%85%B7
+            - menuitem "查看更多" [ref=f2e206]:
+              - generic [ref=f2e207]:
+                - generic [aria-hidden] [ref=f2e208]: 
+                - link "女装" [ref=f2e209] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%A5%B3%E8%A3%85
+                - generic [ref=f2e210]: 
+                - link "男装" [ref=f2e211] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E7%94%B7%E8%A3%85&tab=all
+                - generic [ref=f2e212]: 
+                - link "内衣" [ref=f2e213] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%86%85%E8%A1%A3
+                - generic [ref=f2e214]: 
+                - link "配饰" [ref=f2e215] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E9%85%8D%E9%A5%B0
+            - menuitem "查看更多" [ref=f2e216]:
+              - generic [ref=f2e217]:
+                - generic [aria-hidden] [ref=f2e218]: 
+                - link "女鞋" [ref=f2e219] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%A5%B3%E9%9E%8B
+                - generic [ref=f2e220]: 
+                - link "男鞋" [ref=f2e221] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%94%B7%E9%9E%8B
+                - generic [ref=f2e222]: 
+                - link "运动" [ref=f2e223] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E8%BF%90%E5%8A%A8%E8%A3%85%E5%A4%87
+                - generic [ref=f2e224]: 
+                - link "户外" [ref=f2e225] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%88%B7%E5%A4%96%E7%94%A8%E5%93%81
+            - menuitem "查看更多" [ref=f2e226]:
+              - generic [ref=f2e227]:
+                - generic [aria-hidden] [ref=f2e228]: 
+                - link "汽车" [ref=f2e229] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E6%B1%BD%E8%BD%A6&tab=all
+                - generic [ref=f2e230]: 
+                - link "珠宝" [ref=f2e231] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%8F%A0%E5%AE%9D
+                - generic [ref=f2e232]: 
+                - link "文玩" [ref=f2e233] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%96%87%E7%8E%A9
+                - generic [ref=f2e234]: 
+                - link "箱包" [ref=f2e235] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%AE%B1%E5%8C%85
+            - menuitem "查看更多" [ref=f2e236]:
+              - generic [ref=f2e237]:
+                - generic [aria-hidden] [ref=f2e238]: 
+                - link "食品" [ref=f2e239] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E9%A3%9F%E5%93%81
+                - generic [ref=f2e240]: 
+                - link "鲜花" [ref=f2e241] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E9%B2%9C%E8%8A%B1
+                - generic [ref=f2e242]: 
+                - link "酒水" [ref=f2e243] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?page=1&q=%E9%85%92%E6%B0%B4%E9%A5%AE%E6%96%99
+                - generic [ref=f2e244]: 
+                - link "健康" [ref=f2e245] [cursor=pointer]:
+                  - /url: https://www.liangxinyao.com/
+            - menuitem "查看更多" [ref=f2e246]:
+              - generic [ref=f2e247]:
+                - generic [aria-hidden] [ref=f2e248]: 
+                - link "母婴" [ref=f2e249] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E6%AF%8D%E5%A9%B4
+                - generic [ref=f2e250]: 
+                - link "童装" [ref=f2e251] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%AB%A5%E8%A3%85
+                - generic [ref=f2e252]: 
+                - link "玩具" [ref=f2e253] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E7%8E%A9%E5%85%B7
+                - generic [ref=f2e254]: 
+                - link "宠物" [ref=f2e255] [cursor=pointer]:
+                  - /url: https://s.taobao.com/search?q=%E5%AE%A0%E7%89%A9
+          - generic [ref=f2e257]:
+            - generic [ref=f2e258]:
+              - generic [ref=f2e261]:
+                - generic [ref=f2e263]:
+                  - link [ref=f2e267] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-597015?custom_content_source=a2113w.46758283&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e268]:
+                      - generic [ref=f2e270]: 家享生活
+                      - generic [ref=f2e271]: 叠国补低至6折
+                      - generic [ref=f2e272]: 官方立减商品8.8折起
+                  - link "大牌好物5折起 券后低至7.7折起 官方立减商品8.8折起" [ref=f2e276] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083?custom_content_source=a2113w.46759041&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e277]:
+                      - generic [ref=f2e279]: 大牌好物5折起
+                      - generic [ref=f2e280]: 券后低至7.7折起
+                      - generic [ref=f2e281]: 官方立减商品8.8折起
+                  - link [ref=f2e285] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true&custom_content_source=a2113w.30046077&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e286]:
+                      - generic [ref=f2e288]: 抢官方补贴
+                      - generic [ref=f2e289]: 来领券中心
+                      - generic [ref=f2e290]: 领大额消费券
+                  - link [ref=f2e294] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-596971?custom_content_source=a2113w.46758237&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e295]:
+                      - generic [ref=f2e297]: 服饰时尚
+                      - generic [ref=f2e298]: 叠券低至7.7折起
+                      - generic [ref=f2e299]: 大牌时髦焕新
+                  - link [ref=f2e303] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-596995?custom_content_source=a2113w.46758262&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e304]:
+                      - generic [ref=f2e306]: 爆款美味
+                      - generic [ref=f2e307]: 鲜享特惠
+                      - generic [ref=f2e308]: 官方立减商品8.8折起
+                  - link [ref=f2e312] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-597015?custom_content_source=a2113w.46758283&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e313]:
+                      - generic [ref=f2e315]: 家享生活
+                      - generic [ref=f2e316]: 叠国补低至6折
+                      - generic [ref=f2e317]: 官方立减商品8.8折起
+                  - link [ref=f2e321] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-main-597083?custom_content_source=a2113w.46759041&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e322]:
+                      - generic [ref=f2e324]: 大牌好物5折起
+                      - generic [ref=f2e325]: 券后低至7.7折起
+                      - generic [ref=f2e326]: 官方立减商品8.8折起
+                  - link [ref=f2e330] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true&custom_content_source=a2113w.30046077&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e331]:
+                      - generic [ref=f2e333]: 抢官方补贴
+                      - generic [ref=f2e334]: 来领券中心
+                      - generic [ref=f2e335]: 领大额消费券
+                  - link [ref=f2e339] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-596971?custom_content_source=a2113w.46758237&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e340]:
+                      - generic [ref=f2e342]: 服饰时尚
+                      - generic [ref=f2e343]: 叠券低至7.7折起
+                      - generic [ref=f2e344]: 大牌时髦焕新
+                  - link [ref=f2e348] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-596995?custom_content_source=a2113w.46758262&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e349]:
+                      - generic [ref=f2e351]: 爆款美味
+                      - generic [ref=f2e352]: 鲜享特惠
+                      - generic [ref=f2e353]: 官方立减商品8.8折起
+                  - link [ref=f2e357] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tb-m2pc/m2pc-light-industry-597015?custom_content_source=a2113w.46758283&scm=1007.home_pc.banner.activity
+                    - generic [ref=f2e358]:
+                      - generic [ref=f2e360]: 家享生活
+                      - generic [ref=f2e361]: 叠国补低至6折
+                      - generic [ref=f2e362]: 官方立减商品8.8折起
+                - list [ref=f2e363]:
+                  - listitem [ref=f2e364]:
+                    - button "1" [ref=f2e365] [cursor=pointer]
+                  - listitem [ref=f2e366]:
+                    - button "2" [ref=f2e367] [cursor=pointer]
+                  - listitem [ref=f2e368]:
+                    - button "3" [ref=f2e369] [cursor=pointer]
+                  - listitem [ref=f2e370]:
+                    - button "4" [ref=f2e371] [cursor=pointer]
+                  - listitem [ref=f2e372]:
+                    - button "5" [ref=f2e373] [cursor=pointer]
+              - generic [ref=f2e375]:
+                - link "百亿补贴 · 买贵必赔" [ref=f2e376] [cursor=pointer]:
+                  - /url: https://pages-fast.m.taobao.com/wow/z/tbhome/tb-m2pc/jingmi-1323-pc-adapt?mi_ids=0200WA6zV-eXZsAzvhmSfYC25-MelUN4aBPGoxHlwdZ-IvZXSpuPt2laud2pyTinMWZdciLLeRftrU7ThK-oceaELX8Qs1i2z85exmAixD_i9Rc&itemId=574955915424%2C710606786159%2C702820754110%2C571824424943&itemIds=574955915424%2C710606786159%2C702820754110%2C571824424943&custom_content_source=a21677.neirong_tm_kp_618
+                - generic [ref=f2e381]:
+                  - link "¥20000" [ref=f2e382] [cursor=pointer]:
+                    - /url: https://pages-fast.m.taobao.com/wow/z/tbhome/tb-m2pc/jingmi-1323-pc-adapt?mi_ids=0200WA6zV-eXZsAzvhmSfYC25-MelUN4aBPGoxHlwdZ-IvZXSpuPt2laud2pyTinMWZdciLLeRftrU7ThK-oceaELX8Qs1i2z85exmAixD_i9Rc&itemId=574955915424%2C710606786159%2C702820754110%2C571824424943&itemIds=574955915424%2C710606786159%2C702820754110%2C571824424943&custom_content_source=a21677.neirong_tm_kp_618
+                  - link "¥14999" [ref=f2e387] [cursor=pointer]:
+                    - /url: https://pages-fast.m.taobao.com/wow/z/tbhome/tb-m2pc/jingmi-1323-pc-adapt?mi_ids=0200WA6zV-eXZsAzvhmSfYC25-MelUN4aBPGoxHlwdZ-IvZXSpuPt2laud2pyTinMWZdciLLeRftrU7ThK-oceaELX8Qs1i2z85exmAixD_i9Rc&itemId=574955915424%2C710606786159%2C702820754110%2C571824424943&itemIds=574955915424%2C710606786159%2C702820754110%2C571824424943&custom_content_source=a21677.neirong_tm_kp_618
+                  - link "¥4999" [ref=f2e392] [cursor=pointer]:
+                    - /url: https://pages-fast.m.taobao.com/wow/z/tbhome/tb-m2pc/jingmi-1323-pc-adapt?mi_ids=0200WA6zV-eXZsAzvhmSfYC25-MelUN4aBPGoxHlwdZ-IvZXSpuPt2laud2pyTinMWZdciLLeRftrU7ThK-oceaELX8Qs1i2z85exmAixD_i9Rc&itemId=574955915424%2C710606786159%2C702820754110%2C571824424943&itemIds=574955915424%2C710606786159%2C702820754110%2C571824424943&custom_content_source=a21677.neirong_tm_kp_618
+                  - link "¥4999" [ref=f2e397] [cursor=pointer]:
+                    - /url: https://pages-fast.m.taobao.com/wow/z/tbhome/tb-m2pc/jingmi-1323-pc-adapt?mi_ids=0200WA6zV-eXZsAzvhmSfYC25-MelUN4aBPGoxHlwdZ-IvZXSpuPt2laud2pyTinMWZdciLLeRftrU7ThK-oceaELX8Qs1i2z85exmAixD_i9Rc&itemId=574955915424%2C710606786159%2C702820754110%2C571824424943&itemIds=574955915424%2C710606786159%2C702820754110%2C571824424943&custom_content_source=a21677.neirong_tm_kp_618
+            - generic [ref=f2e402]:
+              - generic [ref=f2e404]:
+                - link "领券中心" [ref=f2e405] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true&mi_ids=0200qRB7Z2uglzr7mx1_Km5SPmazOe1zbz5JUAHvV0HWXuzxHNDxg2t9JA91JaWuLW4SQyAt6Q2YFVmC8DjHLZa8dQ&itemId=602335042879%2C629149473710&itemIds=602335042879%2C629149473710&custom_content_source=a2113w.30046077
+                - generic [ref=f2e410]:
+                  - link "¥10800" [ref=f2e411] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true&mi_ids=0200qRB7Z2uglzr7mx1_Km5SPmazOe1zbz5JUAHvV0HWXuzxHNDxg2t9JA91JaWuLW4SQyAt6Q2YFVmC8DjHLZa8dQ&itemId=602335042879%2C629149473710&itemIds=602335042879%2C629149473710&custom_content_source=a2113w.30046077
+                  - link "¥6380" [ref=f2e416] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/a/act/tao/dailygroup/23509/24308/wupr?wh_pid=daily-561441&disableNav=YES&status_bar_transparent=true&mi_ids=0200qRB7Z2uglzr7mx1_Km5SPmazOe1zbz5JUAHvV0HWXuzxHNDxg2t9JA91JaWuLW4SQyAt6Q2YFVmC8DjHLZa8dQ&itemId=602335042879%2C629149473710&itemIds=602335042879%2C629149473710&custom_content_source=a2113w.30046077
+              - generic [ref=f2e422]:
+                - link "淘宝直播" [ref=f2e423] [cursor=pointer]:
+                  - /url: https://tbzb.taobao.com/
+                - generic [ref=f2e428]:
+                  - link "菲菲家皮草店" [ref=f2e429] [cursor=pointer]:
+                    - /url: https://tbzb.taobao.com/?spm=a21bo.jianhua%2Fa.201859.3.5af92a897Dor4K&liveId=179457842245201
+                    - generic "菲菲家皮草店" [ref=f2e432]
+                  - link "伊的枫格" [ref=f2e433] [cursor=pointer]:
+                    - /url: https://tbzb.taobao.com/?spm=a21bo.jianhua%2Fa.201859.3.5af92a897Dor4K&liveId=3124867330415922
+                    - generic "伊的枫格" [ref=f2e436]
+              - generic [ref=f2e438]:
+                - link "国家补贴" [ref=f2e439] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/z/tbhome/tbpc-venue/gov-subsidy?mi_ids=0200Uk0i7LmAA0kBaiRzuoOp2_t-_kCMBLxScPWHuptyVIUJ6DBFojXCS0B2m7BGbsRTr4ldOSoP9L1Zu_7kgWEsng&itemId=660821641391%2C573758252166&itemIds=660821641391%2C573758252166&custom_content_source=gov-subsidy-app.home-pcall
+                - generic [ref=f2e444]:
+                  - link "¥21800" [ref=f2e445] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tbpc-venue/gov-subsidy?mi_ids=0200Uk0i7LmAA0kBaiRzuoOp2_t-_kCMBLxScPWHuptyVIUJ6DBFojXCS0B2m7BGbsRTr4ldOSoP9L1Zu_7kgWEsng&itemId=660821641391%2C573758252166&itemIds=660821641391%2C573758252166&custom_content_source=gov-subsidy-app.home-pcall
+                  - link "¥20411" [ref=f2e450] [cursor=pointer]:
+                    - /url: https://huodong.taobao.com/wow/z/tbhome/tbpc-venue/gov-subsidy?mi_ids=0200Uk0i7LmAA0kBaiRzuoOp2_t-_kCMBLxScPWHuptyVIUJ6DBFojXCS0B2m7BGbsRTr4ldOSoP9L1Zu_7kgWEsng&itemId=660821641391%2C573758252166&itemIds=660821641391%2C573758252166&custom_content_source=gov-subsidy-app.home-pcall
+              - generic [ref=f2e456]:
+                - link "淘宝秒杀" [ref=f2e457] [cursor=pointer]:
+                  - /url: https://web.m.taobao.com/app/ltao-fe/tbmx-pc-page/home?spmb=tbmspcnew&mi_ids=0200AvrfFPrLDTsY_4HRbujL1cEybmaB7Qy3SyhQIdQzF5Emz98L7lY7gGinbK3XyyowcvDsufjl0L1lkTstjXK3Ag&itemId=560885129778%2C616438768606&itemIds=560885129778%2C616438768606&custom_content_source=mspd.tbmspcnew
+                - generic [ref=f2e462]:
+                  - link "¥6999" [ref=f2e463] [cursor=pointer]:
+                    - /url: https://web.m.taobao.com/app/ltao-fe/tbmx-pc-page/home?spmb=tbmspcnew&mi_ids=0200AvrfFPrLDTsY_4HRbujL1cEybmaB7Qy3SyhQIdQzF5Emz98L7lY7gGinbK3XyyowcvDsufjl0L1lkTstjXK3Ag&itemId=560885129778%2C616438768606&itemIds=560885129778%2C616438768606&custom_content_source=mspd.tbmspcnew
+                  - link "¥652" [ref=f2e468] [cursor=pointer]:
+                    - /url: https://web.m.taobao.com/app/ltao-fe/tbmx-pc-page/home?spmb=tbmspcnew&mi_ids=0200AvrfFPrLDTsY_4HRbujL1cEybmaB7Qy3SyhQIdQzF5Emz98L7lY7gGinbK3XyyowcvDsufjl0L1lkTstjXK3Ag&itemId=560885129778%2C616438768606&itemIds=560885129778%2C616438768606&custom_content_source=mspd.tbmspcnew
+          - complementary [ref=f2e473]:
+            - generic [ref=f2e474]:
+              - generic [ref=f2e475]:
+                - generic [ref=f2e476]:
+                  - link [ref=f2e478]:
+                    - /url: "#"
+                  - link [ref=f2e480] [cursor=pointer]:
+                    - /url: "#"
+                    - strong [ref=f2e482]: 中午好
+                  - generic [ref=f2e483]:
+                    - link "注册" [ref=f2e484] [cursor=pointer]:
+                      - /url: //reg.taobao.com/member/new_register.jhtml?from=index&ex_info=&ex_sign=
+                    - link "开店" [ref=f2e486] [cursor=pointer]:
+                      - /url: //ishop.taobao.com/openshop/tb_open_shop_landing.htm?accessCode=tbopenshop_personal
+                - generic [ref=f2e488]:
+                  - generic [ref=f2e489]: 登录淘宝后更多精彩
+                  - generic [ref=f2e490]: 嘿！更懂你的推荐，更便捷的搜索
+                  - link "立即登录" [ref=f2e491] [cursor=pointer]:
+                    - /url: //login.taobao.com/member/login.jhtml?f=top&redirectURL=http%3A%2F%2Fwww.taobao.com%2F
+              - generic [ref=f2e492]:
+                - link " 已买到" [ref=f2e494] [cursor=pointer]:
+                  - /url: https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm
+                  - generic [ref=f2e495]: 
+                  - paragraph [ref=f2e496]: 已买到
+                - link " 收藏夹" [ref=f2e498] [cursor=pointer]:
+                  - /url: https://i.taobao.com/my_itaobao/itao-tool/collect
+                  - generic [ref=f2e499]: 
+                  - paragraph [ref=f2e500]: 收藏夹
+                - link " 买过的店" [ref=f2e502] [cursor=pointer]:
+                  - /url: https://i.taobao.com/my_itaobao/boughtshops
+                  - generic [ref=f2e503]: 
+                  - paragraph [ref=f2e504]: 买过的店
+                - link " 足迹" [ref=f2e506] [cursor=pointer]:
+                  - /url: https://i.taobao.com/my_itaobao/itao-tool/footMark
+                  - generic [ref=f2e507]: 
+                  - paragraph [ref=f2e508]: 足迹
+              - generic [ref=f2e512]:
+                - link [ref=f2e516] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/z/tbhome/pc-growth/tao-coin?bc_fl_src=tbsite_odHcHDg3&bc_fl_src=tbsite_KkztuRRb
+                - link [ref=f2e520] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/z/tbhome/pc-growth/tao-coin?bc_fl_src=tbsite_odHcHDg3&bc_fl_src=tbsite_KkztuRRb
+                - link [ref=f2e524] [cursor=pointer]:
+                  - /url: https://huodong.taobao.com/wow/z/tbhome/pc-growth/tao-coin?bc_fl_src=tbsite_odHcHDg3&bc_fl_src=tbsite_KkztuRRb
+      - generic [ref=f2e528]:
+        - generic [ref=f2e530]: 更多低价商品
+        - generic [ref=f2e543]:
+          - generic [ref=f2e546]:
+            - generic [ref=f2e547] [cursor=pointer]: 猜你喜欢
+            - generic [ref=f2e550] [cursor=pointer]: 运动户外
+            - generic [ref=f2e553] [cursor=pointer]: 馋嘴零食
+            - generic [ref=f2e556] [cursor=pointer]: 潮电数码
+            - generic [ref=f2e559] [cursor=pointer]: 服饰时尚
+            - generic [ref=f2e562] [cursor=pointer]: 家装建材
+            - generic [ref=f2e565] [cursor=pointer]: 办公文具
+            - generic [ref=f2e568] [cursor=pointer]: 健康保健
+          - generic [ref=f2e574] [cursor=pointer]
+        - generic [ref=f2e577]:
+          - link "月光卡20元[官方卡密自动发货]看清楚下单不退换 刷单必被骗 ¥ 20" [ref=f2e580] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1076270351201&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&mi_id=s050ggYa5pisCJtlRrUZZ3uTgOMLzq9UCQwTKhohkILyShSsXq9W0tDAOnZL244llsmfRaSNnc4Sb-klF3L3Fw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22b0d0211a1206cec8809859e5c9b0d720%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1076270351201%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e583]: 月光卡20元[官方卡密自动发货]看清楚下单不退换 刷单必被骗
+            - generic [ref=f2e586]:
+              - generic [ref=f2e587]: ¥
+              - generic [ref=f2e588]: "20"
+          - link "竹制牙签韧性十足不易折断天然毛竹软硬适中便携式卫生精致双头 ¥ 4" [ref=f2e591] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1059060474534&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6268387506659&mi_id=CBItV4FXaY7BFjW8mfw76pGKVRfjnQalShYtjRrIM9rHwyxnbWnBCZUj6PhXvBgLI_MFBJ9Di8WjEmEfiqSnRQ&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%228e71f30338046e1b7894b17f8f5d5052%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1059060474534%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e594]: 竹制牙签韧性十足不易折断天然毛竹软硬适中便携式卫生精致双头
+            - generic [ref=f2e597]:
+              - generic [ref=f2e598]: ¥
+              - generic [ref=f2e599]: "4"
+          - link "悬挂式大包抽纸专用柔软纸巾整箱厨房擦手用纸壁挂卫生餐巾纸 ¥ 50" [ref=f2e602] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1073243634018&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6296588274838&mi_id=tC6jRnPiIP4DLjDRYfHt_02mL3INcoLq68fET_1GvP0rtOBZmebc125FV9lYDuKu_KJUmXZsVqoEWg1wSZrvig&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%226ff541618678672bdb206615a1792d2e%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1073243634018%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e605]: 悬挂式大包抽纸专用柔软纸巾整箱厨房擦手用纸壁挂卫生餐巾纸
+            - generic [ref=f2e610]:
+              - generic [ref=f2e611]: ¥
+              - generic [ref=f2e612]: "50"
+          - link "精选黄金百香果新鲜原浆应季水果现摘现发纯甜无酸特大果整箱包邮 ¥ 45.8" [ref=f2e615] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=974361324564&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6130540144530&mi_id=-5p7TlhuE8QMEyGDDKGnFeTOOfQWCUawvY3d_ZdyIa9BgZA9TSwD_nvgtVSsL08OPfU31gTz8OVoiGbjJ5dO3g&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%225b13b2486bfd51662849bd727bbe7d0e%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A974361324564%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e618]: 精选黄金百香果新鲜原浆应季水果现摘现发纯甜无酸特大果整箱包邮
+            - generic [ref=f2e623]:
+              - generic [ref=f2e624]: ¥
+              - generic [ref=f2e625]: "45.8"
+          - link "天猫超市卡享淘卡猫超卡超市卡猫卡礼品卡5元面值 谨防诈骗 ¥ 5" [ref=f2e628] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=884162979809&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=5724162688806&mi_id=6qgsvf7MXLXVcbL7tRlNmlIbbcc6APHYMRc17bOy2xdOjL7W29Er3PSgfdJIa-aU0rO4huAMofYwGLL0aXTx-A&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22022e6ab3a5830cbd1bc361ff0395ab83%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A884162979809%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e631]: 天猫超市卡享淘卡猫超卡超市卡猫卡礼品卡5元面值 谨防诈骗
+            - generic [ref=f2e634]:
+              - generic [ref=f2e635]: ¥
+              - generic [ref=f2e636]: "5"
+          - link "长柄硅胶杯刷360°无死角清洁刷头可弯折水杯破壁机奶瓶刷缝隙刷 ¥ 5.99" [ref=f2e639] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1073228856219&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6286510723960&mi_id=tC6jRnPiIP4DLjDRYfHt_8tzJ8SBx8tBXjlcarY7HdnD8KIYuCQYSL2aY4f-HJZZS28Doawug-YOBdScbP0urw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22675ee3d550c70d552a47b738df91bac1%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1073228856219%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e642]: 长柄硅胶杯刷360°无死角清洁刷头可弯折水杯破壁机奶瓶刷缝隙刷
+            - generic [ref=f2e645]:
+              - generic [ref=f2e646]: ¥
+              - generic [ref=f2e647]: "5.99"
+          - link "帮宝适清新帮婴儿纸尿裤SMLXL清爽透气不闷热宝宝尿不湿拉拉裤XXL ¥ 100" [ref=f2e650] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=750516796475&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&umpChannel=bybtqdyh&u_channel=bybtqdyh&skuId=6066983937586&mi_id=Uldt8rI19FSFaS_pcx82RyZCYU7LaQ2m6-IzghjxWznxUsovQJ2zXMdE4l7tduQob3Vcc1dU_V_MgaMhjJ7Xng&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22cdff8cbedf40752dbe5fbc5e2e13fecc%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A750516796475%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e653]: 帮宝适清新帮婴儿纸尿裤SMLXL清爽透气不闷热宝宝尿不湿拉拉裤XXL
+            - generic [ref=f2e656]:
+              - generic [ref=f2e657]: ¥
+              - generic [ref=f2e658]: "100"
+          - link "【王一博同款】百雀羚灵玉面霜2.0保湿修护紧致抗皱舒缓护肤面霜 ¥ 999" [ref=f2e661] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=973650121481&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6127412996894&mi_id=hA1Mq6pbkQdF7gzlLdzH-Gy3obKjAH9xwA8WPr7xrU9M9csByOh_DLYqoYQ6PfEqlmSNNh2MjhHHMC7F9LW0bg&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%222b8f498a4aa33fa4fb1a9e047825630b%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A973650121481%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e664]: 【王一博同款】百雀羚灵玉面霜2.0保湿修护紧致抗皱舒缓护肤面霜
+            - generic [ref=f2e669]:
+              - generic [ref=f2e670]: ¥
+              - generic [ref=f2e671]: "999"
+          - link "【芭芭农场】芭芭农场联名克米特椅咖色1把 ¥ 42" [ref=f2e674] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=953490142062&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6098758616712&mi_id=tOKJLXqcWrpy2H-5uqygS7cQJDxrwpXu5LbmVZGnHaWFHz-b_3gB3G3rqpyHPDe6hirP67YjUIF9Ui03EVcWSw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22ebc00b5cdf1dcfa37c88adf727f59d71%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A953490142062%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e677]: 【芭芭农场】芭芭农场联名克米特椅咖色1把
+            - generic [ref=f2e680]:
+              - generic [ref=f2e681]: ¥
+              - generic [ref=f2e682]: "42"
+          - link "汉达一次性电池7号闹钟遥控器通用大容量碳性电池碳性电池AA1.5V ¥ 3.02" [ref=f2e685] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1066600526745&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6287296823089&mi_id=AeVBt38mG9m_esnKIySbTEncJTjg-Ses803QQtiHHMGR9JbwgcBHkApeybcjGy1ihRLbgpIJAqG-JCakZf6J0Q&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%2262ae3bb51d34173458e5ad7a1377087d%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1066600526745%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e688]: 汉达一次性电池7号闹钟遥控器通用大容量碳性电池碳性电池AA1.5V
+            - generic [ref=f2e691]:
+              - generic [ref=f2e692]: ¥
+              - generic [ref=f2e693]: "3.02"
+          - link "亲肤柔感抽纸宝宝纸巾家用餐巾纸不易掉絮擦手纸面巾纸 ¥ 3.8" [ref=f2e696] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1046912988868&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6128267756951&mi_id=MWCoMkcXMUFJQUp63a553MA0ZXgoPw7BOeY2gOctCqdPfKNtbJ8Itq1I2N1qn7ffNcTQgl-nJ-5qGyvkMVPyxw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%220e144e290d99508c39154c7bcddd18cb%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1046912988868%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e699]: 亲肤柔感抽纸宝宝纸巾家用餐巾纸不易掉絮擦手纸面巾纸
+            - generic [ref=f2e702]:
+              - generic [ref=f2e703]: ¥
+              - generic [ref=f2e704]: "3.8"
+          - link "网课+一套3样英文练字衡水体临川上官老师英文书法/2套起免邮近省 ¥ 16" [ref=f2e707] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=579933531107&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6012939936787&mi_id=5FbPsD-SE1s4O-9YvmfekVJBrE1GrKQ5Hux8HDiSuT6KnyWmm0n0xb3s6VnI_XTyKM4UgboU_KoFCxrJemQS_Q&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22b0905b9dfb445f11b5e7cce85466cb4a%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A579933531107%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e710]: 网课+一套3样英文练字衡水体临川上官老师英文书法/2套起免邮近省
+            - generic [ref=f2e713]:
+              - generic [ref=f2e714]: ¥
+              - generic [ref=f2e715]: "16"
+          - link "林饱饱香煎鸡排空气炸锅儿童早餐鸡胸肉半成品冷冻食材奥尔良鸡排 ¥ 68.1" [ref=f2e718] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=995729017769&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6284480154054&mi_id=v5XmjmUY51pLDCLFWEvLWp5NyEi-EIZXkWglabR07ZSjOCHvD1t44xYb7HYwRhgpjsYUHKWSr8ihAJy2YC1afg&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%2204e9d315dde801975c758df531090937%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A995729017769%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e721]: 林饱饱香煎鸡排空气炸锅儿童早餐鸡胸肉半成品冷冻食材奥尔良鸡排
+            - generic [ref=f2e726]:
+              - generic [ref=f2e727]: ¥
+              - generic [ref=f2e728]: "68.1"
+          - link "【葵妈专属】花香洗衣液2kg持久留香适合各种衣物家用洗衣液家用 ¥ 15.4" [ref=f2e731] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1037672718168&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6111475937639&mi_id=dBJxO0GN8iXzxx6Q86l1lKml0KpPeDYZEkujbgAx-CN6BfVhMjeBBMeDdXZa6rJOV1J3BJDNxAPpVHZSl4pQ-w&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22d27cfed36dafd44afbf521c2b6fce2cd%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1037672718168%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e734]: 【葵妈专属】花香洗衣液2kg持久留香适合各种衣物家用洗衣液家用
+            - generic [ref=f2e737]:
+              - generic [ref=f2e738]: ¥
+              - generic [ref=f2e739]: "15.4"
+          - link "创意多功能清洁刷可连接矿泉水瓶刷头清洁刷多功能死角缝隙刷家用 ¥ 4.8" [ref=f2e742] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1072271604054&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6121032613713&mi_id=p_DNQZu2295D1JMtkvJAdZpQHSc5lTCwO5aB3tRwnDPjwhk86wQqyaDJi9Qg-wiWjQjM9yr8hbVNqiM4YMB2lQ&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%224d415d183961d8352c60b114e3c1f6ae%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1072271604054%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e745]: 创意多功能清洁刷可连接矿泉水瓶刷头清洁刷多功能死角缝隙刷家用
+            - generic [ref=f2e748]:
+              - generic [ref=f2e749]: ¥
+              - generic [ref=f2e750]: "4.8"
+          - link "语文本16k三到六年级作业本小学生大本子初中生专用牛皮纸方格本练习簿四五年级统一作文数学英语本笔记横格 ¥ 9.2" [ref=f2e753] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=638881069397&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=5921460633338&mi_id=u4br60n9IiJVgadPBVRq3G7iPVx_4wN89pux4zk1RG-C7y-PF7jqtX5vQi5hHjB9GP_2717ciaXaUuRJswy8jw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%221154affe9e14c797cca970a5d9f101f3%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A638881069397%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e756]: 语文本16k三到六年级作业本小学生大本子初中生专用牛皮纸方格本练习簿四五年级统一作文数学英语本笔记横格
+            - generic [ref=f2e761]:
+              - generic [ref=f2e762]: ¥
+              - generic [ref=f2e763]: "9.2"
+          - link "Madofit麻豆/京都美奈_2ways嗲兮兮叠搭利器 软糯马海毛吊带上衣 ¥ 258" [ref=f2e766] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1042900261621&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6298636931786&mi_id=MWCoMkcXMUFJQUp63a553IuQJGQmt-81HsdCIC-MjmbGC3i9ctcnWeXUQjyctmysW6CikxSBsByZ84J2WLiqZw&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%2243ac1e57f361e9219ad6d742afcba556%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1042900261621%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e769]: Madofit麻豆/京都美奈_2ways嗲兮兮叠搭利器 软糯马海毛吊带上衣
+            - generic [ref=f2e772]:
+              - generic [ref=f2e773]: ¥
+              - generic [ref=f2e774]: "258"
+          - link "【露露专享】943/934熬夜精华露液透亮水润平滑，每个ID限购2件 ¥ 188" [ref=f2e777] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=844132386566&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6130560484279&mi_id=xbngqKD_V59VdOXuOzY1H_xlN0KxKnN1hK7mHkpGW-rreAqPs8CxXuPKYiCof6g4HSkw_Yqex09E7nc4mGCXHA&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22c90cc48e52175c3fdc745c39e890ed6b%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A844132386566%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e780]: 【露露专享】943/934熬夜精华露液透亮水润平滑，每个ID限购2件
+            - generic [ref=f2e785]:
+              - generic [ref=f2e786]: ¥
+              - generic [ref=f2e787]: "188"
+          - link "突尼斯软籽石榴新鲜水果当季整箱包邮四川会理石榴大果无籽石榴 ¥ 58.8" [ref=f2e790] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1026847925925&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6291027426092&mi_id=tC6jRnPiIP4DLjDRYfHt_3jZcHV3Z-3VoqogwGXHN9928FzI7zkJlUrjb4FsXaYxrLT3flIiCJx80XKLUlTuNQ&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22adf6b36ff94038acf899d2fb7aba4ed2%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1026847925925%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e793]: 突尼斯软籽石榴新鲜水果当季整箱包邮四川会理石榴大果无籽石榴
+            - generic [ref=f2e798]:
+              - generic [ref=f2e799]: ¥
+              - generic [ref=f2e800]: "58.8"
+          - link "农夫山泉东方树叶900ml茉莉花茶青柑普洱黑乌龙茶乌龙茶1瓶饮料 ¥ 25.1" [ref=f2e803] [cursor=pointer]:
+            - /url: //item.taobao.com/item.htm?id=1025713541701&scm=1007.40986.420852.528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037&pvid=a084d6e0-6f98-451e-9aaf-75b5236265cf&xxc=home_recommend&skuId=6083728408894&mi_id=hW1bGml7z_e33GIy01mNW1VMaoN8Y8fX6zhDcHTLMVPCcYuNOEQW2JVe8utzWW2QByH6dVyBIAwrHEG9eiDRLQ&utparam=%7B%22abid%22%3A%22528214_527779_537217_521582_526067_533297_528943_530923_532805_528109_545020_549605_546628_537987_547837_538037%22%2C%22item_ctr%22%3A0%2C%22x_object_type%22%3A%22item%22%2C%22pc_pvid%22%3A%22a084d6e0-6f98-451e-9aaf-75b5236265cf%22%2C%22item_cvr%22%3A0%2C%22mix_group%22%3A%22%22%2C%22pc_scene%22%3A%2220001%22%2C%22item_ecpm%22%3A0%2C%22aplus_abtest%22%3A%22879654aa3d524e209a49a20c172ff9c8%22%2C%22tpp_buckets%22%3A%2230986%23420852%23module%22%2C%22x_object_id%22%3A1025713541701%2C%22ab_info%22%3A%2230986%23420852%23-1%23%22%7D&
+            - generic [ref=f2e806]: 农夫山泉东方树叶900ml茉莉花茶青柑普洱黑乌龙茶乌龙茶1瓶饮料
+            - generic [ref=f2e811]:
+              - generic [ref=f2e812]: ¥
+              - generic [ref=f2e813]: "25.1"
+  - generic [ref=f2e816]:
+    - paragraph [ref=f2e817]:
+      - strong [ref=f2e818]: Taobao | 淘宝
+    - paragraph [ref=f2e819]:
+      - text: 淘宝网是
+      - link "阿里巴巴" [ref=f2e820] [cursor=pointer]:
+        - /url: https://www.alibaba.com/
+      - text: 集团旗下的国际化网络购物平台，
+      - link "淘宝网" [ref=f2e821] [cursor=pointer]:
+        - /url: https://www.taobao.com
+      - text: 为消费者提供互动化、个性化的购物体验。消费者能够从
+      - link "天猫" [ref=f2e822] [cursor=pointer]:
+        - /url: https://www.tmall.com/
+      - text: 品牌旗舰店、
+      - link "淘宝直播" [ref=f2e823] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/zhibo_599/
+      - text: 间实物展示、
+      - link "网红" [ref=f2e824] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/wanghong_598/
+      - text: 主播
+      - link "评论" [ref=f2e825] [cursor=pointer]:
+        - /url: https://pingjia.taobao.com/
+      - text: 区真实的买家秀获取相关度高的
+      - link "商品" [ref=f2e826] [cursor=pointer]:
+        - /url: https://mgoods.taobao.com/
+      - text: 信息，也能通过
+      - link "淘宝百科" [ref=f2e827] [cursor=pointer]:
+        - /url: https://bk.taobao.com/
+      - text: 学习
+      - link "生活知识" [ref=f2e828] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/
+      - text: ，畅享美好
+      - link "购物生活" [ref=f2e829] [cursor=pointer]:
+        - /url: https://goods.taobao.com/
+      - text: 。
+    - paragraph [ref=f2e830]:
+      - link "淘宝网页" [ref=f2e831] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/taobaowangye_180/
+      - text: 通过提供多样化的
+      - link "男装" [ref=f2e832] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/taobaonanzhuang_425/
+      - link "空调" [ref=f2e833] [cursor=pointer]:
+        - /url: https://pingjia.taobao.com/category-kongdiao_3724
+      - link "女鞋" [ref=f2e834] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/taobaonvxie_408/
+      - text: 等
+      - link "企业品牌" [ref=f2e835] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/qiyebaikecitiao_21105
+      - text: 商品和服务，为消费者提供各类
+      - link "newbalance" [ref=f2e836] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/newbalance_36/
+      - text: 、
+      - link "高尔夫手套" [ref=f2e837] [cursor=pointer]:
+        - /url: https://pingjia.taobao.com/category-gaoerfushoutao_688
+      - text: 、
+      - link "adidas" [ref=f2e838] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/adidas_50/
+      - text: 、
+      - link "nike" [ref=f2e839] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/nike_27/
+      - text: 等
+      - link "运动鞋" [ref=f2e840] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/yundongxie/
+      - text: 与
+      - link "篮球鞋" [ref=f2e841] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/lanqiuxie_5/
+      - text: 购物体验。其中
+      - link "oppo" [ref=f2e842] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/oppo_279/
+      - text: 、
+      - link "vivo" [ref=f2e843] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/vivo_291
+      - text: 、
+      - link "电脑" [ref=f2e844] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/diannao_251/
+      - text: 、
+      - link "按摩椅" [ref=f2e845] [cursor=pointer]:
+        - /url: https://pingjia.taobao.com/category-anmoyi_280
+      - text: 、
+      - link "iphone17" [ref=f2e846] [cursor=pointer]:
+        - /url: https://shuma.taobao.com/topic/iphone17_1547/
+      - link "手机" [ref=f2e847] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/shouji_250/
+      - text: 等
+      - link "热门商品" [ref=f2e848] [cursor=pointer]:
+        - /url: https://guangtao.taobao.com/
+      - text: 更是赢得了用户口碑和良好的
+      - link "评价" [ref=f2e849] [cursor=pointer]:
+        - /url: https://pingjia.taobao.com/
+      - text: 。在满足了广大消费者的不同需求，同时也为
+      - link "淘宝卖家" [ref=f2e850] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/taobaoshangjia_438/
+      - text: 和
+      - link "淘宝店铺" [ref=f2e851] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/taobaodianpu_399/
+      - text: 提供了一个广阔的
+      - link "商品" [ref=f2e852] [cursor=pointer]:
+        - /url: https://pcdetail.taobao.com/
+      - text: 销售渠道。
+    - paragraph [ref=f2e853]:
+      - link "手机淘宝" [ref=f2e854] [cursor=pointer]:
+        - /url: https://bk.taobao.com/k/shoujitaobao_430/
+      - text: 不定期推出各种活动，并在
+      - link "服装" [ref=f2e855] [cursor=pointer]:
+        - /url: https://clothing.taobao.com/
+      - text: 、
+      - link "美妆" [ref=f2e856] [cursor=pointer]:
+        - /url: https://beaut.taobao.com/
+      - text: 、
+      - link "数码" [ref=f2e857] [cursor=pointer]:
+        - /url: https://shuma.taobao.com/
+      - text: 、
+      - link "游戏" [ref=f2e858] [cursor=pointer]:
+        - /url: https://tvgame.taobao.com/
+      - text: 等行业为您进行定制化推荐，提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄来保障消费者权益，也可以通过
+      - link "淘宝客户端" [ref=f2e859] [cursor=pointer]:
+        - /url: https://pc.taobao.com/
+      - text: 安心购物的同时还能畅享
+      - link "Tao" [ref=f2e860] [cursor=pointer]:
+        - /url: https://jp.tao.co/
+      - text: 商城的
+      - link "购物乐趣" [ref=f2e861] [cursor=pointer]:
+        - /url: https://jianghu.taobao.com/topicId/123402
+      - text: 。
+    - paragraph [ref=f2e862]:
+      - text: 除了购物以外，淘宝网贴心的为您提供了
+      - link "产品翻译" [ref=f2e863] [cursor=pointer]:
+        - /url: https://fanyi.taobao.com/
+      - text: /
+      - link "阅读" [ref=f2e864] [cursor=pointer]:
+        - /url: https://jhbook.taobao.com/
+      - text: /
+      - link "DingTalk" [ref=f2e865] [cursor=pointer]:
+        - /url: https://www.dingtalk.jp/
+      - text: 等生活娱乐工具，让你购物娱乐两不误！淘宝网不仅是您的购物平台，更是您的生活好伙伴！
+  - generic [ref=f2e868]:
+    - link [ref=f2e870] [cursor=pointer]:
+      - /url: https://pc.taobao.com?channel=shouye
+    - generic [ref=f2e872] [cursor=pointer]
+    - link [ref=f2e876] [cursor=pointer]:
+      - /url: //cart.taobao.com
+    - link [ref=f2e879] [cursor=pointer]:
+      - /url: https://rulechannel.taobao.com/?%2FruleHOR=#/ruleHOR
+    - link [ref=f2e882] [cursor=pointer]:
+      - /url: //consumerservice.taobao.com/online-help
+    - link [ref=f2e885] [cursor=pointer]:
+      - /url: //market.m.taobao.com/app/tbhome/feedback/index.html?fromURL=https%3A%2F%2Fwww.taobao.com%2F

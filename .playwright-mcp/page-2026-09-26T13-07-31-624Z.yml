@@ -1,0 +1,107 @@
+- generic [ref=e247]:
+  - complementary [ref=e248]:
+    - generic [ref=e249]: ⚙️ 管理后台
+    - menubar [ref=e250]:
+      - menuitem [ref=e251] [cursor=pointer]
+      - menuitem [ref=e255] [cursor=pointer]
+      - menuitem [ref=e259] [cursor=pointer]
+      - menuitem [ref=e263] [cursor=pointer]
+      - menuitem [active] [ref=e267] [cursor=pointer]
+      - menuitem [ref=e271] [cursor=pointer]
+    - button "← 返回前台" [ref=e277] [cursor=pointer]
+  - generic [ref=e279]:
+    - generic [ref=e280]:
+      - generic [ref=e281]: 管理员（管理员）
+      - button "退出登录" [ref=e282] [cursor=pointer]
+    - main [ref=e284]:
+      - generic [ref=e628]:
+        - heading "用户管理" [level=2] [ref=e629]
+        - generic [ref=e630]:
+          - generic [ref=e631]:
+            - textbox "搜索用户名/昵称" [ref=e634]
+            - button "搜索" [ref=e636] [cursor=pointer]
+          - generic [ref=e639]:
+            - table [ref=e641]:
+              - rowgroup [ref=e652]:
+                - row [ref=e653]:
+                  - columnheader "ID" [ref=e654]
+                  - columnheader "用户名" [ref=e656]
+                  - columnheader "昵称" [ref=e658]
+                  - columnheader "邮箱" [ref=e660]
+                  - columnheader "手机号" [ref=e662]
+                  - columnheader "角色" [ref=e664]
+                  - columnheader "状态" [ref=e666]
+                  - columnheader "注册时间" [ref=e668]
+                  - columnheader "操作" [ref=e670]
+            - table [ref=e676]:
+              - rowgroup [ref=e687]:
+                - row [ref=e688]:
+                  - cell "1" [ref=e689]
+                  - cell "admin" [ref=e691]
+                  - cell "管理员" [ref=e693]
+                  - cell "admin@shopeasy.com" [ref=e695]
+                  - cell "13800000000" [ref=e697]
+                  - cell "管理员" [ref=e699]
+                  - cell "正常" [ref=e703]
+                  - cell "2026-09-09 06:46" [ref=e707]
+                  - cell [ref=e709]
+                - row [ref=e710]:
+                  - cell "2" [ref=e711]
+                  - cell "buyer1" [ref=e713]
+                  - cell "张三" [ref=e715]
+                  - cell "zhangsan@test.com" [ref=e717]
+                  - cell "13800000001" [ref=e719]
+                  - cell "用户" [ref=e721]
+                  - cell "正常" [ref=e725]
+                  - cell "2026-09-09 06:46" [ref=e729]
+                  - cell [ref=e731]:
+                    - button "禁用" [ref=e733] [cursor=pointer]
+                - row [ref=e735]:
+                  - cell "3" [ref=e736]
+                  - cell "buyer2" [ref=e738]
+                  - cell "李四" [ref=e740]
+                  - cell "lisi@test.com" [ref=e742]
+                  - cell "13800000002" [ref=e744]
+                  - cell "用户" [ref=e746]
+                  - cell "正常" [ref=e750]
+                  - cell "2026-09-09 06:46" [ref=e754]
+                  - cell [ref=e756]:
+                    - button "禁用" [ref=e758] [cursor=pointer]
+                - row [ref=e760]:
+                  - cell "4" [ref=e761]
+                  - cell "disabled_user" [ref=e763]
+                  - cell "已禁用用户" [ref=e765]
+                  - cell [ref=e767]
+                  - cell [ref=e768]
+                  - cell "用户" [ref=e769]
+                  - cell "禁用" [ref=e773]
+                  - cell "2026-09-09 06:46" [ref=e777]
+                  - cell [ref=e779]:
+                    - button "启用" [ref=e781] [cursor=pointer]
+                - row [ref=e783]:
+                  - cell "5" [ref=e784]
+                  - cell "testbuyer_reg" [ref=e786]
+                  - cell "测试注册用户" [ref=e788]
+                  - cell [ref=e790]
+                  - cell [ref=e791]
+                  - cell "用户" [ref=e792]
+                  - cell "禁用" [ref=e796]
+                  - cell "2026-09-26 11:12" [ref=e800]
+                  - cell [ref=e802]:
+                    - button "启用" [ref=e804] [cursor=pointer]
+                - row [ref=e806]:
+                  - cell "6" [ref=e807]
+                  - cell "testbuyer_noaddr" [ref=e809]
+                  - cell "无地址测试用户" [ref=e811]
+                  - cell [ref=e813]
+                  - cell [ref=e814]
+                  - cell "用户" [ref=e815]
+                  - cell "禁用" [ref=e819]
+                  - cell "2026-09-26 12:28" [ref=e823]
+                  - cell [ref=e825]:
+                    - button "启用" [ref=e827] [cursor=pointer]
+          - generic [ref=e830]:
+            - button "上一页" [disabled] [ref=e831]
+            - list [ref=e832]:
+              - listitem "第 1 页" [ref=e833]: "1"
+            - button "下一页" [disabled] [ref=e834]

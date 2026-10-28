@@ -1,0 +1,32 @@
+[   26693ms] [LOG] Wed Sep 09 2026 12:38:13 GMT+0800 (中国标准时间) @ https://g.alicdn.com/AWSC/et/1.84.2/et_f.js:2
+[   26696ms] [LOG] {"cfg":{},"tid":"4AnCltxjXNnFaM8jQQq4Jg=="} @ https://o.alicdn.com/baxia/baxia-entry-gray/index.js:0
+[   26948ms] [ERROR] {message: NOT_LOGIN, info: {"appId":2023319,"channel":"global","cookieExpire"…robotId":288,"sourceType":"SUPERME","tenantId":3}} @ https://g.alicdn.com/code/npm/@ali/alime-alicare/3.10.27/index.js:14
+[   26972ms] [LOG] [bridge] web @ https://g.alicdn.com/code/npm/@ali/alime-alicare/3.10.27/index.js:14
+[   26974ms] Uncaught TypeError: JSBridgePlugin is not a function
+    at <anonymous> (https://g.alicdn.com/tarzan/tarzan-jsbridge/2.0.7/client/web/index.js?callback=JSBridgePlugin:0:0)
+[   27265ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://login.taobao.com/?style=mini&newMini2=true&full_redirect=true&enup=false&qrLogin=true&from=xiaomi&redirectURL=https%3A%2F%2Fai.alimebot.taobao.com%2Fintl%2Findex.htm%3Ffrom%3DWgevAY26kl:0
+[   27315ms] [ERROR] Permissions policy violation: gyroscope is not allowed in this document. @ https://g.alicdn.com/secdev/sufei_data/3.9.14/index.js:0
+[   27315ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://g.alicdn.com/secdev/sufei_data/3.9.14/index.js:0
+[   27315ms] [WARNING] The deviceorientation events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://g.alicdn.com/secdev/sufei_data/3.9.14/index.js:0
+[   27315ms] [LOG] Wed Sep 09 2026 12:38:14 GMT+0800 (中国标准时间) @ https://g.alicdn.com/AWSC/et/1.84.2/et_f.js:2
+[   27365ms] [LOG] Wed Sep 09 2026 12:38:14 GMT+0800 (中国标准时间) @ https://g.alicdn.com/AWSC/et/1.84.2/et_f.js:2
+[   27379ms] [ERROR] Permissions policy violation: encrypted-media is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27379ms] [WARNING] Encrypted Media access has been blocked because of a Feature Policy applied to the current document. See https://crbug.com/414348233 for more details. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27379ms] [ERROR] Permissions policy violation: encrypted-media is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27379ms] [WARNING] Encrypted Media access has been blocked because of a Feature Policy applied to the current document. See https://crbug.com/414348233 for more details. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27380ms] [ERROR] Permissions policy violation: encrypted-media is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27380ms] [WARNING] Encrypted Media access has been blocked because of a Feature Policy applied to the current document. See https://crbug.com/414348233 for more details. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27380ms] [ERROR] Permissions policy violation: encrypted-media is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27380ms] [WARNING] Encrypted Media access has been blocked because of a Feature Policy applied to the current document. See https://crbug.com/414348233 for more details. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27380ms] [ERROR] Permissions policy violation: screen-wake-lock is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27389ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27389ms] [WARNING] The deviceorientation events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27416ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27416ms] [WARNING] The devicemotion events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27620ms] [ERROR] Permissions policy violation: accelerometer is not allowed in this document. @ https://g.alicdn.com/AWSC/uab/1.140.0/collina.js:1
+[   27620ms] [WARNING] The deviceorientation events are blocked by permissions policy. See https://github.com/w3c/webappsec-permissions-policy/blob/master/features.md#sensor-features @ https://g.alicdn.com/AWSC/uab/1.140.0/collina.js:1
+[   27751ms] [WARNING] It is recommended that a robustness level be specified. Not specifying the robustness level could result in unexpected behavior. @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27785ms] [LOG] Wed Sep 09 2026 12:38:14 GMT+0800 (中国标准时间) @ https://g.alicdn.com/AWSC/fireyejs/1.234.24/fireyejs.js:0
+[   27788ms] [LOG] {"cfg":{},"tid":"j8nJl_kjEnUYj9oqDaObow=="} @ https://o.alicdn.com/baxia/baxia-entry-gray/index.js:0
+[   86954ms] [ERROR] [bridge] Error: Timeout
+    at https://g.alicdn.com/code/npm/@ali/alime-alicare/3.10.27/index.js:3:47367 @ https://g.alicdn.com/code/npm/@ali/alime-alicare/3.10.27/index.js:14

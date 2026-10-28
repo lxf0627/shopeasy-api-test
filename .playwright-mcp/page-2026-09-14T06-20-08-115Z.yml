@@ -1,0 +1,66 @@
+- generic [ref=e1]:
+  - generic [ref=e243]:
+    - complementary [ref=e244]:
+      - generic [ref=e245]: ⚙️ 管理后台
+      - menubar [ref=e246]:
+        - menuitem [ref=e247] [cursor=pointer]
+        - menuitem [ref=e251] [cursor=pointer]
+        - menuitem [ref=e255] [cursor=pointer]
+        - menuitem [ref=e259] [cursor=pointer]
+        - menuitem [ref=e263] [cursor=pointer]
+        - menuitem [ref=e267] [cursor=pointer]
+      - button "← 返回前台" [ref=e273] [cursor=pointer]
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: 管理员（管理员）
+        - button "退出登录" [ref=e278] [cursor=pointer]
+      - main [ref=e280]:
+        - generic [ref=e383]:
+          - generic [ref=e384]:
+            - heading "商品管理" [level=2] [ref=e385]
+            - button "新增商品" [ref=e386] [cursor=pointer]
+          - generic [ref=e388]:
+            - generic [ref=e389]:
+              - textbox "搜索商品" [ref=e392]: iPhone
+              - generic [ref=e395] [cursor=pointer]:
+                - generic:
+                  - combobox [expanded] [active] [ref=e397]
+                  - generic [ref=e398]: 状态
+              - button "搜索" [ref=e403] [cursor=pointer]
+            - generic [ref=e406]:
+              - table [ref=e408]:
+                - rowgroup [ref=e419]:
+                  - row [ref=e420]:
+                    - columnheader "ID" [ref=e421]
+                    - columnheader "商品名称" [ref=e423]
+                    - columnheader "分类" [ref=e425]
+                    - columnheader "规格" [ref=e427]
+                    - columnheader "价格" [ref=e429]
+                    - columnheader "库存" [ref=e431]
+                    - columnheader "销量" [ref=e433]
+                    - columnheader "状态" [ref=e435]
+                    - columnheader "操作" [ref=e437]
+              - table [ref=e443]:
+                - rowgroup [ref=e454]:
+                  - row [ref=e455]:
+                    - cell "1" [ref=e456]
+                    - cell "iPhone 15 Pro Max" [ref=e458]
+                    - cell "手机数码" [ref=e460]
+                    - cell "9种" [ref=e462]
+                    - cell "¥9999" [ref=e466]
+                    - cell "69" [ref=e468]
+                    - cell "2611" [ref=e470]
+                    - cell "上架" [ref=e472]
+                    - cell [ref=e476]:
+                      - generic [ref=e477]:
+                        - button "编辑" [ref=e478] [cursor=pointer]
+                        - button "下架" [ref=e480] [cursor=pointer]
+            - generic [ref=e716]:
+              - button "上一页" [disabled] [ref=e717]
+              - list [ref=e718]:
+                - listitem "第 1 页" [ref=e719]: "1"
+              - button "下一页" [disabled] [ref=e722]
+  - tooltip [ref=e1392]:
+    - listbox [ref=e1396]:
+      - option "上架" [ref=e1397] [cursor=pointer]
+      - option "下架" [ref=e1398] [cursor=pointer]

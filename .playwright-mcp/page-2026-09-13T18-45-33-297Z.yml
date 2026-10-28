@@ -1,0 +1,60 @@
+- generic [active] [ref=f10e1]:
+  - generic [ref=f10e266]:
+    - generic [ref=f10e268]:
+      - link "🛍️ ShopEasy" [ref=f10e269] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f10e271]:
+        - textbox "搜索商品..." [ref=f10e273]
+        - button [ref=f10e276] [cursor=pointer]
+      - generic [ref=f10e280]:
+        - button [ref=f10e282] [cursor=pointer]
+        - button "管 管理员" [ref=f10e288] [cursor=pointer]:
+          - generic [ref=f10e289]: 管
+          - generic [ref=f10e290]: 管理员
+    - main [ref=f10e291]:
+      - generic [ref=f10e765]:
+        - heading "我的订单" [level=2] [ref=f10e766]
+        - generic [ref=f10e767]:
+          - tablist [ref=f10e771]:
+            - tab "全部" [selected] [ref=f10e773]
+            - tab "待支付" [ref=f10e774]
+            - tab "已支付" [ref=f10e775]
+            - tab "已发货" [ref=f10e776]
+            - tab "已完成" [ref=f10e777]
+            - tab "已取消" [ref=f10e778]
+          - generic:
+            - tabpanel "全部"
+        - generic [ref=f10e779]:
+          - generic [ref=f10e780] [cursor=pointer]:
+            - generic [ref=f10e781]:
+              - generic [ref=f10e782]: "订单号: ORD1789325132256ZMQQ"
+              - generic [ref=f10e783]: 待支付
+            - generic [ref=f10e786]:
+              - generic [ref=f10e787]:
+                - text: iPhone 15 Pro Max
+                - generic [ref=f10e788]: 512GB / 原色钛金属
+              - generic [ref=f10e790]: x1
+              - generic [ref=f10e791]: ¥11999
+            - generic [ref=f10e792]:
+              - generic [ref=f10e793]: "下单时间: 2026-09-13 18:45"
+              - generic [ref=f10e794]:
+                - text: "合计:"
+                - strong [ref=f10e795]: ¥11999
+          - generic [ref=f10e796] [cursor=pointer]:
+            - generic [ref=f10e797]:
+              - generic [ref=f10e798]: "订单号: ORD17893228159448W2L"
+              - generic [ref=f10e799]: 待支付
+            - generic [ref=f10e802]:
+              - generic [ref=f10e803]:
+                - text: iPhone 15 Pro Max
+                - generic [ref=f10e804]: 256GB / 原色钛金属
+              - generic [ref=f10e806]: x1
+              - generic [ref=f10e807]: ¥9999
+            - generic [ref=f10e808]:
+              - generic [ref=f10e809]: "下单时间: 2026-09-13 18:06"
+              - generic [ref=f10e810]:
+                - text: "合计:"
+                - strong [ref=f10e811]: ¥9999
+    - paragraph [ref=f10e488]: © 2024 ShopEasy — 测试用在线购物平台
+  - alert [ref=f10e812]:
+    - paragraph [ref=f10e816]: 订单创建成功

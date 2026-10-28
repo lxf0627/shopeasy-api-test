@@ -1,0 +1,40 @@
+- generic [ref=f4e3]:
+  - generic [ref=f4e5]:
+    - link "🛍️ ShopEasy" [ref=f4e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f4e8]:
+      - textbox "搜索商品..." [ref=f4e10]
+      - button [ref=f4e13] [cursor=pointer]
+    - generic [ref=f4e17]:
+      - button [ref=f4e19] [cursor=pointer]
+      - button "张 张三" [active] [ref=f4e25] [cursor=pointer]:
+        - generic [ref=f4e26]: 张
+        - generic [ref=f4e27]: 张三
+  - main [ref=f4e28]:
+    - generic [ref=f4e241]:
+      - heading "个人中心" [level=2] [ref=f4e242]
+      - generic [ref=f4e243]:
+        - tablist [ref=f4e247]:
+          - tab "个人信息" [selected] [ref=f4e249]
+          - tab "修改密码" [ref=f4e250]
+          - tab "收货地址" [ref=f4e251]
+        - generic [ref=f4e252]:
+          - tabpanel "个人信息" [ref=f4e253]:
+            - generic [ref=f4e255]:
+              - group "头像" [ref=f4e256]:
+                - generic [ref=f4e258]: 张
+              - generic [ref=f4e260]:
+                - generic [ref=f4e261]: 用户名
+                - textbox "用户名" [disabled] [ref=f4e265]: buyer1
+              - generic [ref=f4e266]:
+                - generic [ref=f4e267]: 昵称
+                - textbox "昵称" [ref=f4e271]: 张三
+              - generic [ref=f4e272]:
+                - generic [ref=f4e273]: 邮箱
+                - textbox "邮箱" [ref=f4e277]: zhangsan@test.com
+              - generic [ref=f4e278]:
+                - generic [ref=f4e279]: 手机号
+                - textbox "手机号" [ref=f4e283]: "13800000001"
+              - button "保存修改" [ref=f4e286] [cursor=pointer]
+          - text: "* * *"
+  - paragraph [ref=f4e229]: © 2024 ShopEasy — 测试用在线购物平台

@@ -1,0 +1,85 @@
+- generic [ref=f4e244]:
+  - complementary [ref=f4e245]:
+    - generic [ref=f4e246]: ⚙️ 管理后台
+    - menubar [ref=f4e247]:
+      - menuitem [ref=f4e248] [cursor=pointer]
+      - menuitem [ref=f4e252] [cursor=pointer]
+      - menuitem [active] [ref=f4e256] [cursor=pointer]
+      - menuitem [ref=f4e260] [cursor=pointer]
+      - menuitem [ref=f4e264] [cursor=pointer]
+      - menuitem [ref=f4e268] [cursor=pointer]
+    - button "← 返回前台" [ref=f4e274] [cursor=pointer]
+  - generic [ref=f4e276]:
+    - generic [ref=f4e277]:
+      - generic [ref=f4e278]: 管理员（管理员）
+      - button "退出登录" [ref=f4e279] [cursor=pointer]
+    - main [ref=f4e281]:
+      - generic [ref=f4e724]:
+        - generic [ref=f4e725]:
+          - heading "分类管理" [level=2] [ref=f4e726]
+          - button "新增分类" [ref=f4e727] [cursor=pointer]
+        - generic [ref=f4e731]:
+          - table [ref=f4e733]:
+            - rowgroup [ref=f4e740]:
+              - row [ref=f4e741]:
+                - columnheader "ID" [ref=f4e742]
+                - columnheader "图标" [ref=f4e744]
+                - columnheader "分类名称" [ref=f4e746]
+                - columnheader "排序" [ref=f4e748]
+                - columnheader "操作" [ref=f4e750]
+          - table [ref=f4e756]:
+            - rowgroup [ref=f4e763]:
+              - row [ref=f4e764]:
+                - cell "1" [ref=f4e765]
+                - cell "📱" [ref=f4e767]
+                - cell "手机数码" [ref=f4e769]
+                - cell "1" [ref=f4e771]
+                - cell [ref=f4e773]:
+                  - generic [ref=f4e774]:
+                    - button "编辑" [ref=f4e775] [cursor=pointer]
+                    - button "删除" [ref=f4e777] [cursor=pointer]
+              - row [ref=f4e779]:
+                - cell "2" [ref=f4e780]
+                - cell "💻" [ref=f4e782]
+                - cell "电脑办公" [ref=f4e784]
+                - cell "2" [ref=f4e786]
+                - cell [ref=f4e788]:
+                  - generic [ref=f4e789]:
+                    - button "编辑" [ref=f4e790] [cursor=pointer]
+                    - button "删除" [ref=f4e792] [cursor=pointer]
+              - row [ref=f4e794]:
+                - cell "3" [ref=f4e795]
+                - cell "🏠" [ref=f4e797]
+                - cell "家用电器" [ref=f4e799]
+                - cell "3" [ref=f4e801]
+                - cell [ref=f4e803]:
+                  - generic [ref=f4e804]:
+                    - button "编辑" [ref=f4e805] [cursor=pointer]
+                    - button "删除" [ref=f4e807] [cursor=pointer]
+              - row [ref=f4e809]:
+                - cell "4" [ref=f4e810]
+                - cell "👕" [ref=f4e812]
+                - cell "服装鞋包" [ref=f4e814]
+                - cell "4" [ref=f4e816]
+                - cell [ref=f4e818]:
+                  - generic [ref=f4e819]:
+                    - button "编辑" [ref=f4e820] [cursor=pointer]
+                    - button "删除" [ref=f4e822] [cursor=pointer]
+              - row [ref=f4e824]:
+                - cell "5" [ref=f4e825]
+                - cell "🍜" [ref=f4e827]
+                - cell "食品饮料" [ref=f4e829]
+                - cell "5" [ref=f4e831]
+                - cell [ref=f4e833]:
+                  - generic [ref=f4e834]:
+                    - button "编辑" [ref=f4e835] [cursor=pointer]
+                    - button "删除" [ref=f4e837] [cursor=pointer]
+              - row [ref=f4e839]:
+                - cell "6" [ref=f4e840]
+                - cell "📚" [ref=f4e842]
+                - cell "图书文具" [ref=f4e844]
+                - cell "6" [ref=f4e846]
+                - cell [ref=f4e848]:
+                  - generic [ref=f4e849]:
+                    - button "编辑" [ref=f4e850] [cursor=pointer]
+                    - button "删除" [ref=f4e852] [cursor=pointer]
